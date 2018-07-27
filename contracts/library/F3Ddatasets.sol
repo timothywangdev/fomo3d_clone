@@ -37,12 +37,11 @@ library F3Ddatasets {
     }
     struct Player {
         address addr;   // player address
-        bytes32 name;   // player name
         uint256 win;    // winnings vault
         uint256 gen;    // general vault
         uint256 aff;    // affiliate vault
         uint256 lrnd;   // last round played
-        uint256 laff;   // last affiliate id used
+        address laff;   // last affiliate id used
     }
     struct PlayerRounds {
         uint256 eth;    // eth player has added to round (used for eth limiter)
@@ -51,7 +50,7 @@ library F3Ddatasets {
         uint256 ico;    // ICO phase investment
     }
     struct Round {
-        uint256 plyr;   // pID of player in lead
+        address plyr;   // pID of player in lead
         uint256 team;   // tID of team in lead
         uint256 end;    // time ends/ended
         bool ended;     // has round end function been ran
@@ -59,7 +58,7 @@ library F3Ddatasets {
         uint256 keys;   // keys
         uint256 eth;    // total eth in
         uint256 pot;    // eth to pot (during round) / final amount paid to winner (after round ends)
-        uint256 mask;   // global mask
+        uint256 mask;   // global mask ???
         uint256 ico;    // total eth sent in during ICO phase
         uint256 icoGen; // total eth for gen during ICO phase
         uint256 icoAvg; // average key price for ICO phase
