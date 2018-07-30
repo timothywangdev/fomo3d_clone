@@ -3,7 +3,7 @@ pragma solidity ^0.4.24;
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 
 import "./interface/JIincForwarderInterface.sol";
-import "./interface/F3DexternalSettingsInterface.sol";
+//import "./interface/F3DexternalSettingsInterface.sol";
 import "./library/SafeMath.sol";
 import "./library/F3DKeysCalcLong.sol";
 import "./library/F3Ddatasets.sol";
@@ -16,17 +16,18 @@ contract FoMo3Dlong is modularLong {
     using F3DKeysCalcLong for uint256;
 
     JIincForwarderInterface private Jekyll_Island_Inc;
-    F3DexternalSettingsInterface private extSettings;
+    //F3DexternalSettingsInterface private extSettings;
     ERC20 public token;
-    uint decimals = 18;
+    uint public decimals = 18;
+    uint public exchangeRate;
     //==============================================================================
     //     _ _  _  |`. _     _ _ |_ | _  _  .
     //    (_(_)| |~|~|(_||_|| (_||_)|(/__\  .  (game settings)
     //=================_|===========================================================
     string constant public name = "FoMo3D Long Official";
     string constant public symbol = "F3D";
-    uint256 private rndExtra_ = 2 hours;
-    uint256 private rndGap_ = 3 hours;
+    uint256 public rndExtra_ = 2 minutes;
+    uint256 public rndGap_ = 2 minutes;
     // uint256 private rndExtra_ = extSettings.getLongExtra();     // length of the very first ICO 
     // uint256 private rndGap_ = extSettings.getLongGap();         // length of ICO phase, set to 1 year for EOS.
     uint256 constant private rndInit_ = 1 hours;                // round timer starts at this
@@ -56,12 +57,12 @@ contract FoMo3Dlong is modularLong {
     //     _ _  _  __|_ _    __|_ _  _  .
     //    (_(_)| |_\ | | |_|(_ | (_)|   .  (initial data setup upon contract deploy)
     //==============================================================================
-    constructor(address Jekyll_Island_Inc_Addr, address F3DexternalSettingsAddr, address tokenAddr)
+    constructor(address Jekyll_Island_Inc_Addr, address tokenAddr, uint _exchangeRate)
         public
         {
+            exchangeRate = _exchangeRate;
             Jekyll_Island_Inc = JIincForwarderInterface(Jekyll_Island_Inc_Addr);
-            extSettings = F3DexternalSettingsInterface(F3DexternalSettingsAddr);
-            token = ERC20(token);
+            token = ERC20(tokenAddr);
 
             // Team allocation structures
             // 0 = whales
@@ -73,16 +74,16 @@ contract FoMo3Dlong is modularLong {
             // (F3D, P3D) + (Pot , Referrals, Community)
             // Referrals / Community rewards are mathematically designed to come from the winner's share of the pot.
             fees_[0] = F3Ddatasets.TeamFee(30,0);   //50% to pot, 10% to aff, 2% to com
-            fees_[1] = F3Ddatasets.TeamFee(43,0);   //43% to pot, 10% to aff, 2% to com
-            fees_[2] = F3Ddatasets.TeamFee(56,0);  //20% to pot, 10% to aff, 2% to com
-            fees_[3] = F3Ddatasets.TeamFee(43,0);   //35% to pot, 10% to aff, 2% to com
+            fees_[1] = F3Ddatasets.TeamFee(30,0);   //43% to pot, 10% to aff, 2% to com
+            fees_[2] = F3Ddatasets.TeamFee(30,0);  //20% to pot, 10% to aff, 2% to com
+            fees_[3] = F3Ddatasets.TeamFee(30,0);   //35% to pot, 10% to aff, 2% to com
         
             // how to split up the final pot based on which team was picked
             // (F3D, P3D)
-            potSplit_[0] = F3Ddatasets.PotSplit(15,0);  //48% to winner, 25% to next round, 2% to com
-            potSplit_[1] = F3Ddatasets.PotSplit(25,0);   //48% to winner, 25% to next round, 2% to com
-            potSplit_[2] = F3Ddatasets.PotSplit(20,0);  //48% to winner, 10% to next round, 2% to com
-            potSplit_[3] = F3Ddatasets.PotSplit(30,0);  //48% to winner, 10% to next round, 2% to com
+            potSplit_[0] = F3Ddatasets.PotSplit(0,0);  //48% to winner, 25% to next round, 2% to com
+            potSplit_[1] = F3Ddatasets.PotSplit(0,0);   //48% to winner, 25% to next round, 2% to com
+            potSplit_[2] = F3Ddatasets.PotSplit(0,0);  //48% to winner, 10% to next round, 2% to com
+            potSplit_[3] = F3Ddatasets.PotSplit(0,0);  //48% to winner, 10% to next round, 2% to com
         }
     //==============================================================================
     //     _ _  _  _|. |`. _  _ _  .
@@ -139,6 +140,7 @@ contract FoMo3Dlong is modularLong {
         F3Ddatasets.EventReturns memory _eventData_;
 
         require(token.transferFrom(msg.sender, address(this), val), "Approve more ethers to be spent by this contract");
+        uint eth = val.div(exchangeRate);
 
         // fetch player id
         address _pID = msg.sender;
@@ -168,7 +170,7 @@ contract FoMo3Dlong is modularLong {
         _team = verifyTeam(_team);
         
         // buy core 
-        buyCore(_pID, _affID, _team, val, _eventData_);
+        buyCore(_pID, _affID, _team, eth, _eventData_);
     }
     
     /**
@@ -242,6 +244,8 @@ contract FoMo3Dlong is modularLong {
         
         // setup temp var for player eth
         uint256 _eth;
+
+        uint val;
         
         // check to see if round has ended and no one has run round end yet
         if (_now > round_[_rID].end && round_[_rID].ended == false && round_[_rID].plyr != 0)
@@ -258,8 +262,10 @@ contract FoMo3Dlong is modularLong {
             
                 // gib moni
                 // CHANGE THIS
-                if (_eth > 0)
-                    token.transfer(plyr_[_pID].addr, eth)
+                if (_eth > 0) {
+                    val = _eth.mul(exchangeRate);
+                    token.transfer(msg.sender, val);
+                }
             
                 // build event data
                 _eventData_.compressedData = _eventData_.compressedData + (_now * 1000000000000000000);
@@ -285,9 +291,10 @@ contract FoMo3Dlong is modularLong {
             _eth = withdrawEarnings(_pID);
             
             // gib moni
-            if (_eth > 0)
-                token.transfer(plyr_[_pID].addr, eth)
-            
+            if (_eth > 0) {
+                val = _eth.mul(exchangeRate);
+                token.transfer(msg.sender, val);
+            }
             // fire withdraw event
             emit F3Devents.onWithdraw(_pID, _eth, _now);
         }
@@ -325,11 +332,12 @@ contract FoMo3Dlong is modularLong {
      * provider
      * -functionhash- 0xc7e284b8
      * @return time left in seconds
+     * @return true if the current round has started, otherwise false
      */
     function getTimeLeft()
         public
         view
-        returns(uint256)
+        returns(uint256, bool)
     {
         // setup local rID
         uint256 _rID = rID_;
@@ -339,11 +347,11 @@ contract FoMo3Dlong is modularLong {
         
         if (_now < round_[_rID].end)
             if (_now > round_[_rID].strt + rndGap_)
-                return( (round_[_rID].end).sub(_now) );
+                return( (round_[_rID].end).sub(_now), true );
             else
-                return( (round_[_rID].strt + rndGap_).sub(_now) );
+                return( (round_[_rID].strt + rndGap_).sub(_now), false );
         else
-            return(0);
+            return(0, true);
     }
     
     /**
@@ -432,7 +440,7 @@ contract FoMo3Dlong is modularLong {
         
         return
             (
-             round_[_rID].ico,               //0
+             round_[_rID].eth,               //0
              _rID,                           //1
              round_[_rID].keys,              //2
              round_[_rID].end,               //3
@@ -453,7 +461,6 @@ contract FoMo3Dlong is modularLong {
      * -functionhash- 0xee0b5d8b
      * @param _addr address of the player you want to lookup 
      * @return player ID 
-     * @return player name
      * @return keys owned (current round)
      * @return winnings vault
      * @return general vault 
