@@ -1,0 +1,515 @@
+{
+  "contractName": "modularLong",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "playerID",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "playerAddress",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "playerName",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "isNewPlayer",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "name": "affiliateID",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "affiliateAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "affiliateName",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "amountPaid",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "timeStamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "onNewName",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "compressedData",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "compressedIDs",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "playerAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "ethIn",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "keysBought",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "winnerAddr",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "winnerName",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "amountWon",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "newPot",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "P3DAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "genAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "potAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "onEndTx",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "playerID",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "ethOut",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "timeStamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "onWithdraw",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "playerAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "ethOut",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "compressedData",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "compressedIDs",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "winnerAddr",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountWon",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "newPot",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "P3DAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "genAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "onWithdrawAndDistribute",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "playerAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "ethIn",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "compressedData",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "compressedIDs",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "winnerAddr",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "winnerName",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "amountWon",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "newPot",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "P3DAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "genAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "onBuyAndDistribute",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "playerAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "compressedData",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "compressedIDs",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "winnerAddr",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "winnerName",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "amountWon",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "newPot",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "P3DAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "genAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "onReLoadAndDistribute",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "affiliateID",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "roundID",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "buyerID",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "timeStamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "onAffiliatePayout",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "roundID",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "amountAddedToPot",
+          "type": "uint256"
+        }
+      ],
+      "name": "onPotSwapDeposit",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058205d92d932140e1c2c2663bbb9e95b66a39adb8e0d757ded2693a2ea9c11e11fc50029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058205d92d932140e1c2c2663bbb9e95b66a39adb8e0d757ded2693a2ea9c11e11fc50029",
+  "sourceMap": "53:36:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;53:36:7;;;;;;;",
+  "deployedSourceMap": "53:36:7:-;;;;;",
+  "source": "pragma solidity ^0.4.24;\n\nimport \"./F3Devents.sol\";\n\ncontract modularLong is F3Devents {}",
+  "sourcePath": "/root/projects/fomo3d_clone/contracts/modularLong.sol",
+  "ast": {
+    "absolutePath": "/root/projects/fomo3d_clone/contracts/modularLong.sol",
+    "exportedSymbols": {
+      "modularLong": [
+        3384
+      ]
+    },
+    "id": 3385,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3380,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "absolutePath": "/root/projects/fomo3d_clone/contracts/F3Devents.sol",
+        "file": "./F3Devents.sol",
+        "id": 3381,
+        "nodeType": "ImportDirective",
+        "scope": 3385,
+        "sourceUnit": 137,
+        "src": "26:25:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3382,
+              "name": "F3Devents",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 136,
+              "src": "77:9:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_F3Devents_$136",
+                "typeString": "contract F3Devents"
+              }
+            },
+            "id": 3383,
+            "nodeType": "InheritanceSpecifier",
+            "src": "77:9:7"
+          }
+        ],
+        "contractDependencies": [
+          136
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 3384,
+        "linearizedBaseContracts": [
+          3384,
+          136
+        ],
+        "name": "modularLong",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3385,
+        "src": "53:36:7"
+      }
+    ],
+    "src": "0:89:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/root/projects/fomo3d_clone/contracts/modularLong.sol",
+    "exportedSymbols": {
+      "modularLong": [
+        3384
+      ]
+    },
+    "id": 3385,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3380,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "absolutePath": "/root/projects/fomo3d_clone/contracts/F3Devents.sol",
+        "file": "./F3Devents.sol",
+        "id": 3381,
+        "nodeType": "ImportDirective",
+        "scope": 3385,
+        "sourceUnit": 137,
+        "src": "26:25:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3382,
+              "name": "F3Devents",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 136,
+              "src": "77:9:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_F3Devents_$136",
+                "typeString": "contract F3Devents"
+              }
+            },
+            "id": 3383,
+            "nodeType": "InheritanceSpecifier",
+            "src": "77:9:7"
+          }
+        ],
+        "contractDependencies": [
+          136
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 3384,
+        "linearizedBaseContracts": [
+          3384,
+          136
+        ],
+        "name": "modularLong",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3385,
+        "src": "53:36:7"
+      }
+    ],
+    "src": "0:89:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-07-29T23:06:53.660Z"
+}

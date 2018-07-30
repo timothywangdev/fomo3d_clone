@@ -1,0 +1,167 @@
+{
+  "contractName": "otherFoMo3D",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "potSwap",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.24;\n\ninterface otherFoMo3D {\n    function potSwap() external payable;\n}",
+  "sourcePath": "/root/projects/fomo3d_clone/contracts/interface/otherFoMo3D.sol",
+  "ast": {
+    "absolutePath": "/root/projects/fomo3d_clone/contracts/interface/otherFoMo3D.sol",
+    "exportedSymbols": {
+      "otherFoMo3D": [
+        4451
+      ]
+    },
+    "id": 4452,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4447,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:16"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 4451,
+        "linearizedBaseContracts": [
+          4451
+        ],
+        "name": "otherFoMo3D",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 4450,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "potSwap",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4448,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "70:2:16"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 4449,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "89:0:16"
+            },
+            "scope": 4451,
+            "src": "54:36:16",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4452,
+        "src": "26:66:16"
+      }
+    ],
+    "src": "0:92:16"
+  },
+  "legacyAST": {
+    "absolutePath": "/root/projects/fomo3d_clone/contracts/interface/otherFoMo3D.sol",
+    "exportedSymbols": {
+      "otherFoMo3D": [
+        4451
+      ]
+    },
+    "id": 4452,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4447,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:16"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 4451,
+        "linearizedBaseContracts": [
+          4451
+        ],
+        "name": "otherFoMo3D",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 4450,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "potSwap",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4448,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "70:2:16"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 4449,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "89:0:16"
+            },
+            "scope": 4451,
+            "src": "54:36:16",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4452,
+        "src": "26:66:16"
+      }
+    ],
+    "src": "0:92:16"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-07-27T05:30:07.964Z"
+}
