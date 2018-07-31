@@ -31,6 +31,7 @@ class FomoService {
     this.instance = await Utils.getFomo()
     let addr = await this.instance.token.call()
     this.token = await Utils.getToken(addr)
+    this.tokenDecimals = 18
   }
 
   getInstanceAddress () {
@@ -54,11 +55,40 @@ class FomoService {
   }
 
   async getPlayerVaults (addr) {
-    return this.instance.getPlayerVaults(addr)
+    return this.instance.getPlayerVaults.call(addr)
   }
 
   async getTokenAllowance (addr) {
-    return this.token.allowance(addr, this.instance.address)
+    return this.token.allowance.call(addr, this.instance.address)
+  }
+
+  async getTokenBalance (addr) {
+    return this.token.balanceOf.call(addr)
+  }
+
+  async approveToken (tokens) {
+    let allowance = await this.getTokenAllowance(Utils.account)
+    if (tokens.gt(allowance)) {
+      // not enough allowance, approve more
+      return this.token.approve((tokens.minus(allowance)).toString())
+    }
+  }
+
+  async buy (affCode, team, tokens) {
+    let allowance = await this.getTokenAllowance(Utils.account)
+    console.log(allowance, tokens)
+    if (tokens.gt(allowance)) {
+      // enough allowance
+      toast.error('Not enough tokens approved for transfer', {
+        position: toast.POSITION.TOP_CENTER
+      })
+      return
+    }
+    await this.instance.buyXaddr(affCode, team, tokens.toString())
+  }
+
+  async iWantXKeys (keys) {
+    return this.instance.iWantXKeys.call(keys.toString())
   }
 }
 

@@ -3,7 +3,7 @@ import logo from './logo.svg'
 import './App.css'
 import { Grid, Input, Message, Container, Header, Divider, Button, Segment, Step, Icon, Statistic, Form, Image, Menu, Label, List} from 'semantic-ui-react'
 import { connect } from 'react-redux'
-import { getData } from './actions/fomo'
+import { getData, getBuyPrice, buy } from './actions/fomo'
 import Utils from './utils/utils.js'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -46,6 +46,27 @@ class App extends Component {
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
+  buyOnSubmit = () => {
+    let master = this.state.master
+    if (!this.props.fataError)
+      if (this.state.buyAmount && this.state.buyAmount != '') {
+        this.props.buy(master, this.state.buyAmount)
+      } else {
+        this.props.buy(master, '1')
+      }
+  }
+
+  buyAmountOnChange = (event, data) => {
+    this.setState({buyAmount: data.value})
+    if (!this.props.fataError) {
+      if (data.value !== '') {
+        this.props.getBuyPrice(data.value)
+      } else {
+        this.props.getBuyPrice('1')
+      }
+    }
+  }
+
   render () {
     if (!this.props || !this.props.roundInfo) {
       return (
@@ -56,17 +77,17 @@ class App extends Component {
 
     const { activeItem } = this.state
 
-    const { roundInfo, playerInfo, vaultsInfo, tokenInfo } = this.props
+    const { roundInfo, playerInfo, vaultsInfo, tokenInfo, buyPrice, buyTotalPrice } = this.props
 
     return (
       <div className='fomo' style={{marginTop: '10%'}}>
-      <ToastContainer />
-      {/*
-          Heads up! The styles below are necessary for the correct render of this example.
-          You can do same with CSS, the main idea is that all the elements up to the `Grid`
-          below must have a height of 100%.
-        */}
-      <style>{`
+        <ToastContainer />
+        {/*
+            Heads up! The styles below are necessary for the correct render of this example.
+            You can do same with CSS, the main idea is that all the elements up to the `Grid`
+            below must have a height of 100%.
+          */}
+        <style>{`
       body > div,
       body > div > div,
       body > div > div > div.fomo {
@@ -86,9 +107,9 @@ class App extends Component {
     50%  { box-shadow: 0 0 30px white; }
     100% { box-shadow: 0 0 0 white; }
 }
-      `}
+          `}
         </style>
-      <Grid textAlign='center' style={{ height: '100%' }}>
+        <Grid textAlign='center' style={{ height: '100%' }}>
           <Grid.Column style={{ maxWidth: 450 }}>
             <Grid.Row>
               <Segment circular style={square}>
@@ -142,81 +163,106 @@ class App extends Component {
                     name='vault'
                     active={activeItem === 'vault'}
                     onClick={this.handleItemClick}
-      />
-      
-      </Menu>
-      { activeItem === 'purchase' &&
-        <Segment inverted style={{backgroundColor: '#343a40', topMargin: '0px', paddingTop: '0px'}}>
-          <Segment clearing style={{backgroundColor: '#2d3238'}} >
-            <Header inverted as='h5' floated='left'>
-              Tokens Approved for Transfer
-            </Header>
-            <Header inverted as='h5' floated='right' style={{
-              textShadow: '0 0 5px #2b002b, 0 0 20px #cc9600, 0 0 10px #ff9900',
-              color: 'white'}}>
-              { tokenInfo.allowance  } XYZ
-            </Header>
-          </Segment>
-          <Input
-            fluid
-            labelPosition='right'
-            placeholder='1' >
-            <Label basic> <Icon name='key' /> </Label>
-            <input />
-            <Label>@ 0.02191514 XYZ</Label>
-          </Input>
-          <Button.Group fluid style={{paddingTop: '2%'}}>
-            <Button positive> <Icon name='ethereum' />Send XYZ </Button>
-            <Button.Or />
-            <Button > <Icon name='dollar sign' /> Use Vault </Button>
-          </Button.Group>
-        </Segment>
-      }
-      { activeItem === 'round' &&
-        <Segment inverted style={{backgroundColor: '#343a40', topMargin: '0px', paddingTop: '0px'}}>
-          <div>
-            <Segment clearing style={{backgroundColor: '#2d3238'}} >
-              <Header inverted as='h5' floated='left'>
-                Your Keys
-              </Header>
-              <Header inverted as='h5' floated='right' style={{
-                textShadow: '0 0 5px #2b002b, 0 0 20px #cc9600, 0 0 10px #ff9900',
-                color: 'white'}}>
-                { playerInfo.keys } <Icon name='key' />
-              </Header>
-            </Segment>
-            <Segment clearing style={{backgroundColor: '#2d3238'}} >
-              <Header inverted as='h5' floated='left'>
-                Your Earnings 
-              </Header>
-              <Header inverted as='h5' floated='right' style={{
-                textShadow: '0 0 5px #2b002b, 0 0 20px #cc9600, 0 0 10px #ff9900',
-                color: 'white'}}>
-                { playerInfo.earnings } XYZ
-              </Header>
-            </Segment>
-            <Divider horizontal inverted>
-              Round Stats
-            </Divider>
-            <Segment clearing style={{backgroundColor: '#2d3238'}} >
-              <Header inverted as='h5' floated='left'>
-                Total Keys
-              </Header>
-              <Header inverted as='h5' floated='right'>
-                { roundInfo.keys}
-              </Header>
-            </Segment>
-            <Segment clearing style={{backgroundColor: '#2d3238'}} >
-              <Header inverted as='h5' floated='left'>
-                Total XYZ purchased
-              </Header>
-              <Header inverted as='h5' floated='right'>
-                { roundInfo.eth }
-              </Header>
-            </Segment>
-          </div>
-        </Segment>
-      }
+                  />
+                  
+                </Menu>
+                { activeItem === 'purchase' &&
+                  <Segment inverted style={{backgroundColor: '#343a40', topMargin: '0px', paddingTop: '0px'}}>
+                    <Segment clearing style={{backgroundColor: '#2d3238'}} >
+                      <Header inverted as='h5' floated='left'>
+                        Token Balance
+                      </Header>
+                      <Header inverted as='h5' floated='right' style={{
+                        textShadow: '0 0 5px #2b002b, 0 0 20px #cc9600, 0 0 10px #ff9900',
+                        color: 'white'}}>
+                        { tokenInfo.balance  } XYZ
+                      </Header>
+                    </Segment>
+                    <Segment clearing style={{backgroundColor: '#2d3238'}} >
+                      <Header inverted as='h5' floated='left'>
+                        Tokens Approved for Transfer
+                      </Header>
+                      <Header inverted as='h5' floated='right' style={{
+                        textShadow: '0 0 5px #2b002b, 0 0 20px #cc9600, 0 0 10px #ff9900',
+                        color: 'white'}}>
+                        { tokenInfo.allowance  } XYZ
+                      </Header>
+                      <Input
+                        action={{ color: 'grey', labelPosition: 'left', icon: 'clipboard check', content: 'Approve' }}
+                        actionPosition='left'
+                        label={{ basic: true, content: 'XYZ', color: 'white' }}
+                        labelPosition='right'
+                        placeholder='Search...'
+                        defaultValue='10'
+                      />
+                    </Segment>
+                    <Input
+                      fluid
+                      labelPosition='right'
+                      placeholder='1'
+                      defaultValue='1'
+                      onChange={this.buyAmountOnChange} >
+                      <Label basic> <Icon name='key' /> </Label>
+                      <input />
+                      <Label>@ { buyTotalPrice ? buyTotalPrice : buyPrice } XYZ</Label>
+                    </Input>
+                    <Button.Group fluid style={{paddingTop: '2%'}}>
+                      <Button
+                        positive
+                        onClick={this.buyOnSubmit}
+                      >
+                        <Icon name='ethereum' />Send XYZ
+                      </Button>
+                      <Button.Or />
+                      <Button > <Icon name='dollar sign' /> Use Vault </Button>
+                    </Button.Group>
+                  </Segment>
+                }
+                { activeItem === 'round' &&
+                  <Segment inverted style={{backgroundColor: '#343a40', topMargin: '0px', paddingTop: '0px'}}>
+                    <div>
+                      <Segment clearing style={{backgroundColor: '#2d3238'}} >
+                        <Header inverted as='h5' floated='left'>
+                          Your Keys
+                        </Header>
+                        <Header inverted as='h5' floated='right' style={{
+                          textShadow: '0 0 5px #2b002b, 0 0 20px #cc9600, 0 0 10px #ff9900',
+                          color: 'white'}}>
+                          { playerInfo.keys } <Icon name='key' />
+                        </Header>
+                      </Segment>
+                      <Segment clearing style={{backgroundColor: '#2d3238'}} >
+                        <Header inverted as='h5' floated='left'>
+                          Your Earnings 
+                        </Header>
+                        <Header inverted as='h5' floated='right' style={{
+                          textShadow: '0 0 5px #2b002b, 0 0 20px #cc9600, 0 0 10px #ff9900',
+                          color: 'white'}}>
+                          { playerInfo.earnings } XYZ
+                        </Header>
+                      </Segment>
+                      <Divider horizontal inverted>
+                        Round Stats
+                      </Divider>
+                      <Segment clearing style={{backgroundColor: '#2d3238'}} >
+                        <Header inverted as='h5' floated='left'>
+                          Total Keys
+                        </Header>
+                        <Header inverted as='h5' floated='right'>
+                          { roundInfo.keys}
+                        </Header>
+                      </Segment>
+                      <Segment clearing style={{backgroundColor: '#2d3238'}} >
+                        <Header inverted as='h5' floated='left'>
+                          Total XYZ purchased
+                        </Header>
+                        <Header inverted as='h5' floated='right'>
+                          { roundInfo.eth }
+                        </Header>
+                      </Segment>
+                    </div>
+                  </Segment>
+                }
                 { activeItem === 'vault' &&
                   <Segment inverted style={{backgroundColor: '#343a40', topMargin: '0px', paddingTop: '0px'}}>
                     <div>
@@ -277,13 +323,17 @@ const mapStateToProps = state => {
     roundInfo: state.fomoReducer.roundInfo,
     playerInfo: state.fomoReducer.playerInfo,
     vaultsInfo: state.fomoReducer.vaultsInfo,
-    tokenInfo: state.fomoReducer.tokenInfo
+    tokenInfo: state.fomoReducer.tokenInfo,
+    buyPrice: state.fomoReducer.buyPrice,
+    buyTotalPrice: state.fomoReducer.buyTotalPrice
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return ({
     getData: () => { dispatch(getData()) },
+    getBuyPrice: (keys) => { dispatch(getBuyPrice(keys)) },
+    buy: (affCode, keys) =>  { dispatch(buy(affCode, keys)) }
   })
 }
 

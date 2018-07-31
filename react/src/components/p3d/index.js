@@ -43,7 +43,7 @@ class App extends Component {
 
   buyOnSubmit = () => {
     if (!this.props.fataError)
-      this.props.buy(this.state.buyAmount, this.state.master)
+      this.props.buy(master, this.state.buyAmount)
   }
 
   sellAmountOnChange = (event, data) => {

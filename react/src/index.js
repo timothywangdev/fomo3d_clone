@@ -50,6 +50,7 @@ async function init () {
           console.log(account, accounts[0])
           web3.eth.defaultAccount = accounts[0]
           account = accounts[0]
+          Utils.account = accounts[0]
           window.location.reload()
         }
       })

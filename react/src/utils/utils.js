@@ -1,6 +1,8 @@
 import contract from 'truffle-contract'
 import Eth from 'ethjs'
+import {BigNumber} from 'bignumber.js'
 var Web3 = require('web3')
+
 
 var createErrorHandler = function (name) {
   return function (err) {
@@ -89,5 +91,23 @@ export default class Utils {
     _c.setProvider(this.getProvider())
     _c.defaults({from: this.defaultAccount()})
     return _c.at(addr)
+  }
+
+  static humanUnit (big, fixed = 4, decimals = 18) {
+    if (!big) return '0.0000'
+    let base = new BigNumber(10).pow(new BigNumber(decimals))
+    big = big.div(base)
+    return big.toFixed(fixed)
+  }
+
+  static basicUnit (val, decimals = 18) {
+    let base = new BigNumber(10).pow(new BigNumber(decimals))
+    if (val) {
+      return (new BigNumber(val)).times(base)
+    }
+  }
+
+  static getBase (exp) {
+    return new BigNumber(10).pow(new BigNumber(exp))
   }
 }

@@ -160,7 +160,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 315,
-        "sourceUnit": 3849,
+        "sourceUnit": 3865,
         "src": "4312:41:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -171,7 +171,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 315,
-        "sourceUnit": 4980,
+        "sourceUnit": 4996,
         "src": "4354:32:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -182,7 +182,7 @@
         "id": 4,
         "nodeType": "ImportDirective",
         "scope": 315,
-        "sourceUnit": 5160,
+        "sourceUnit": 5176,
         "src": "4387:38:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -193,7 +193,7 @@
         "id": 5,
         "nodeType": "ImportDirective",
         "scope": 315,
-        "sourceUnit": 3904,
+        "sourceUnit": 3920,
         "src": "4426:44:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -218,10 +218,10 @@
               "id": 6,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4979,
+              "referencedDeclaration": 4995,
               "src": "4500:8:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$4979",
+                "typeIdentifier": "t_contract$_SafeMath_$4995",
                 "typeString": "library SafeMath"
               }
             },
@@ -245,10 +245,10 @@
               "id": 9,
               "name": "UintCompressor",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5159,
+              "referencedDeclaration": 5175,
               "src": "4532:14:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_UintCompressor_$5159",
+                "typeIdentifier": "t_contract$_UintCompressor_$5175",
                 "typeString": "library UintCompressor"
               }
             },
@@ -275,7 +275,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+              "typeIdentifier": "t_contract$_HourglassInterface_$3919",
               "typeString": "contract HourglassInterface"
             },
             "typeName": {
@@ -283,10 +283,10 @@
               "id": 12,
               "name": "HourglassInterface",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3903,
+              "referencedDeclaration": 3919,
               "src": "4565:18:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                 "typeString": "contract HourglassInterface"
               }
             },
@@ -323,10 +323,10 @@
                 "name": "HourglassInterface",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 3903,
+                "referencedDeclaration": 3919,
                 "src": "4608:18:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_type$_t_contract$_HourglassInterface_$3903_$",
+                  "typeIdentifier": "t_type$_t_contract$_HourglassInterface_$3919_$",
                   "typeString": "type(contract HourglassInterface)"
                 }
               },
@@ -340,7 +340,7 @@
               "nodeType": "FunctionCall",
               "src": "4608:62:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                 "typeString": "contract HourglassInterface"
               }
             },
@@ -572,7 +572,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5255,
+                      "referencedDeclaration": 5271,
                       "src": "5092:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -745,10 +745,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        5258,
-                        5259
+                        5274,
+                        5275
                       ],
-                      "referencedDeclaration": 5259,
+                      "referencedDeclaration": 5275,
                       "src": "5203:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -814,7 +814,7 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 5276,
+                              "referencedDeclaration": 5292,
                               "src": "5539:4:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_Divies_$314",
@@ -1326,10 +1326,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        5258,
-                        5259
+                        5274,
+                        5275
                       ],
-                      "referencedDeclaration": 5259,
+                      "referencedDeclaration": 5275,
                       "src": "6748:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1395,7 +1395,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5255,
+                      "referencedDeclaration": 5271,
                       "src": "6888:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -1463,7 +1463,7 @@
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 5276,
+                          "referencedDeclaration": 5292,
                           "src": "6931:4:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_contract$_Divies_$314",
@@ -1722,7 +1722,7 @@
                           "lValueRequested": false,
                           "memberName": "sub",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 4843,
+                          "referencedDeclaration": 4859,
                           "src": "7151:18:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -1854,7 +1854,7 @@
                           "lValueRequested": false,
                           "memberName": "add",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 4868,
+                          "referencedDeclaration": 4884,
                           "src": "7226:26:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -1883,7 +1883,7 @@
                         "name": "now",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 5257,
+                        "referencedDeclaration": 5273,
                         "src": "7264:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2023,7 +2023,7 @@
                               "lValueRequested": false,
                               "memberName": "insert",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 5076,
+                              "referencedDeclaration": 5092,
                               "src": "8713:22:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -2232,7 +2232,7 @@
                                 "referencedDeclaration": 16,
                                 "src": "7544:12:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                  "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                   "typeString": "contract HourglassInterface"
                                 }
                               },
@@ -2243,7 +2243,7 @@
                               "lValueRequested": false,
                               "memberName": "balanceOf",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 3888,
+                              "referencedDeclaration": 3904,
                               "src": "7544:22:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -2280,7 +2280,7 @@
                                 "referencedDeclaration": 16,
                                 "src": "7579:12:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                  "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                   "typeString": "contract HourglassInterface"
                                 }
                               },
@@ -2291,7 +2291,7 @@
                               "lValueRequested": false,
                               "memberName": "stakingRequirement",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 3902,
+                              "referencedDeclaration": 3918,
                               "src": "7579:31:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
@@ -2588,7 +2588,7 @@
                                   "lValueRequested": false,
                                   "memberName": "mul",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 4804,
+                                  "referencedDeclaration": 4820,
                                   "src": "7773:8:0",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -2710,7 +2710,7 @@
                                   "referencedDeclaration": 16,
                                   "src": "7861:12:0",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                    "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                     "typeString": "contract HourglassInterface"
                                   }
                                 },
@@ -2721,7 +2721,7 @@
                                 "lValueRequested": false,
                                 "memberName": "buy",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3860,
+                                "referencedDeclaration": 3876,
                                 "src": "7861:16:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_external_payable$_t_address_$returns$_t_uint256_$",
@@ -2790,7 +2790,7 @@
                                       "name": "this",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 5276,
+                                      "referencedDeclaration": 5292,
                                       "src": "7961:4:0",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_contract$_Divies_$314",
@@ -2849,7 +2849,7 @@
                                   "referencedDeclaration": 16,
                                   "src": "7930:12:0",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                    "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                     "typeString": "contract HourglassInterface"
                                   }
                                 },
@@ -2860,7 +2860,7 @@
                                 "lValueRequested": false,
                                 "memberName": "balanceOf",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3888,
+                                "referencedDeclaration": 3904,
                                 "src": "7930:22:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -2898,7 +2898,7 @@
                               "referencedDeclaration": 16,
                               "src": "7912:12:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                 "typeString": "contract HourglassInterface"
                               }
                             },
@@ -2909,7 +2909,7 @@
                             "lValueRequested": false,
                             "memberName": "sell",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 3865,
+                            "referencedDeclaration": 3881,
                             "src": "7912:17:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
@@ -2979,7 +2979,7 @@
                                   "name": "this",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 5276,
+                                  "referencedDeclaration": 5292,
                                   "src": "8121:4:0",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_contract$_Divies_$314",
@@ -3038,7 +3038,7 @@
                               "referencedDeclaration": 16,
                               "src": "8088:12:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                 "typeString": "contract HourglassInterface"
                               }
                             },
@@ -3049,7 +3049,7 @@
                             "lValueRequested": false,
                             "memberName": "dividendsOf",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 3881,
+                            "referencedDeclaration": 3897,
                             "src": "8088:24:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -3094,7 +3094,7 @@
                                     "referencedDeclaration": 16,
                                     "src": "8317:12:0",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                      "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                       "typeString": "contract HourglassInterface"
                                     }
                                   },
@@ -3105,7 +3105,7 @@
                                   "lValueRequested": false,
                                   "memberName": "reinvest",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 3868,
+                                  "referencedDeclaration": 3884,
                                   "src": "8317:21:0",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
@@ -3146,7 +3146,7 @@
                                             "name": "this",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 5276,
+                                            "referencedDeclaration": 5292,
                                             "src": "8407:4:0",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_contract$_Divies_$314",
@@ -3205,7 +3205,7 @@
                                         "referencedDeclaration": 16,
                                         "src": "8376:12:0",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                          "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                           "typeString": "contract HourglassInterface"
                                         }
                                       },
@@ -3216,7 +3216,7 @@
                                       "lValueRequested": false,
                                       "memberName": "balanceOf",
                                       "nodeType": "MemberAccess",
-                                      "referencedDeclaration": 3888,
+                                      "referencedDeclaration": 3904,
                                       "src": "8376:22:0",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -3254,7 +3254,7 @@
                                     "referencedDeclaration": 16,
                                     "src": "8358:12:0",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                      "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                       "typeString": "contract HourglassInterface"
                                     }
                                   },
@@ -3265,7 +3265,7 @@
                                   "lValueRequested": false,
                                   "memberName": "sell",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 3865,
+                                  "referencedDeclaration": 3881,
                                   "src": "8358:17:0",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
@@ -3376,7 +3376,7 @@
                                           "lValueRequested": false,
                                           "memberName": "mul",
                                           "nodeType": "MemberAccess",
-                                          "referencedDeclaration": 4804,
+                                          "referencedDeclaration": 4820,
                                           "src": "8553:12:0",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -3513,7 +3513,7 @@
                               "referencedDeclaration": 16,
                               "src": "8641:12:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                 "typeString": "contract HourglassInterface"
                               }
                             },
@@ -3524,7 +3524,7 @@
                             "lValueRequested": false,
                             "memberName": "withdraw",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 3871,
+                            "referencedDeclaration": 3887,
                             "src": "8641:21:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
@@ -3624,7 +3624,7 @@
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5257,
+                      "referencedDeclaration": 5273,
                       "src": "8889:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3673,7 +3673,7 @@
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 5257,
+                          "referencedDeclaration": 5273,
                           "src": "8988:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -3752,7 +3752,7 @@
                         "lValueRequested": false,
                         "memberName": "insert",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 5076,
+                        "referencedDeclaration": 5092,
                         "src": "8965:22:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -3937,7 +3937,7 @@
                         "lValueRequested": false,
                         "memberName": "insert",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 5076,
+                        "referencedDeclaration": 5092,
                         "src": "9027:22:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -4079,7 +4079,7 @@
                         "lValueRequested": false,
                         "memberName": "insert",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 5076,
+                        "referencedDeclaration": 5092,
                         "src": "9112:22:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -4221,7 +4221,7 @@
                         "lValueRequested": false,
                         "memberName": "insert",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 5076,
+                        "referencedDeclaration": 5092,
                         "src": "9186:22:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -4306,7 +4306,7 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 5276,
+                              "referencedDeclaration": 5292,
                               "src": "9323:4:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_Divies_$314",
@@ -4538,7 +4538,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 315,
-        "sourceUnit": 3849,
+        "sourceUnit": 3865,
         "src": "4312:41:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -4549,7 +4549,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 315,
-        "sourceUnit": 4980,
+        "sourceUnit": 4996,
         "src": "4354:32:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -4560,7 +4560,7 @@
         "id": 4,
         "nodeType": "ImportDirective",
         "scope": 315,
-        "sourceUnit": 5160,
+        "sourceUnit": 5176,
         "src": "4387:38:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -4571,7 +4571,7 @@
         "id": 5,
         "nodeType": "ImportDirective",
         "scope": 315,
-        "sourceUnit": 3904,
+        "sourceUnit": 3920,
         "src": "4426:44:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -4596,10 +4596,10 @@
               "id": 6,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4979,
+              "referencedDeclaration": 4995,
               "src": "4500:8:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$4979",
+                "typeIdentifier": "t_contract$_SafeMath_$4995",
                 "typeString": "library SafeMath"
               }
             },
@@ -4623,10 +4623,10 @@
               "id": 9,
               "name": "UintCompressor",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5159,
+              "referencedDeclaration": 5175,
               "src": "4532:14:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_UintCompressor_$5159",
+                "typeIdentifier": "t_contract$_UintCompressor_$5175",
                 "typeString": "library UintCompressor"
               }
             },
@@ -4653,7 +4653,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+              "typeIdentifier": "t_contract$_HourglassInterface_$3919",
               "typeString": "contract HourglassInterface"
             },
             "typeName": {
@@ -4661,10 +4661,10 @@
               "id": 12,
               "name": "HourglassInterface",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3903,
+              "referencedDeclaration": 3919,
               "src": "4565:18:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                 "typeString": "contract HourglassInterface"
               }
             },
@@ -4701,10 +4701,10 @@
                 "name": "HourglassInterface",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 3903,
+                "referencedDeclaration": 3919,
                 "src": "4608:18:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_type$_t_contract$_HourglassInterface_$3903_$",
+                  "typeIdentifier": "t_type$_t_contract$_HourglassInterface_$3919_$",
                   "typeString": "type(contract HourglassInterface)"
                 }
               },
@@ -4718,7 +4718,7 @@
               "nodeType": "FunctionCall",
               "src": "4608:62:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                 "typeString": "contract HourglassInterface"
               }
             },
@@ -4950,7 +4950,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5255,
+                      "referencedDeclaration": 5271,
                       "src": "5092:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -5123,10 +5123,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        5258,
-                        5259
+                        5274,
+                        5275
                       ],
-                      "referencedDeclaration": 5259,
+                      "referencedDeclaration": 5275,
                       "src": "5203:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -5192,7 +5192,7 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 5276,
+                              "referencedDeclaration": 5292,
                               "src": "5539:4:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_Divies_$314",
@@ -5704,10 +5704,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        5258,
-                        5259
+                        5274,
+                        5275
                       ],
-                      "referencedDeclaration": 5259,
+                      "referencedDeclaration": 5275,
                       "src": "6748:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -5773,7 +5773,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5255,
+                      "referencedDeclaration": 5271,
                       "src": "6888:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -5841,7 +5841,7 @@
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 5276,
+                          "referencedDeclaration": 5292,
                           "src": "6931:4:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_contract$_Divies_$314",
@@ -6100,7 +6100,7 @@
                           "lValueRequested": false,
                           "memberName": "sub",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 4843,
+                          "referencedDeclaration": 4859,
                           "src": "7151:18:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -6232,7 +6232,7 @@
                           "lValueRequested": false,
                           "memberName": "add",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 4868,
+                          "referencedDeclaration": 4884,
                           "src": "7226:26:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -6261,7 +6261,7 @@
                         "name": "now",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 5257,
+                        "referencedDeclaration": 5273,
                         "src": "7264:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -6401,7 +6401,7 @@
                               "lValueRequested": false,
                               "memberName": "insert",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 5076,
+                              "referencedDeclaration": 5092,
                               "src": "8713:22:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -6610,7 +6610,7 @@
                                 "referencedDeclaration": 16,
                                 "src": "7544:12:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                  "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                   "typeString": "contract HourglassInterface"
                                 }
                               },
@@ -6621,7 +6621,7 @@
                               "lValueRequested": false,
                               "memberName": "balanceOf",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 3888,
+                              "referencedDeclaration": 3904,
                               "src": "7544:22:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -6658,7 +6658,7 @@
                                 "referencedDeclaration": 16,
                                 "src": "7579:12:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                  "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                   "typeString": "contract HourglassInterface"
                                 }
                               },
@@ -6669,7 +6669,7 @@
                               "lValueRequested": false,
                               "memberName": "stakingRequirement",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 3902,
+                              "referencedDeclaration": 3918,
                               "src": "7579:31:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
@@ -6966,7 +6966,7 @@
                                   "lValueRequested": false,
                                   "memberName": "mul",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 4804,
+                                  "referencedDeclaration": 4820,
                                   "src": "7773:8:0",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -7088,7 +7088,7 @@
                                   "referencedDeclaration": 16,
                                   "src": "7861:12:0",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                    "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                     "typeString": "contract HourglassInterface"
                                   }
                                 },
@@ -7099,7 +7099,7 @@
                                 "lValueRequested": false,
                                 "memberName": "buy",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3860,
+                                "referencedDeclaration": 3876,
                                 "src": "7861:16:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_external_payable$_t_address_$returns$_t_uint256_$",
@@ -7168,7 +7168,7 @@
                                       "name": "this",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 5276,
+                                      "referencedDeclaration": 5292,
                                       "src": "7961:4:0",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_contract$_Divies_$314",
@@ -7227,7 +7227,7 @@
                                   "referencedDeclaration": 16,
                                   "src": "7930:12:0",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                    "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                     "typeString": "contract HourglassInterface"
                                   }
                                 },
@@ -7238,7 +7238,7 @@
                                 "lValueRequested": false,
                                 "memberName": "balanceOf",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3888,
+                                "referencedDeclaration": 3904,
                                 "src": "7930:22:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -7276,7 +7276,7 @@
                               "referencedDeclaration": 16,
                               "src": "7912:12:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                 "typeString": "contract HourglassInterface"
                               }
                             },
@@ -7287,7 +7287,7 @@
                             "lValueRequested": false,
                             "memberName": "sell",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 3865,
+                            "referencedDeclaration": 3881,
                             "src": "7912:17:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
@@ -7357,7 +7357,7 @@
                                   "name": "this",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 5276,
+                                  "referencedDeclaration": 5292,
                                   "src": "8121:4:0",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_contract$_Divies_$314",
@@ -7416,7 +7416,7 @@
                               "referencedDeclaration": 16,
                               "src": "8088:12:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                 "typeString": "contract HourglassInterface"
                               }
                             },
@@ -7427,7 +7427,7 @@
                             "lValueRequested": false,
                             "memberName": "dividendsOf",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 3881,
+                            "referencedDeclaration": 3897,
                             "src": "8088:24:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -7472,7 +7472,7 @@
                                     "referencedDeclaration": 16,
                                     "src": "8317:12:0",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                      "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                       "typeString": "contract HourglassInterface"
                                     }
                                   },
@@ -7483,7 +7483,7 @@
                                   "lValueRequested": false,
                                   "memberName": "reinvest",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 3868,
+                                  "referencedDeclaration": 3884,
                                   "src": "8317:21:0",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
@@ -7524,7 +7524,7 @@
                                             "name": "this",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 5276,
+                                            "referencedDeclaration": 5292,
                                             "src": "8407:4:0",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_contract$_Divies_$314",
@@ -7583,7 +7583,7 @@
                                         "referencedDeclaration": 16,
                                         "src": "8376:12:0",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                          "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                           "typeString": "contract HourglassInterface"
                                         }
                                       },
@@ -7594,7 +7594,7 @@
                                       "lValueRequested": false,
                                       "memberName": "balanceOf",
                                       "nodeType": "MemberAccess",
-                                      "referencedDeclaration": 3888,
+                                      "referencedDeclaration": 3904,
                                       "src": "8376:22:0",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -7632,7 +7632,7 @@
                                     "referencedDeclaration": 16,
                                     "src": "8358:12:0",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                      "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                       "typeString": "contract HourglassInterface"
                                     }
                                   },
@@ -7643,7 +7643,7 @@
                                   "lValueRequested": false,
                                   "memberName": "sell",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 3865,
+                                  "referencedDeclaration": 3881,
                                   "src": "8358:17:0",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
@@ -7754,7 +7754,7 @@
                                           "lValueRequested": false,
                                           "memberName": "mul",
                                           "nodeType": "MemberAccess",
-                                          "referencedDeclaration": 4804,
+                                          "referencedDeclaration": 4820,
                                           "src": "8553:12:0",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -7891,7 +7891,7 @@
                               "referencedDeclaration": 16,
                               "src": "8641:12:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_HourglassInterface_$3903",
+                                "typeIdentifier": "t_contract$_HourglassInterface_$3919",
                                 "typeString": "contract HourglassInterface"
                               }
                             },
@@ -7902,7 +7902,7 @@
                             "lValueRequested": false,
                             "memberName": "withdraw",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 3871,
+                            "referencedDeclaration": 3887,
                             "src": "8641:21:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
@@ -8002,7 +8002,7 @@
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5257,
+                      "referencedDeclaration": 5273,
                       "src": "8889:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -8051,7 +8051,7 @@
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 5257,
+                          "referencedDeclaration": 5273,
                           "src": "8988:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -8130,7 +8130,7 @@
                         "lValueRequested": false,
                         "memberName": "insert",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 5076,
+                        "referencedDeclaration": 5092,
                         "src": "8965:22:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -8315,7 +8315,7 @@
                         "lValueRequested": false,
                         "memberName": "insert",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 5076,
+                        "referencedDeclaration": 5092,
                         "src": "9027:22:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -8457,7 +8457,7 @@
                         "lValueRequested": false,
                         "memberName": "insert",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 5076,
+                        "referencedDeclaration": 5092,
                         "src": "9112:22:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -8599,7 +8599,7 @@
                         "lValueRequested": false,
                         "memberName": "insert",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 5076,
+                        "referencedDeclaration": 5092,
                         "src": "9186:22:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -8684,7 +8684,7 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 5276,
+                              "referencedDeclaration": 5292,
                               "src": "9323:4:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_Divies_$314",
@@ -8895,5 +8895,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-07-27T05:30:42.132Z"
+  "updatedAt": "2018-07-31T18:01:56.712Z"
 }

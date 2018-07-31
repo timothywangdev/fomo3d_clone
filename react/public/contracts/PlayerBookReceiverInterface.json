@@ -56,14 +56,14 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/interface/PlayerBookReceiverInterface.sol",
     "exportedSymbols": {
       "PlayerBookReceiverInterface": [
-        3963
+        3979
       ]
     },
-    "id": 3964,
+    "id": 3980,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3944,
+        "id": 3960,
         "literals": [
           "solidity",
           "^",
@@ -79,9 +79,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 3963,
+        "id": 3979,
         "linearizedBaseContracts": [
-          3963
+          3979
         ],
         "name": "PlayerBookReceiverInterface",
         "nodeType": "ContractDefinition",
@@ -89,7 +89,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3955,
+            "id": 3971,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -97,15 +97,15 @@
             "name": "receivePlayerInfo",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3953,
+              "id": 3969,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3946,
+                  "id": 3962,
                   "name": "_pID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3955,
+                  "scope": 3971,
                   "src": "97:12:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -114,7 +114,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3945,
+                    "id": 3961,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "97:7:8",
@@ -128,10 +128,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3948,
+                  "id": 3964,
                   "name": "_addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3955,
+                  "scope": 3971,
                   "src": "111:13:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -140,7 +140,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3947,
+                    "id": 3963,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "111:7:8",
@@ -154,10 +154,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3950,
+                  "id": 3966,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3955,
+                  "scope": 3971,
                   "src": "126:13:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -166,7 +166,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 3949,
+                    "id": 3965,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "126:7:8",
@@ -180,10 +180,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3952,
+                  "id": 3968,
                   "name": "_laff",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3955,
+                  "scope": 3971,
                   "src": "141:13:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -192,7 +192,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3951,
+                    "id": 3967,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "141:7:8",
@@ -209,12 +209,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3954,
+              "id": 3970,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "164:0:8"
             },
-            "scope": 3963,
+            "scope": 3979,
             "src": "70:95:8",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -223,7 +223,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3962,
+            "id": 3978,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -231,15 +231,15 @@
             "name": "receivePlayerNameList",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3960,
+              "id": 3976,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3957,
+                  "id": 3973,
                   "name": "_pID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3962,
+                  "scope": 3978,
                   "src": "201:12:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -248,7 +248,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3956,
+                    "id": 3972,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "201:7:8",
@@ -262,10 +262,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3959,
+                  "id": 3975,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3962,
+                  "scope": 3978,
                   "src": "215:13:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -274,7 +274,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 3958,
+                    "id": 3974,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "215:7:8",
@@ -291,19 +291,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3961,
+              "id": 3977,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "238:0:8"
             },
-            "scope": 3963,
+            "scope": 3979,
             "src": "170:69:8",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 3964,
+        "scope": 3980,
         "src": "26:215:8"
       }
     ],
@@ -313,14 +313,14 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/interface/PlayerBookReceiverInterface.sol",
     "exportedSymbols": {
       "PlayerBookReceiverInterface": [
-        3963
+        3979
       ]
     },
-    "id": 3964,
+    "id": 3980,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3944,
+        "id": 3960,
         "literals": [
           "solidity",
           "^",
@@ -336,9 +336,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 3963,
+        "id": 3979,
         "linearizedBaseContracts": [
-          3963
+          3979
         ],
         "name": "PlayerBookReceiverInterface",
         "nodeType": "ContractDefinition",
@@ -346,7 +346,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3955,
+            "id": 3971,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -354,15 +354,15 @@
             "name": "receivePlayerInfo",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3953,
+              "id": 3969,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3946,
+                  "id": 3962,
                   "name": "_pID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3955,
+                  "scope": 3971,
                   "src": "97:12:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -371,7 +371,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3945,
+                    "id": 3961,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "97:7:8",
@@ -385,10 +385,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3948,
+                  "id": 3964,
                   "name": "_addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3955,
+                  "scope": 3971,
                   "src": "111:13:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -397,7 +397,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3947,
+                    "id": 3963,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "111:7:8",
@@ -411,10 +411,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3950,
+                  "id": 3966,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3955,
+                  "scope": 3971,
                   "src": "126:13:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -423,7 +423,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 3949,
+                    "id": 3965,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "126:7:8",
@@ -437,10 +437,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3952,
+                  "id": 3968,
                   "name": "_laff",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3955,
+                  "scope": 3971,
                   "src": "141:13:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -449,7 +449,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3951,
+                    "id": 3967,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "141:7:8",
@@ -466,12 +466,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3954,
+              "id": 3970,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "164:0:8"
             },
-            "scope": 3963,
+            "scope": 3979,
             "src": "70:95:8",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -480,7 +480,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3962,
+            "id": 3978,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -488,15 +488,15 @@
             "name": "receivePlayerNameList",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3960,
+              "id": 3976,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3957,
+                  "id": 3973,
                   "name": "_pID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3962,
+                  "scope": 3978,
                   "src": "201:12:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -505,7 +505,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3956,
+                    "id": 3972,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "201:7:8",
@@ -519,10 +519,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3959,
+                  "id": 3975,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3962,
+                  "scope": 3978,
                   "src": "215:13:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -531,7 +531,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 3958,
+                    "id": 3974,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "215:7:8",
@@ -548,19 +548,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3961,
+              "id": 3977,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "238:0:8"
             },
-            "scope": 3963,
+            "scope": 3979,
             "src": "170:69:8",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 3964,
+        "scope": 3980,
         "src": "26:215:8"
       }
     ],
@@ -572,5 +572,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-07-27T05:30:42.135Z"
+  "updatedAt": "2018-07-31T18:01:56.734Z"
 }

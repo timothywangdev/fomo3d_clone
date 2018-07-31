@@ -68,14 +68,14 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/interface/F3DexternalSettingsInterface.sol",
     "exportedSymbols": {
       "F3DexternalSettingsInterface": [
-        4190
+        4100
       ]
     },
-    "id": 4191,
+    "id": 4101,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4169,
+        "id": 4079,
         "literals": [
           "solidity",
           "^",
@@ -83,7 +83,7 @@
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:9"
+        "src": "0:24:7"
       },
       {
         "baseContracts": [],
@@ -91,9 +91,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 4190,
+        "id": 4100,
         "linearizedBaseContracts": [
-          4190
+          4100
         ],
         "name": "F3DexternalSettingsInterface",
         "nodeType": "ContractDefinition",
@@ -101,7 +101,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 4174,
+            "id": 4084,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -109,23 +109,23 @@
             "name": "getFastGap",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4170,
+              "id": 4080,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "90:2:9"
+              "src": "90:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4173,
+              "id": 4083,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4172,
+                  "id": 4082,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4174,
-                  "src": "110:7:9",
+                  "scope": 4084,
+                  "src": "110:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -133,10 +133,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4171,
+                    "id": 4081,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "110:7:9",
+                    "src": "110:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -146,10 +146,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "109:9:9"
+              "src": "109:9:7"
             },
-            "scope": 4190,
-            "src": "71:48:9",
+            "scope": 4100,
+            "src": "71:48:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -157,7 +157,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 4179,
+            "id": 4089,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -165,23 +165,23 @@
             "name": "getLongGap",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4175,
+              "id": 4085,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "143:2:9"
+              "src": "143:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4178,
+              "id": 4088,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4177,
+                  "id": 4087,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4179,
-                  "src": "163:7:9",
+                  "scope": 4089,
+                  "src": "163:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -189,10 +189,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4176,
+                    "id": 4086,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "163:7:9",
+                    "src": "163:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -202,10 +202,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "162:9:9"
+              "src": "162:9:7"
             },
-            "scope": 4190,
-            "src": "124:48:9",
+            "scope": 4100,
+            "src": "124:48:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -213,7 +213,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 4184,
+            "id": 4094,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -221,23 +221,23 @@
             "name": "getFastExtra",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4180,
+              "id": 4090,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "198:2:9"
+              "src": "198:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4183,
+              "id": 4093,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4182,
+                  "id": 4092,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4184,
-                  "src": "218:7:9",
+                  "scope": 4094,
+                  "src": "218:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -245,10 +245,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4181,
+                    "id": 4091,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "218:7:9",
+                    "src": "218:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -258,10 +258,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "217:9:9"
+              "src": "217:9:7"
             },
-            "scope": 4190,
-            "src": "177:50:9",
+            "scope": 4100,
+            "src": "177:50:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -269,7 +269,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 4189,
+            "id": 4099,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -277,23 +277,23 @@
             "name": "getLongExtra",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4185,
+              "id": 4095,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "253:2:9"
+              "src": "253:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4188,
+              "id": 4098,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4187,
+                  "id": 4097,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4189,
-                  "src": "273:7:9",
+                  "scope": 4099,
+                  "src": "273:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -301,10 +301,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4186,
+                    "id": 4096,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "273:7:9",
+                    "src": "273:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -314,33 +314,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "272:9:9"
+              "src": "272:9:7"
             },
-            "scope": 4190,
-            "src": "232:50:9",
+            "scope": 4100,
+            "src": "232:50:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 4191,
-        "src": "26:258:9"
+        "scope": 4101,
+        "src": "26:258:7"
       }
     ],
-    "src": "0:284:9"
+    "src": "0:284:7"
   },
   "legacyAST": {
     "absolutePath": "/root/projects/fomo3d_clone/contracts/interface/F3DexternalSettingsInterface.sol",
     "exportedSymbols": {
       "F3DexternalSettingsInterface": [
-        4190
+        4100
       ]
     },
-    "id": 4191,
+    "id": 4101,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4169,
+        "id": 4079,
         "literals": [
           "solidity",
           "^",
@@ -348,7 +348,7 @@
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:9"
+        "src": "0:24:7"
       },
       {
         "baseContracts": [],
@@ -356,9 +356,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 4190,
+        "id": 4100,
         "linearizedBaseContracts": [
-          4190
+          4100
         ],
         "name": "F3DexternalSettingsInterface",
         "nodeType": "ContractDefinition",
@@ -366,7 +366,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 4174,
+            "id": 4084,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -374,23 +374,23 @@
             "name": "getFastGap",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4170,
+              "id": 4080,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "90:2:9"
+              "src": "90:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4173,
+              "id": 4083,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4172,
+                  "id": 4082,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4174,
-                  "src": "110:7:9",
+                  "scope": 4084,
+                  "src": "110:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -398,10 +398,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4171,
+                    "id": 4081,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "110:7:9",
+                    "src": "110:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -411,10 +411,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "109:9:9"
+              "src": "109:9:7"
             },
-            "scope": 4190,
-            "src": "71:48:9",
+            "scope": 4100,
+            "src": "71:48:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -422,7 +422,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 4179,
+            "id": 4089,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -430,23 +430,23 @@
             "name": "getLongGap",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4175,
+              "id": 4085,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "143:2:9"
+              "src": "143:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4178,
+              "id": 4088,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4177,
+                  "id": 4087,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4179,
-                  "src": "163:7:9",
+                  "scope": 4089,
+                  "src": "163:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -454,10 +454,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4176,
+                    "id": 4086,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "163:7:9",
+                    "src": "163:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -467,10 +467,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "162:9:9"
+              "src": "162:9:7"
             },
-            "scope": 4190,
-            "src": "124:48:9",
+            "scope": 4100,
+            "src": "124:48:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -478,7 +478,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 4184,
+            "id": 4094,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -486,23 +486,23 @@
             "name": "getFastExtra",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4180,
+              "id": 4090,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "198:2:9"
+              "src": "198:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4183,
+              "id": 4093,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4182,
+                  "id": 4092,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4184,
-                  "src": "218:7:9",
+                  "scope": 4094,
+                  "src": "218:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -510,10 +510,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4181,
+                    "id": 4091,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "218:7:9",
+                    "src": "218:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -523,10 +523,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "217:9:9"
+              "src": "217:9:7"
             },
-            "scope": 4190,
-            "src": "177:50:9",
+            "scope": 4100,
+            "src": "177:50:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -534,7 +534,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 4189,
+            "id": 4099,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -542,23 +542,23 @@
             "name": "getLongExtra",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4185,
+              "id": 4095,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "253:2:9"
+              "src": "253:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4188,
+              "id": 4098,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4187,
+                  "id": 4097,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4189,
-                  "src": "273:7:9",
+                  "scope": 4099,
+                  "src": "273:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -566,10 +566,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4186,
+                    "id": 4096,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "273:7:9",
+                    "src": "273:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -579,26 +579,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "272:9:9"
+              "src": "272:9:7"
             },
-            "scope": 4190,
-            "src": "232:50:9",
+            "scope": 4100,
+            "src": "232:50:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 4191,
-        "src": "26:258:9"
+        "scope": 4101,
+        "src": "26:258:7"
       }
     ],
-    "src": "0:284:9"
+    "src": "0:284:7"
   },
   "compiler": {
     "name": "solc",
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "2.0.1",
-  "updatedAt": "2018-07-27T05:30:07.963Z"
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-07-27T02:39:02.585Z"
 }

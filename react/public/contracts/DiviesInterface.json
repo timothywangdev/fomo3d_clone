@@ -21,14 +21,14 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/interface/DiviesInterface.sol",
     "exportedSymbols": {
       "DiviesInterface": [
-        3848
+        3864
       ]
     },
-    "id": 3849,
+    "id": 3865,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3844,
+        "id": 3860,
         "literals": [
           "solidity",
           "^",
@@ -44,9 +44,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 3848,
+        "id": 3864,
         "linearizedBaseContracts": [
-          3848
+          3864
         ],
         "name": "DiviesInterface",
         "nodeType": "ContractDefinition",
@@ -54,7 +54,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3847,
+            "id": 3863,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -62,26 +62,26 @@
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3845,
+              "id": 3861,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "74:2:5"
             },
             "payable": true,
             "returnParameters": {
-              "id": 3846,
+              "id": 3862,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "93:0:5"
             },
-            "scope": 3848,
+            "scope": 3864,
             "src": "58:36:5",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 3849,
+        "scope": 3865,
         "src": "26:70:5"
       }
     ],
@@ -91,14 +91,14 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/interface/DiviesInterface.sol",
     "exportedSymbols": {
       "DiviesInterface": [
-        3848
+        3864
       ]
     },
-    "id": 3849,
+    "id": 3865,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3844,
+        "id": 3860,
         "literals": [
           "solidity",
           "^",
@@ -114,9 +114,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 3848,
+        "id": 3864,
         "linearizedBaseContracts": [
-          3848
+          3864
         ],
         "name": "DiviesInterface",
         "nodeType": "ContractDefinition",
@@ -124,7 +124,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3847,
+            "id": 3863,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -132,26 +132,26 @@
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3845,
+              "id": 3861,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "74:2:5"
             },
             "payable": true,
             "returnParameters": {
-              "id": 3846,
+              "id": 3862,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "93:0:5"
             },
-            "scope": 3848,
+            "scope": 3864,
             "src": "58:36:5",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 3849,
+        "scope": 3865,
         "src": "26:70:5"
       }
     ],
@@ -163,5 +163,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-07-27T05:30:42.133Z"
+  "updatedAt": "2018-07-31T18:01:56.732Z"
 }

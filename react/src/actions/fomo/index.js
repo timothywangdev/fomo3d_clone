@@ -1,26 +1,18 @@
 import fomo from '../../utils/fomo.js'
-import {BigNumber} from 'bignumber.js'
 import Utils from '../../utils/utils.js'
-var moment = require('moment')
+import {BigNumber} from 'bignumber.js'
 
-function humanUnit (big, fixed = 4, decimals = 18) {
-  if (!big) return '0.0000'
-  let base = new BigNumber(10).pow(new BigNumber(decimals))
-  big = big.div(base)
-  return big.toFixed(fixed)
-}
-
-function roundInfo (roundData, timeLeftData, exchangeRate) {
+function roundInfo (roundData, timeLeftData, exchangeRate, decimals) {
   roundData[0] = roundData[0].mul(exchangeRate)
   roundData[5] = roundData[5].mul(exchangeRate)
 
   let rv = {
-    eth: humanUnit(roundData[0]),
+    eth: Utils.humanUnit(roundData[0], 4, decimals),
     rID: roundData[1].toString(),
-    keys: humanUnit(roundData[2]),
+    keys: Utils.humanUnit(roundData[2]),
     end: roundData[3].toNumber(),
     start: roundData[4].toNumber(),
-    pot: humanUnit(roundData[5]),
+    pot: Utils.humanUnit(roundData[5], 4, decimals),
     team: roundData[6].toNumber(),
     plyr: roundData[7],
     timeLeft: timeLeftData[0].toNumber(),
@@ -30,29 +22,29 @@ function roundInfo (roundData, timeLeftData, exchangeRate) {
   return rv
 }
 
-function playerInfo (playerData, exchangeRate) {
+function playerInfo (playerData, exchangeRate, decimals) {
   playerData[2] = playerData[2].mul(exchangeRate)
   playerData[3] = playerData[3].mul(exchangeRate)
 
   let rv = {
-    keys: humanUnit(playerData[1]),
-    earnings: humanUnit(playerData[2]),
-    eth: humanUnit(playerData[3])
+    keys: Utils.humanUnit(playerData[1]),
+    earnings: Utils.humanUnit(playerData[2], 4, decimals),
+    eth: Utils.humanUnit(playerData[3], 4, decimals)
   }
 
   return rv
 }
 
-function vaultsInfo (vaultsData, exchangeRate) {
+function vaultsInfo (vaultsData, exchangeRate, decimals) {
   vaultsData[0] = vaultsData[0].mul(exchangeRate)
   vaultsData[1] = vaultsData[1].mul(exchangeRate)
   vaultsData[2] = vaultsData[2].mul(exchangeRate)
 
   return {
-    win: humanUnit(vaultsData[0]),
-    gen: humanUnit(vaultsData[1]),
-    aff: humanUnit(vaultsData[2]),
-    total: humanUnit(vaultsData[0].add(vaultsData[1]).add(vaultsData[2]))
+    win: Utils.humanUnit(vaultsData[0], 4, decimals),
+    gen: Utils.humanUnit(vaultsData[1], 4, decimals),
+    aff: Utils.humanUnit(vaultsData[2], 4, decimals),
+    total: Utils.humanUnit(vaultsData[0].add(vaultsData[1]).add(vaultsData[2]), 4, decimals)
   }
 }
 
@@ -69,14 +61,59 @@ async function _getData () {
 
   let allowance = await fomo.getTokenAllowance(accounts[0])
 
+  let buyPrice = await fomo.iWantXKeys(Utils.getBase(18))
+  buyPrice = buyPrice.mul(exchangeRate)
+
+  let tokenBalance = await fomo.getTokenBalance(accounts[0])
+
+  let decimals = fomo.tokenDecimals
+
   return {
-    roundInfo: roundInfo(roundData, timeLeftData, exchangeRate),
-    playerInfo: playerInfo(playerData, exchangeRate),
-    vaultsInfo: vaultsInfo(vaultsData, exchangeRate),
+    roundInfo: roundInfo(roundData, timeLeftData, exchangeRate, decimals),
+    playerInfo: playerInfo(playerData, exchangeRate, decimals),
+    vaultsInfo: vaultsInfo(vaultsData, exchangeRate, decimals),
     tokenInfo: {
-      allowance: humanUnit(allowance)
-    }
+      allowance: Utils.humanUnit(allowance, 4, decimals),
+      balance: Utils.humanUnit(tokenBalance, 4, decimals)
+    },
+    buyPrice: Utils.humanUnit(buyPrice, 6, decimals)
   }
+}
+
+async function _getBuyPrice (keys) {
+  let decimals = fomo.tokenDecimals
+  let exchangeRate = await fomo.exchangeRate()
+
+  let base = Utils.getBase(18)
+  let _keys = base.times(new BigNumber(keys))
+  let buyPrice = await fomo.iWantXKeys(_keys)
+  buyPrice = buyPrice.mul(exchangeRate)
+  return {
+    buyTotalPrice: Utils.humanUnit(buyPrice, 6, decimals)
+  }
+}
+
+async function _buy (affCode, keys) {
+  let decimals = fomo.tokenDecimals
+  let exchangeRate = await fomo.exchangeRate()
+
+  let base = Utils.getBase(18)
+  let _keys = base.times(new BigNumber(keys))
+  let buyPrice = await fomo.iWantXKeys(_keys)
+  buyPrice = buyPrice.mul(exchangeRate)
+
+  if (!affCode) {
+    affCode = '0x0000000000000000000000000000000000000000'
+  }
+  await fomo.buy(affCode, 0, buyPrice)
+}
+
+async function _approve (val) {
+  let decimals = fomo.tokenDecimals
+  let base = Utils.getBase(decimals)
+  let tokens = base.times(new BigNumber(val))
+
+  await fomo.approveToken(tokens)
 }
 
 const getData = () => {
@@ -86,4 +123,25 @@ const getData = () => {
   }
 }
 
-export { getData }
+const getBuyPrice = (keys) => {
+  return {
+    type: 'FOMO_GET_BUY_PRICE',
+    payload: _getBuyPrice(keys)
+  }
+}
+
+const buy = (affcode, keys) => {
+  return {
+    type: 'FOMO_BUY',
+    payload: _buy(affcode, keys)
+  }
+}
+
+const approve = (val) => {
+  return {
+    type: 'FOMO_APPROVE',
+    payload: _approve(val)
+  }
+}
+
+export { getData, getBuyPrice, buy, approve}

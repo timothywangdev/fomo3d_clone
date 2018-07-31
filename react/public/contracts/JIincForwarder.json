@@ -134,17 +134,17 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/JIincForwarder.sol",
     "exportedSymbols": {
       "JIincForwarder": [
-        3427
+        3434
       ],
       "JIincInterfaceForForwarder": [
-        3220
+        3227
       ]
     },
-    "id": 3428,
+    "id": 3435,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3207,
+        "id": 3214,
         "literals": [
           "solidity",
           "^",
@@ -160,9 +160,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 3220,
+        "id": 3227,
         "linearizedBaseContracts": [
-          3220
+          3227
         ],
         "name": "JIincInterfaceForForwarder",
         "nodeType": "ContractDefinition",
@@ -170,7 +170,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3214,
+            "id": 3221,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -178,15 +178,15 @@
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3210,
+              "id": 3217,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3209,
+                  "id": 3216,
                   "name": "_addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3214,
+                  "scope": 3221,
                   "src": "4887:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -195,7 +195,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3208,
+                    "id": 3215,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "4887:7:4",
@@ -212,15 +212,15 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 3213,
+              "id": 3220,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3212,
+                  "id": 3219,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3214,
+                  "scope": 3221,
                   "src": "4928:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -229,7 +229,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3211,
+                    "id": 3218,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4928:4:4",
@@ -244,7 +244,7 @@
               ],
               "src": "4927:6:4"
             },
-            "scope": 3220,
+            "scope": 3227,
             "src": "4870:64:4",
             "stateMutability": "payable",
             "superFunction": null,
@@ -253,7 +253,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3219,
+            "id": 3226,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -261,22 +261,22 @@
             "name": "migrationReceiver_setup",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3215,
+              "id": 3222,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "4971:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3218,
+              "id": 3225,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3217,
+                  "id": 3224,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3219,
+                  "scope": 3226,
                   "src": "4992:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -285,7 +285,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3216,
+                    "id": 3223,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4992:4:4",
@@ -300,14 +300,14 @@
               ],
               "src": "4991:6:4"
             },
-            "scope": 3220,
+            "scope": 3227,
             "src": "4939:59:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 3428,
+        "scope": 3435,
         "src": "4827:173:4"
       },
       {
@@ -316,19 +316,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 3427,
+        "id": 3434,
         "linearizedBaseContracts": [
-          3427
+          3434
         ],
         "name": "JIincForwarder",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 3223,
+            "id": 3230,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 3427,
+            "scope": 3434,
             "src": "5032:37:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -337,7 +337,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 3221,
+              "id": 3228,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "5032:6:4",
@@ -349,7 +349,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "4a49696e63466f72776172646572",
-              "id": 3222,
+              "id": 3229,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -368,26 +368,26 @@
           },
           {
             "constant": false,
-            "id": 3225,
+            "id": 3232,
             "name": "currentCorpBank_",
             "nodeType": "VariableDeclaration",
-            "scope": 3427,
+            "scope": 3434,
             "src": "5075:51:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
               "typeString": "contract JIincInterfaceForForwarder"
             },
             "typeName": {
               "contractScope": null,
-              "id": 3224,
+              "id": 3231,
               "name": "JIincInterfaceForForwarder",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3220,
+              "referencedDeclaration": 3227,
               "src": "5075:26:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                 "typeString": "contract JIincInterfaceForForwarder"
               }
             },
@@ -396,10 +396,10 @@
           },
           {
             "constant": false,
-            "id": 3227,
+            "id": 3234,
             "name": "newCorpBank_",
             "nodeType": "VariableDeclaration",
-            "scope": 3427,
+            "scope": 3434,
             "src": "5132:28:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -408,7 +408,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 3226,
+              "id": 3233,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "5132:7:4",
@@ -422,10 +422,10 @@
           },
           {
             "constant": false,
-            "id": 3230,
+            "id": 3237,
             "name": "needsBank_",
             "nodeType": "VariableDeclaration",
-            "scope": 3427,
+            "scope": 3434,
             "src": "5166:22:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -434,7 +434,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 3228,
+              "id": 3235,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "5166:4:4",
@@ -446,7 +446,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "74727565",
-              "id": 3229,
+              "id": 3236,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -465,13 +465,13 @@
           },
           {
             "body": {
-              "id": 3233,
+              "id": 3240,
               "nodeType": "Block",
               "src": "5233:43:4",
               "statements": []
             },
             "documentation": null,
-            "id": 3234,
+            "id": 3241,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -479,19 +479,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3231,
+              "id": 3238,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5210:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3232,
+              "id": 3239,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5233:0:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "5199:77:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -499,7 +499,7 @@
           },
           {
             "body": {
-              "id": 3252,
+              "id": 3259,
               "nodeType": "Block",
               "src": "5332:218:4",
               "statements": [
@@ -512,14 +512,14 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 3248,
+                            "id": 3255,
                             "name": "currentCorpBank_",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3225,
+                            "referencedDeclaration": 3232,
                             "src": "5525:16:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                               "typeString": "contract JIincInterfaceForForwarder"
                             }
                           }
@@ -527,11 +527,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                               "typeString": "contract JIincInterfaceForForwarder"
                             }
                           ],
-                          "id": 3247,
+                          "id": 3254,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -544,7 +544,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 3249,
+                        "id": 3256,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -574,14 +574,14 @@
                             "arguments": [
                               {
                                 "argumentTypes": null,
-                                "id": 3243,
+                                "id": 3250,
                                 "name": "this",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 6177,
+                                "referencedDeclaration": 5652,
                                 "src": "5502:4:4",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_JIincForwarder_$3427",
+                                  "typeIdentifier": "t_contract$_JIincForwarder_$3434",
                                   "typeString": "contract JIincForwarder"
                                 }
                               }
@@ -589,11 +589,11 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_JIincForwarder_$3427",
+                                  "typeIdentifier": "t_contract$_JIincForwarder_$3434",
                                   "typeString": "contract JIincForwarder"
                                 }
                               ],
-                              "id": 3242,
+                              "id": 3249,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -606,7 +606,7 @@
                               },
                               "typeName": "address"
                             },
-                            "id": 3244,
+                            "id": 3251,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -620,7 +620,7 @@
                               "typeString": "address"
                             }
                           },
-                          "id": 3245,
+                          "id": 3252,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -646,32 +646,32 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 3237,
+                            "id": 3244,
                             "name": "currentCorpBank_",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3225,
+                            "referencedDeclaration": 3232,
                             "src": "5463:16:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                               "typeString": "contract JIincInterfaceForForwarder"
                             }
                           },
-                          "id": 3240,
+                          "id": 3247,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "deposit",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 3214,
+                          "referencedDeclaration": 3221,
                           "src": "5463:24:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_payable$_t_address_$returns$_t_bool_$",
                             "typeString": "function (address) payable external returns (bool)"
                           }
                         },
-                        "id": 3241,
+                        "id": 3248,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -685,7 +685,7 @@
                           "typeString": "function (uint256) returns (function (address) payable external returns (bool))"
                         }
                       },
-                      "id": 3246,
+                      "id": 3253,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -699,7 +699,7 @@
                         "typeString": "function (address) payable external returns (bool)"
                       }
                     },
-                    "id": 3250,
+                    "id": 3257,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -713,14 +713,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3251,
+                  "id": 3258,
                   "nodeType": "ExpressionStatement",
                   "src": "5463:80:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 3253,
+            "id": 3260,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -728,19 +728,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3235,
+              "id": 3242,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5294:2:4"
             },
             "payable": true,
             "returnParameters": {
-              "id": 3236,
+              "id": 3243,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5332:0:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "5286:264:4",
             "stateMutability": "payable",
             "superFunction": null,
@@ -748,7 +748,7 @@
           },
           {
             "body": {
-              "id": 3291,
+              "id": 3298,
               "nodeType": "Block",
               "src": "5637:323:4",
               "statements": [
@@ -762,7 +762,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 3262,
+                        "id": 3269,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -771,18 +771,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 3259,
+                            "id": 3266,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6136,
+                            "referencedDeclaration": 5609,
                             "src": "5655:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 3260,
+                          "id": 3267,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -801,7 +801,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 3261,
+                          "id": 3268,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -825,7 +825,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "466f72776172646572204465706f736974206661696c6564202d207a65726f206465706f73697473206e6f7420616c6c6f776564",
-                        "id": 3263,
+                        "id": 3270,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -852,21 +852,21 @@
                           "typeString": "literal_string \"Forwarder Deposit failed - zero deposits not allowed\""
                         }
                       ],
-                      "id": 3258,
+                      "id": 3265,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        6139,
-                        6140
+                        5612,
+                        5613
                       ],
-                      "referencedDeclaration": 6140,
+                      "referencedDeclaration": 5613,
                       "src": "5647:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3264,
+                    "id": 3271,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -880,7 +880,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3265,
+                  "id": 3272,
                   "nodeType": "ExpressionStatement",
                   "src": "5647:78:4"
                 },
@@ -894,18 +894,18 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 3269,
+                        "id": 3276,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 3267,
+                          "id": 3274,
                           "name": "needsBank_",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3230,
+                          "referencedDeclaration": 3237,
                           "src": "5743:10:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -917,7 +917,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
-                          "id": 3268,
+                          "id": 3275,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -941,7 +941,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "466f72776172646572204465706f736974206661696c6564202d206e6f20726567697374657265642062616e6b",
-                        "id": 3270,
+                        "id": 3277,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -968,21 +968,21 @@
                           "typeString": "literal_string \"Forwarder Deposit failed - no registered bank\""
                         }
                       ],
-                      "id": 3266,
+                      "id": 3273,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        6139,
-                        6140
+                        5612,
+                        5613
                       ],
-                      "referencedDeclaration": 6140,
+                      "referencedDeclaration": 5613,
                       "src": "5735:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3271,
+                    "id": 3278,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -996,7 +996,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3272,
+                  "id": 3279,
                   "nodeType": "ExpressionStatement",
                   "src": "5735:77:4"
                 },
@@ -1007,7 +1007,7 @@
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 3283,
+                    "id": 3290,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1019,18 +1019,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 3279,
+                            "id": 3286,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6136,
+                            "referencedDeclaration": 5609,
                             "src": "5868:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 3280,
+                          "id": 3287,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1057,18 +1057,18 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 3276,
+                              "id": 3283,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 6136,
+                              "referencedDeclaration": 5609,
                               "src": "5857:3:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 3277,
+                            "id": 3284,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1094,32 +1094,32 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 3273,
+                              "id": 3280,
                               "name": "currentCorpBank_",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3225,
+                              "referencedDeclaration": 3232,
                               "src": "5826:16:4",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                                 "typeString": "contract JIincInterfaceForForwarder"
                               }
                             },
-                            "id": 3274,
+                            "id": 3281,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "deposit",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 3214,
+                            "referencedDeclaration": 3221,
                             "src": "5826:24:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_payable$_t_address_$returns$_t_bool_$",
                               "typeString": "function (address) payable external returns (bool)"
                             }
                           },
-                          "id": 3275,
+                          "id": 3282,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1133,7 +1133,7 @@
                             "typeString": "function (uint256) returns (function (address) payable external returns (bool))"
                           }
                         },
-                        "id": 3278,
+                        "id": 3285,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1147,7 +1147,7 @@
                           "typeString": "function (address) payable external returns (bool)"
                         }
                       },
-                      "id": 3281,
+                      "id": 3288,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1166,7 +1166,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 3282,
+                      "id": 3289,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1194,7 +1194,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
-                          "id": 3287,
+                          "id": 3294,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1210,7 +1210,7 @@
                           "value": "false"
                         }
                       ],
-                      "id": 3288,
+                      "id": 3295,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
@@ -1223,12 +1223,12 @@
                         "typeString": "bool"
                       }
                     },
-                    "functionReturnParameters": 3257,
-                    "id": 3289,
+                    "functionReturnParameters": 3264,
+                    "id": 3296,
                     "nodeType": "Return",
                     "src": "5940:13:4"
                   },
-                  "id": 3290,
+                  "id": 3297,
                   "nodeType": "IfStatement",
                   "src": "5822:131:4",
                   "trueBody": {
@@ -1238,7 +1238,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 3284,
+                          "id": 3291,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1254,7 +1254,7 @@
                           "value": "true"
                         }
                       ],
-                      "id": 3285,
+                      "id": 3292,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
@@ -1267,8 +1267,8 @@
                         "typeString": "bool"
                       }
                     },
-                    "functionReturnParameters": 3257,
-                    "id": 3286,
+                    "functionReturnParameters": 3264,
+                    "id": 3293,
                     "nodeType": "Return",
                     "src": "5901:12:4"
                   }
@@ -1276,7 +1276,7 @@
               ]
             },
             "documentation": null,
-            "id": 3292,
+            "id": 3299,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1284,22 +1284,22 @@
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3254,
+              "id": 3261,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5576:2:4"
             },
             "payable": true,
             "returnParameters": {
-              "id": 3257,
+              "id": 3264,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3256,
+                  "id": 3263,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3292,
+                  "scope": 3299,
                   "src": "5627:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1308,7 +1308,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3255,
+                    "id": 3262,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "5627:4:4",
@@ -1323,7 +1323,7 @@
               ],
               "src": "5626:6:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "5560:400:4",
             "stateMutability": "payable",
             "superFunction": null,
@@ -1331,7 +1331,7 @@
           },
           {
             "body": {
-              "id": 3310,
+              "id": 3317,
               "nodeType": "Block",
               "src": "6289:85:4",
               "statements": [
@@ -1344,14 +1344,14 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 3302,
+                            "id": 3309,
                             "name": "currentCorpBank_",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3225,
+                            "referencedDeclaration": 3232,
                             "src": "6314:16:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                               "typeString": "contract JIincInterfaceForForwarder"
                             }
                           }
@@ -1359,11 +1359,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                               "typeString": "contract JIincInterfaceForForwarder"
                             }
                           ],
-                          "id": 3301,
+                          "id": 3308,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1376,7 +1376,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 3303,
+                        "id": 3310,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1395,11 +1395,11 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 3305,
+                            "id": 3312,
                             "name": "newCorpBank_",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3227,
+                            "referencedDeclaration": 3234,
                             "src": "6341:12:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -1414,7 +1414,7 @@
                               "typeString": "address"
                             }
                           ],
-                          "id": 3304,
+                          "id": 3311,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1427,7 +1427,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 3306,
+                        "id": 3313,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1443,11 +1443,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3307,
+                        "id": 3314,
                         "name": "needsBank_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3230,
+                        "referencedDeclaration": 3237,
                         "src": "6356:10:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -1455,7 +1455,7 @@
                         }
                       }
                     ],
-                    "id": 3308,
+                    "id": 3315,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -1468,15 +1468,15 @@
                       "typeString": "tuple(address,address,bool)"
                     }
                   },
-                  "functionReturnParameters": 3300,
-                  "id": 3309,
+                  "functionReturnParameters": 3307,
+                  "id": 3316,
                   "nodeType": "Return",
                   "src": "6299:68:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 3311,
+            "id": 3318,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1484,22 +1484,22 @@
             "name": "status",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3293,
+              "id": 3300,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "6214:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3300,
+              "id": 3307,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3295,
+                  "id": 3302,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3311,
+                  "scope": 3318,
                   "src": "6261:7:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1508,7 +1508,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3294,
+                    "id": 3301,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "6261:7:4",
@@ -1522,10 +1522,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3297,
+                  "id": 3304,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3311,
+                  "scope": 3318,
                   "src": "6270:7:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1534,7 +1534,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3296,
+                    "id": 3303,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "6270:7:4",
@@ -1548,10 +1548,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3299,
+                  "id": 3306,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3311,
+                  "scope": 3318,
                   "src": "6279:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1560,7 +1560,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3298,
+                    "id": 3305,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "6279:4:4",
@@ -1575,7 +1575,7 @@
               ],
               "src": "6260:24:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "6199:175:4",
             "stateMutability": "view",
             "superFunction": null,
@@ -1583,7 +1583,7 @@
           },
           {
             "body": {
-              "id": 3347,
+              "id": 3354,
               "nodeType": "Block",
               "src": "6469:567:4",
               "statements": [
@@ -1597,7 +1597,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 3324,
+                        "id": 3331,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1606,18 +1606,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 3319,
+                            "id": 3326,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6136,
+                            "referencedDeclaration": 5609,
                             "src": "6546:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 3320,
+                          "id": 3327,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1638,14 +1638,14 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 3322,
+                              "id": 3329,
                               "name": "currentCorpBank_",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3225,
+                              "referencedDeclaration": 3232,
                               "src": "6568:16:4",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                                 "typeString": "contract JIincInterfaceForForwarder"
                               }
                             }
@@ -1653,11 +1653,11 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                                 "typeString": "contract JIincInterfaceForForwarder"
                               }
                             ],
-                            "id": 3321,
+                            "id": 3328,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -1670,7 +1670,7 @@
                             },
                             "typeName": "address"
                           },
-                          "id": 3323,
+                          "id": 3330,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1693,7 +1693,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "466f727761726465722073746172744d6967726174696f6e206661696c6564202d206d73672e73656e646572206d7573742062652063757272656e7420636f72702062616e6b",
-                        "id": 3325,
+                        "id": 3332,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1720,21 +1720,21 @@
                           "typeString": "literal_string \"Forwarder startMigration failed - msg.sender must be current corp bank\""
                         }
                       ],
-                      "id": 3318,
+                      "id": 3325,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        6139,
-                        6140
+                        5612,
+                        5613
                       ],
-                      "referencedDeclaration": 6140,
+                      "referencedDeclaration": 5613,
                       "src": "6538:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3326,
+                    "id": 3333,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1748,7 +1748,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3327,
+                  "id": 3334,
                   "nodeType": "ExpressionStatement",
                   "src": "6538:122:4"
                 },
@@ -1759,7 +1759,7 @@
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 3334,
+                    "id": 3341,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1774,11 +1774,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 3329,
+                              "id": 3336,
                               "name": "_newCorpBank",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3313,
+                              "referencedDeclaration": 3320,
                               "src": "6814:12:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -1793,18 +1793,18 @@
                                 "typeString": "address"
                               }
                             ],
-                            "id": 3328,
+                            "id": 3335,
                             "name": "JIincInterfaceForForwarder",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3220,
+                            "referencedDeclaration": 3227,
                             "src": "6787:26:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_JIincInterfaceForForwarder_$3220_$",
+                              "typeIdentifier": "t_type$_t_contract$_JIincInterfaceForForwarder_$3227_$",
                               "typeString": "type(contract JIincInterfaceForForwarder)"
                             }
                           },
-                          "id": 3330,
+                          "id": 3337,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1814,25 +1814,25 @@
                           "nodeType": "FunctionCall",
                           "src": "6787:40:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                            "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                             "typeString": "contract JIincInterfaceForForwarder"
                           }
                         },
-                        "id": 3331,
+                        "id": 3338,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "migrationReceiver_setup",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 3219,
+                        "referencedDeclaration": 3226,
                         "src": "6787:64:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_bool_$",
                           "typeString": "function () external returns (bool)"
                         }
                       },
-                      "id": 3332,
+                      "id": 3339,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1851,7 +1851,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 3333,
+                      "id": 3340,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1879,7 +1879,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
-                          "id": 3343,
+                          "id": 3350,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1895,7 +1895,7 @@
                           "value": "false"
                         }
                       ],
-                      "id": 3344,
+                      "id": 3351,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
@@ -1908,34 +1908,34 @@
                         "typeString": "bool"
                       }
                     },
-                    "functionReturnParameters": 3317,
-                    "id": 3345,
+                    "functionReturnParameters": 3324,
+                    "id": 3352,
                     "nodeType": "Return",
                     "src": "7015:14:4"
                   },
-                  "id": 3346,
+                  "id": 3353,
                   "nodeType": "IfStatement",
                   "src": "6784:245:4",
                   "trueBody": {
-                    "id": 3342,
+                    "id": 3349,
                     "nodeType": "Block",
                     "src": "6871:125:4",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3337,
+                          "id": 3344,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
                             "argumentTypes": null,
-                            "id": 3335,
+                            "id": 3342,
                             "name": "newCorpBank_",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3227,
+                            "referencedDeclaration": 3234,
                             "src": "6931:12:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -1946,11 +1946,11 @@
                           "operator": "=",
                           "rightHandSide": {
                             "argumentTypes": null,
-                            "id": 3336,
+                            "id": 3343,
                             "name": "_newCorpBank",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3313,
+                            "referencedDeclaration": 3320,
                             "src": "6946:12:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -1963,7 +1963,7 @@
                             "typeString": "address"
                           }
                         },
-                        "id": 3338,
+                        "id": 3345,
                         "nodeType": "ExpressionStatement",
                         "src": "6931:27:4"
                       },
@@ -1974,7 +1974,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "74727565",
-                              "id": 3339,
+                              "id": 3346,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1990,7 +1990,7 @@
                               "value": "true"
                             }
                           ],
-                          "id": 3340,
+                          "id": 3347,
                           "isConstant": false,
                           "isInlineArray": false,
                           "isLValue": false,
@@ -2003,8 +2003,8 @@
                             "typeString": "bool"
                           }
                         },
-                        "functionReturnParameters": 3317,
-                        "id": 3341,
+                        "functionReturnParameters": 3324,
+                        "id": 3348,
                         "nodeType": "Return",
                         "src": "6972:13:4"
                       }
@@ -2014,7 +2014,7 @@
               ]
             },
             "documentation": null,
-            "id": 3348,
+            "id": 3355,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -2022,15 +2022,15 @@
             "name": "startMigration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3314,
+              "id": 3321,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3313,
+                  "id": 3320,
                   "name": "_newCorpBank",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3348,
+                  "scope": 3355,
                   "src": "6404:20:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2039,7 +2039,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3312,
+                    "id": 3319,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "6404:7:4",
@@ -2056,15 +2056,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3317,
+              "id": 3324,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3316,
+                  "id": 3323,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3348,
+                  "scope": 3355,
                   "src": "6459:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2073,7 +2073,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3315,
+                    "id": 3322,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "6459:4:4",
@@ -2088,7 +2088,7 @@
               ],
               "src": "6458:6:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "6380:656:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2096,7 +2096,7 @@
           },
           {
             "body": {
-              "id": 3372,
+              "id": 3379,
               "nodeType": "Block",
               "src": "7116:403:4",
               "statements": [
@@ -2110,7 +2110,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 3359,
+                        "id": 3366,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2119,18 +2119,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 3354,
+                            "id": 3361,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6136,
+                            "referencedDeclaration": 5609,
                             "src": "7272:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 3355,
+                          "id": 3362,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2151,14 +2151,14 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 3357,
+                              "id": 3364,
                               "name": "currentCorpBank_",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3225,
+                              "referencedDeclaration": 3232,
                               "src": "7294:16:4",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                                 "typeString": "contract JIincInterfaceForForwarder"
                               }
                             }
@@ -2166,11 +2166,11 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                                 "typeString": "contract JIincInterfaceForForwarder"
                               }
                             ],
-                            "id": 3356,
+                            "id": 3363,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -2183,7 +2183,7 @@
                             },
                             "typeName": "address"
                           },
-                          "id": 3358,
+                          "id": 3365,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2206,7 +2206,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "466f727761726465722063616e63656c4d6967726174696f6e206661696c6564202d206d73672e73656e646572206d7573742062652063757272656e7420636f72702062616e6b",
-                        "id": 3360,
+                        "id": 3367,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2233,21 +2233,21 @@
                           "typeString": "literal_string \"Forwarder cancelMigration failed - msg.sender must be current corp bank\""
                         }
                       ],
-                      "id": 3353,
+                      "id": 3360,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        6139,
-                        6140
+                        5612,
+                        5613
                       ],
-                      "referencedDeclaration": 6140,
+                      "referencedDeclaration": 5613,
                       "src": "7264:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3361,
+                    "id": 3368,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2261,25 +2261,25 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3362,
+                  "id": 3369,
                   "nodeType": "ExpressionStatement",
                   "src": "7264:123:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3367,
+                    "id": 3374,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3363,
+                      "id": 3370,
                       "name": "newCorpBank_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3227,
+                      "referencedDeclaration": 3234,
                       "src": "7453:12:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2294,7 +2294,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "307830",
-                          "id": 3365,
+                          "id": 3372,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2317,7 +2317,7 @@
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 3364,
+                        "id": 3371,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2330,7 +2330,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 3366,
+                      "id": 3373,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2350,7 +2350,7 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 3368,
+                  "id": 3375,
                   "nodeType": "ExpressionStatement",
                   "src": "7453:27:4"
                 },
@@ -2361,7 +2361,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "74727565",
-                        "id": 3369,
+                        "id": 3376,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2377,7 +2377,7 @@
                         "value": "true"
                       }
                     ],
-                    "id": 3370,
+                    "id": 3377,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -2390,15 +2390,15 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 3352,
-                  "id": 3371,
+                  "functionReturnParameters": 3359,
+                  "id": 3378,
                   "nodeType": "Return",
                   "src": "7499:13:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 3373,
+            "id": 3380,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -2406,22 +2406,22 @@
             "name": "cancelMigration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3349,
+              "id": 3356,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "7070:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3352,
+              "id": 3359,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3351,
+                  "id": 3358,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3373,
+                  "scope": 3380,
                   "src": "7106:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2430,7 +2430,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3350,
+                    "id": 3357,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "7106:4:4",
@@ -2445,7 +2445,7 @@
               ],
               "src": "7105:6:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "7046:473:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2453,7 +2453,7 @@
           },
           {
             "body": {
-              "id": 3402,
+              "id": 3409,
               "nodeType": "Block",
               "src": "7599:407:4",
               "statements": [
@@ -2467,7 +2467,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 3382,
+                        "id": 3389,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2476,18 +2476,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 3379,
+                            "id": 3386,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6136,
+                            "referencedDeclaration": 5609,
                             "src": "7668:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 3380,
+                          "id": 3387,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2505,11 +2505,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 3381,
+                          "id": 3388,
                           "name": "newCorpBank_",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3227,
+                          "referencedDeclaration": 3234,
                           "src": "7682:12:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -2525,7 +2525,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "466f727761726465722066696e6973684d6967726174696f6e206661696c6564202d206d73672e73656e646572206d757374206265206e657720636f72702062616e6b",
-                        "id": 3383,
+                        "id": 3390,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2552,21 +2552,21 @@
                           "typeString": "literal_string \"Forwarder finishMigration failed - msg.sender must be new corp bank\""
                         }
                       ],
-                      "id": 3378,
+                      "id": 3385,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        6139,
-                        6140
+                        5612,
+                        5613
                       ],
-                      "referencedDeclaration": 6140,
+                      "referencedDeclaration": 5613,
                       "src": "7660:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3384,
+                    "id": 3391,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2580,28 +2580,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3385,
+                  "id": 3392,
                   "nodeType": "ExpressionStatement",
                   "src": "7660:106:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3391,
+                    "id": 3398,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3386,
+                      "id": 3393,
                       "name": "currentCorpBank_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3225,
+                      "referencedDeclaration": 3232,
                       "src": "7821:16:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                         "typeString": "contract JIincInterfaceForForwarder"
                       }
                     },
@@ -2615,11 +2615,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 3388,
+                              "id": 3395,
                               "name": "newCorpBank_",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3227,
+                              "referencedDeclaration": 3234,
                               "src": "7868:12:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -2634,18 +2634,18 @@
                                 "typeString": "address"
                               }
                             ],
-                            "id": 3387,
+                            "id": 3394,
                             "name": "JIincInterfaceForForwarder",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3220,
+                            "referencedDeclaration": 3227,
                             "src": "7841:26:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_JIincInterfaceForForwarder_$3220_$",
+                              "typeIdentifier": "t_type$_t_contract$_JIincInterfaceForForwarder_$3227_$",
                               "typeString": "type(contract JIincInterfaceForForwarder)"
                             }
                           },
-                          "id": 3389,
+                          "id": 3396,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2655,12 +2655,12 @@
                           "nodeType": "FunctionCall",
                           "src": "7841:40:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                            "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                             "typeString": "contract JIincInterfaceForForwarder"
                           }
                         }
                       ],
-                      "id": 3390,
+                      "id": 3397,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
@@ -2669,35 +2669,35 @@
                       "nodeType": "TupleExpression",
                       "src": "7840:42:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                         "typeString": "contract JIincInterfaceForForwarder"
                       }
                     },
                     "src": "7821:61:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                      "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                       "typeString": "contract JIincInterfaceForForwarder"
                     }
                   },
-                  "id": 3392,
+                  "id": 3399,
                   "nodeType": "ExpressionStatement",
                   "src": "7821:61:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3397,
+                    "id": 3404,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3393,
+                      "id": 3400,
                       "name": "newCorpBank_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3227,
+                      "referencedDeclaration": 3234,
                       "src": "7940:12:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2712,7 +2712,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "307830",
-                          "id": 3395,
+                          "id": 3402,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2735,7 +2735,7 @@
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 3394,
+                        "id": 3401,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2748,7 +2748,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 3396,
+                      "id": 3403,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2768,7 +2768,7 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 3398,
+                  "id": 3405,
                   "nodeType": "ExpressionStatement",
                   "src": "7940:27:4"
                 },
@@ -2779,7 +2779,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "74727565",
-                        "id": 3399,
+                        "id": 3406,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2795,7 +2795,7 @@
                         "value": "true"
                       }
                     ],
-                    "id": 3400,
+                    "id": 3407,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -2808,15 +2808,15 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 3377,
-                  "id": 3401,
+                  "functionReturnParameters": 3384,
+                  "id": 3408,
                   "nodeType": "Return",
                   "src": "7986:13:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 3403,
+            "id": 3410,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -2824,22 +2824,22 @@
             "name": "finishMigration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3374,
+              "id": 3381,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "7553:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3377,
+              "id": 3384,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3376,
+                  "id": 3383,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3403,
+                  "scope": 3410,
                   "src": "7589:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2848,7 +2848,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3375,
+                    "id": 3382,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "7589:4:4",
@@ -2863,7 +2863,7 @@
               ],
               "src": "7588:6:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "7529:477:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2871,7 +2871,7 @@
           },
           {
             "body": {
-              "id": 3425,
+              "id": 3432,
               "nodeType": "Block",
               "src": "8339:200:4",
               "statements": [
@@ -2885,18 +2885,18 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 3411,
+                        "id": 3418,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 3409,
+                          "id": 3416,
                           "name": "needsBank_",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3230,
+                          "referencedDeclaration": 3237,
                           "src": "8357:10:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -2908,7 +2908,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 3410,
+                          "id": 3417,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2932,7 +2932,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "466f72776172646572207365747570206661696c6564202d20636f72702062616e6b20616c72656164792072656769737465726564",
-                        "id": 3412,
+                        "id": 3419,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2959,21 +2959,21 @@
                           "typeString": "literal_string \"Forwarder setup failed - corp bank already registered\""
                         }
                       ],
-                      "id": 3408,
+                      "id": 3415,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        6139,
-                        6140
+                        5612,
+                        5613
                       ],
-                      "referencedDeclaration": 6140,
+                      "referencedDeclaration": 5613,
                       "src": "8349:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3413,
+                    "id": 3420,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2987,28 +2987,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3414,
+                  "id": 3421,
                   "nodeType": "ExpressionStatement",
                   "src": "8349:84:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3419,
+                    "id": 3426,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3415,
+                      "id": 3422,
                       "name": "currentCorpBank_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3225,
+                      "referencedDeclaration": 3232,
                       "src": "8443:16:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                         "typeString": "contract JIincInterfaceForForwarder"
                       }
                     },
@@ -3019,11 +3019,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 3417,
+                          "id": 3424,
                           "name": "_firstCorpBank",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3405,
+                          "referencedDeclaration": 3412,
                           "src": "8489:14:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -3038,18 +3038,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 3416,
+                        "id": 3423,
                         "name": "JIincInterfaceForForwarder",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3220,
+                        "referencedDeclaration": 3227,
                         "src": "8462:26:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_JIincInterfaceForForwarder_$3220_$",
+                          "typeIdentifier": "t_type$_t_contract$_JIincInterfaceForForwarder_$3227_$",
                           "typeString": "type(contract JIincInterfaceForForwarder)"
                         }
                       },
-                      "id": 3418,
+                      "id": 3425,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3059,35 +3059,35 @@
                       "nodeType": "FunctionCall",
                       "src": "8462:42:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                         "typeString": "contract JIincInterfaceForForwarder"
                       }
                     },
                     "src": "8443:61:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                      "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                       "typeString": "contract JIincInterfaceForForwarder"
                     }
                   },
-                  "id": 3420,
+                  "id": 3427,
                   "nodeType": "ExpressionStatement",
                   "src": "8443:61:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3423,
+                    "id": 3430,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3421,
+                      "id": 3428,
                       "name": "needsBank_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3230,
+                      "referencedDeclaration": 3237,
                       "src": "8514:10:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -3099,7 +3099,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 3422,
+                      "id": 3429,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -3120,14 +3120,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3424,
+                  "id": 3431,
                   "nodeType": "ExpressionStatement",
                   "src": "8514:18:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 3426,
+            "id": 3433,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -3135,15 +3135,15 @@
             "name": "setup",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3406,
+              "id": 3413,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3405,
+                  "id": 3412,
                   "name": "_firstCorpBank",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3426,
+                  "scope": 3433,
                   "src": "8294:22:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3152,7 +3152,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3404,
+                    "id": 3411,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "8294:7:4",
@@ -3169,19 +3169,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3407,
+              "id": 3414,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "8339:0:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "8279:260:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 3428,
+        "scope": 3435,
         "src": "5002:3539:4"
       }
     ],
@@ -3191,17 +3191,17 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/JIincForwarder.sol",
     "exportedSymbols": {
       "JIincForwarder": [
-        3427
+        3434
       ],
       "JIincInterfaceForForwarder": [
-        3220
+        3227
       ]
     },
-    "id": 3428,
+    "id": 3435,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3207,
+        "id": 3214,
         "literals": [
           "solidity",
           "^",
@@ -3217,9 +3217,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 3220,
+        "id": 3227,
         "linearizedBaseContracts": [
-          3220
+          3227
         ],
         "name": "JIincInterfaceForForwarder",
         "nodeType": "ContractDefinition",
@@ -3227,7 +3227,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3214,
+            "id": 3221,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -3235,15 +3235,15 @@
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3210,
+              "id": 3217,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3209,
+                  "id": 3216,
                   "name": "_addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3214,
+                  "scope": 3221,
                   "src": "4887:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3252,7 +3252,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3208,
+                    "id": 3215,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "4887:7:4",
@@ -3269,15 +3269,15 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 3213,
+              "id": 3220,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3212,
+                  "id": 3219,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3214,
+                  "scope": 3221,
                   "src": "4928:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3286,7 +3286,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3211,
+                    "id": 3218,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4928:4:4",
@@ -3301,7 +3301,7 @@
               ],
               "src": "4927:6:4"
             },
-            "scope": 3220,
+            "scope": 3227,
             "src": "4870:64:4",
             "stateMutability": "payable",
             "superFunction": null,
@@ -3310,7 +3310,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3219,
+            "id": 3226,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -3318,22 +3318,22 @@
             "name": "migrationReceiver_setup",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3215,
+              "id": 3222,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "4971:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3218,
+              "id": 3225,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3217,
+                  "id": 3224,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3219,
+                  "scope": 3226,
                   "src": "4992:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3342,7 +3342,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3216,
+                    "id": 3223,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4992:4:4",
@@ -3357,14 +3357,14 @@
               ],
               "src": "4991:6:4"
             },
-            "scope": 3220,
+            "scope": 3227,
             "src": "4939:59:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 3428,
+        "scope": 3435,
         "src": "4827:173:4"
       },
       {
@@ -3373,19 +3373,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 3427,
+        "id": 3434,
         "linearizedBaseContracts": [
-          3427
+          3434
         ],
         "name": "JIincForwarder",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 3223,
+            "id": 3230,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 3427,
+            "scope": 3434,
             "src": "5032:37:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3394,7 +3394,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 3221,
+              "id": 3228,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "5032:6:4",
@@ -3406,7 +3406,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "4a49696e63466f72776172646572",
-              "id": 3222,
+              "id": 3229,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -3425,26 +3425,26 @@
           },
           {
             "constant": false,
-            "id": 3225,
+            "id": 3232,
             "name": "currentCorpBank_",
             "nodeType": "VariableDeclaration",
-            "scope": 3427,
+            "scope": 3434,
             "src": "5075:51:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
               "typeString": "contract JIincInterfaceForForwarder"
             },
             "typeName": {
               "contractScope": null,
-              "id": 3224,
+              "id": 3231,
               "name": "JIincInterfaceForForwarder",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3220,
+              "referencedDeclaration": 3227,
               "src": "5075:26:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                 "typeString": "contract JIincInterfaceForForwarder"
               }
             },
@@ -3453,10 +3453,10 @@
           },
           {
             "constant": false,
-            "id": 3227,
+            "id": 3234,
             "name": "newCorpBank_",
             "nodeType": "VariableDeclaration",
-            "scope": 3427,
+            "scope": 3434,
             "src": "5132:28:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3465,7 +3465,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 3226,
+              "id": 3233,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "5132:7:4",
@@ -3479,10 +3479,10 @@
           },
           {
             "constant": false,
-            "id": 3230,
+            "id": 3237,
             "name": "needsBank_",
             "nodeType": "VariableDeclaration",
-            "scope": 3427,
+            "scope": 3434,
             "src": "5166:22:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3491,7 +3491,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 3228,
+              "id": 3235,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "5166:4:4",
@@ -3503,7 +3503,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "74727565",
-              "id": 3229,
+              "id": 3236,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -3522,13 +3522,13 @@
           },
           {
             "body": {
-              "id": 3233,
+              "id": 3240,
               "nodeType": "Block",
               "src": "5233:43:4",
               "statements": []
             },
             "documentation": null,
-            "id": 3234,
+            "id": 3241,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -3536,19 +3536,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3231,
+              "id": 3238,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5210:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3232,
+              "id": 3239,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5233:0:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "5199:77:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3556,7 +3556,7 @@
           },
           {
             "body": {
-              "id": 3252,
+              "id": 3259,
               "nodeType": "Block",
               "src": "5332:218:4",
               "statements": [
@@ -3569,14 +3569,14 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 3248,
+                            "id": 3255,
                             "name": "currentCorpBank_",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3225,
+                            "referencedDeclaration": 3232,
                             "src": "5525:16:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                               "typeString": "contract JIincInterfaceForForwarder"
                             }
                           }
@@ -3584,11 +3584,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                               "typeString": "contract JIincInterfaceForForwarder"
                             }
                           ],
-                          "id": 3247,
+                          "id": 3254,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3601,7 +3601,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 3249,
+                        "id": 3256,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3631,14 +3631,14 @@
                             "arguments": [
                               {
                                 "argumentTypes": null,
-                                "id": 3243,
+                                "id": 3250,
                                 "name": "this",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 6177,
+                                "referencedDeclaration": 5652,
                                 "src": "5502:4:4",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_JIincForwarder_$3427",
+                                  "typeIdentifier": "t_contract$_JIincForwarder_$3434",
                                   "typeString": "contract JIincForwarder"
                                 }
                               }
@@ -3646,11 +3646,11 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_JIincForwarder_$3427",
+                                  "typeIdentifier": "t_contract$_JIincForwarder_$3434",
                                   "typeString": "contract JIincForwarder"
                                 }
                               ],
-                              "id": 3242,
+                              "id": 3249,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -3663,7 +3663,7 @@
                               },
                               "typeName": "address"
                             },
-                            "id": 3244,
+                            "id": 3251,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -3677,7 +3677,7 @@
                               "typeString": "address"
                             }
                           },
-                          "id": 3245,
+                          "id": 3252,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3703,32 +3703,32 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 3237,
+                            "id": 3244,
                             "name": "currentCorpBank_",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3225,
+                            "referencedDeclaration": 3232,
                             "src": "5463:16:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                               "typeString": "contract JIincInterfaceForForwarder"
                             }
                           },
-                          "id": 3240,
+                          "id": 3247,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "deposit",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 3214,
+                          "referencedDeclaration": 3221,
                           "src": "5463:24:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_payable$_t_address_$returns$_t_bool_$",
                             "typeString": "function (address) payable external returns (bool)"
                           }
                         },
-                        "id": 3241,
+                        "id": 3248,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3742,7 +3742,7 @@
                           "typeString": "function (uint256) returns (function (address) payable external returns (bool))"
                         }
                       },
-                      "id": 3246,
+                      "id": 3253,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3756,7 +3756,7 @@
                         "typeString": "function (address) payable external returns (bool)"
                       }
                     },
-                    "id": 3250,
+                    "id": 3257,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3770,14 +3770,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3251,
+                  "id": 3258,
                   "nodeType": "ExpressionStatement",
                   "src": "5463:80:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 3253,
+            "id": 3260,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -3785,19 +3785,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3235,
+              "id": 3242,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5294:2:4"
             },
             "payable": true,
             "returnParameters": {
-              "id": 3236,
+              "id": 3243,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5332:0:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "5286:264:4",
             "stateMutability": "payable",
             "superFunction": null,
@@ -3805,7 +3805,7 @@
           },
           {
             "body": {
-              "id": 3291,
+              "id": 3298,
               "nodeType": "Block",
               "src": "5637:323:4",
               "statements": [
@@ -3819,7 +3819,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 3262,
+                        "id": 3269,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3828,18 +3828,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 3259,
+                            "id": 3266,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6136,
+                            "referencedDeclaration": 5609,
                             "src": "5655:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 3260,
+                          "id": 3267,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3858,7 +3858,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 3261,
+                          "id": 3268,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3882,7 +3882,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "466f72776172646572204465706f736974206661696c6564202d207a65726f206465706f73697473206e6f7420616c6c6f776564",
-                        "id": 3263,
+                        "id": 3270,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -3909,21 +3909,21 @@
                           "typeString": "literal_string \"Forwarder Deposit failed - zero deposits not allowed\""
                         }
                       ],
-                      "id": 3258,
+                      "id": 3265,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        6139,
-                        6140
+                        5612,
+                        5613
                       ],
-                      "referencedDeclaration": 6140,
+                      "referencedDeclaration": 5613,
                       "src": "5647:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3264,
+                    "id": 3271,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3937,7 +3937,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3265,
+                  "id": 3272,
                   "nodeType": "ExpressionStatement",
                   "src": "5647:78:4"
                 },
@@ -3951,18 +3951,18 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 3269,
+                        "id": 3276,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 3267,
+                          "id": 3274,
                           "name": "needsBank_",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3230,
+                          "referencedDeclaration": 3237,
                           "src": "5743:10:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -3974,7 +3974,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
-                          "id": 3268,
+                          "id": 3275,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3998,7 +3998,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "466f72776172646572204465706f736974206661696c6564202d206e6f20726567697374657265642062616e6b",
-                        "id": 3270,
+                        "id": 3277,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -4025,21 +4025,21 @@
                           "typeString": "literal_string \"Forwarder Deposit failed - no registered bank\""
                         }
                       ],
-                      "id": 3266,
+                      "id": 3273,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        6139,
-                        6140
+                        5612,
+                        5613
                       ],
-                      "referencedDeclaration": 6140,
+                      "referencedDeclaration": 5613,
                       "src": "5735:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3271,
+                    "id": 3278,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4053,7 +4053,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3272,
+                  "id": 3279,
                   "nodeType": "ExpressionStatement",
                   "src": "5735:77:4"
                 },
@@ -4064,7 +4064,7 @@
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 3283,
+                    "id": 3290,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4076,18 +4076,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 3279,
+                            "id": 3286,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6136,
+                            "referencedDeclaration": 5609,
                             "src": "5868:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 3280,
+                          "id": 3287,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -4114,18 +4114,18 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 3276,
+                              "id": 3283,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 6136,
+                              "referencedDeclaration": 5609,
                               "src": "5857:3:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 3277,
+                            "id": 3284,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -4151,32 +4151,32 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 3273,
+                              "id": 3280,
                               "name": "currentCorpBank_",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3225,
+                              "referencedDeclaration": 3232,
                               "src": "5826:16:4",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                                 "typeString": "contract JIincInterfaceForForwarder"
                               }
                             },
-                            "id": 3274,
+                            "id": 3281,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "deposit",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 3214,
+                            "referencedDeclaration": 3221,
                             "src": "5826:24:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_payable$_t_address_$returns$_t_bool_$",
                               "typeString": "function (address) payable external returns (bool)"
                             }
                           },
-                          "id": 3275,
+                          "id": 3282,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -4190,7 +4190,7 @@
                             "typeString": "function (uint256) returns (function (address) payable external returns (bool))"
                           }
                         },
-                        "id": 3278,
+                        "id": 3285,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4204,7 +4204,7 @@
                           "typeString": "function (address) payable external returns (bool)"
                         }
                       },
-                      "id": 3281,
+                      "id": 3288,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4223,7 +4223,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 3282,
+                      "id": 3289,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4251,7 +4251,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
-                          "id": 3287,
+                          "id": 3294,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -4267,7 +4267,7 @@
                           "value": "false"
                         }
                       ],
-                      "id": 3288,
+                      "id": 3295,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
@@ -4280,12 +4280,12 @@
                         "typeString": "bool"
                       }
                     },
-                    "functionReturnParameters": 3257,
-                    "id": 3289,
+                    "functionReturnParameters": 3264,
+                    "id": 3296,
                     "nodeType": "Return",
                     "src": "5940:13:4"
                   },
-                  "id": 3290,
+                  "id": 3297,
                   "nodeType": "IfStatement",
                   "src": "5822:131:4",
                   "trueBody": {
@@ -4295,7 +4295,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 3284,
+                          "id": 3291,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -4311,7 +4311,7 @@
                           "value": "true"
                         }
                       ],
-                      "id": 3285,
+                      "id": 3292,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
@@ -4324,8 +4324,8 @@
                         "typeString": "bool"
                       }
                     },
-                    "functionReturnParameters": 3257,
-                    "id": 3286,
+                    "functionReturnParameters": 3264,
+                    "id": 3293,
                     "nodeType": "Return",
                     "src": "5901:12:4"
                   }
@@ -4333,7 +4333,7 @@
               ]
             },
             "documentation": null,
-            "id": 3292,
+            "id": 3299,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -4341,22 +4341,22 @@
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3254,
+              "id": 3261,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5576:2:4"
             },
             "payable": true,
             "returnParameters": {
-              "id": 3257,
+              "id": 3264,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3256,
+                  "id": 3263,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3292,
+                  "scope": 3299,
                   "src": "5627:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4365,7 +4365,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3255,
+                    "id": 3262,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "5627:4:4",
@@ -4380,7 +4380,7 @@
               ],
               "src": "5626:6:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "5560:400:4",
             "stateMutability": "payable",
             "superFunction": null,
@@ -4388,7 +4388,7 @@
           },
           {
             "body": {
-              "id": 3310,
+              "id": 3317,
               "nodeType": "Block",
               "src": "6289:85:4",
               "statements": [
@@ -4401,14 +4401,14 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 3302,
+                            "id": 3309,
                             "name": "currentCorpBank_",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3225,
+                            "referencedDeclaration": 3232,
                             "src": "6314:16:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                               "typeString": "contract JIincInterfaceForForwarder"
                             }
                           }
@@ -4416,11 +4416,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                              "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                               "typeString": "contract JIincInterfaceForForwarder"
                             }
                           ],
-                          "id": 3301,
+                          "id": 3308,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -4433,7 +4433,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 3303,
+                        "id": 3310,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4452,11 +4452,11 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 3305,
+                            "id": 3312,
                             "name": "newCorpBank_",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3227,
+                            "referencedDeclaration": 3234,
                             "src": "6341:12:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -4471,7 +4471,7 @@
                               "typeString": "address"
                             }
                           ],
-                          "id": 3304,
+                          "id": 3311,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -4484,7 +4484,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 3306,
+                        "id": 3313,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4500,11 +4500,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3307,
+                        "id": 3314,
                         "name": "needsBank_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3230,
+                        "referencedDeclaration": 3237,
                         "src": "6356:10:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -4512,7 +4512,7 @@
                         }
                       }
                     ],
-                    "id": 3308,
+                    "id": 3315,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -4525,15 +4525,15 @@
                       "typeString": "tuple(address,address,bool)"
                     }
                   },
-                  "functionReturnParameters": 3300,
-                  "id": 3309,
+                  "functionReturnParameters": 3307,
+                  "id": 3316,
                   "nodeType": "Return",
                   "src": "6299:68:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 3311,
+            "id": 3318,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -4541,22 +4541,22 @@
             "name": "status",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3293,
+              "id": 3300,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "6214:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3300,
+              "id": 3307,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3295,
+                  "id": 3302,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3311,
+                  "scope": 3318,
                   "src": "6261:7:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4565,7 +4565,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3294,
+                    "id": 3301,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "6261:7:4",
@@ -4579,10 +4579,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3297,
+                  "id": 3304,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3311,
+                  "scope": 3318,
                   "src": "6270:7:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4591,7 +4591,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3296,
+                    "id": 3303,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "6270:7:4",
@@ -4605,10 +4605,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3299,
+                  "id": 3306,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3311,
+                  "scope": 3318,
                   "src": "6279:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4617,7 +4617,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3298,
+                    "id": 3305,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "6279:4:4",
@@ -4632,7 +4632,7 @@
               ],
               "src": "6260:24:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "6199:175:4",
             "stateMutability": "view",
             "superFunction": null,
@@ -4640,7 +4640,7 @@
           },
           {
             "body": {
-              "id": 3347,
+              "id": 3354,
               "nodeType": "Block",
               "src": "6469:567:4",
               "statements": [
@@ -4654,7 +4654,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 3324,
+                        "id": 3331,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4663,18 +4663,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 3319,
+                            "id": 3326,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6136,
+                            "referencedDeclaration": 5609,
                             "src": "6546:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 3320,
+                          "id": 3327,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -4695,14 +4695,14 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 3322,
+                              "id": 3329,
                               "name": "currentCorpBank_",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3225,
+                              "referencedDeclaration": 3232,
                               "src": "6568:16:4",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                                 "typeString": "contract JIincInterfaceForForwarder"
                               }
                             }
@@ -4710,11 +4710,11 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                                 "typeString": "contract JIincInterfaceForForwarder"
                               }
                             ],
-                            "id": 3321,
+                            "id": 3328,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -4727,7 +4727,7 @@
                             },
                             "typeName": "address"
                           },
-                          "id": 3323,
+                          "id": 3330,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -4750,7 +4750,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "466f727761726465722073746172744d6967726174696f6e206661696c6564202d206d73672e73656e646572206d7573742062652063757272656e7420636f72702062616e6b",
-                        "id": 3325,
+                        "id": 3332,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -4777,21 +4777,21 @@
                           "typeString": "literal_string \"Forwarder startMigration failed - msg.sender must be current corp bank\""
                         }
                       ],
-                      "id": 3318,
+                      "id": 3325,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        6139,
-                        6140
+                        5612,
+                        5613
                       ],
-                      "referencedDeclaration": 6140,
+                      "referencedDeclaration": 5613,
                       "src": "6538:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3326,
+                    "id": 3333,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4805,7 +4805,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3327,
+                  "id": 3334,
                   "nodeType": "ExpressionStatement",
                   "src": "6538:122:4"
                 },
@@ -4816,7 +4816,7 @@
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 3334,
+                    "id": 3341,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4831,11 +4831,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 3329,
+                              "id": 3336,
                               "name": "_newCorpBank",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3313,
+                              "referencedDeclaration": 3320,
                               "src": "6814:12:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -4850,18 +4850,18 @@
                                 "typeString": "address"
                               }
                             ],
-                            "id": 3328,
+                            "id": 3335,
                             "name": "JIincInterfaceForForwarder",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3220,
+                            "referencedDeclaration": 3227,
                             "src": "6787:26:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_JIincInterfaceForForwarder_$3220_$",
+                              "typeIdentifier": "t_type$_t_contract$_JIincInterfaceForForwarder_$3227_$",
                               "typeString": "type(contract JIincInterfaceForForwarder)"
                             }
                           },
-                          "id": 3330,
+                          "id": 3337,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -4871,25 +4871,25 @@
                           "nodeType": "FunctionCall",
                           "src": "6787:40:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                            "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                             "typeString": "contract JIincInterfaceForForwarder"
                           }
                         },
-                        "id": 3331,
+                        "id": 3338,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "migrationReceiver_setup",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 3219,
+                        "referencedDeclaration": 3226,
                         "src": "6787:64:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_bool_$",
                           "typeString": "function () external returns (bool)"
                         }
                       },
-                      "id": 3332,
+                      "id": 3339,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4908,7 +4908,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 3333,
+                      "id": 3340,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4936,7 +4936,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
-                          "id": 3343,
+                          "id": 3350,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -4952,7 +4952,7 @@
                           "value": "false"
                         }
                       ],
-                      "id": 3344,
+                      "id": 3351,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
@@ -4965,34 +4965,34 @@
                         "typeString": "bool"
                       }
                     },
-                    "functionReturnParameters": 3317,
-                    "id": 3345,
+                    "functionReturnParameters": 3324,
+                    "id": 3352,
                     "nodeType": "Return",
                     "src": "7015:14:4"
                   },
-                  "id": 3346,
+                  "id": 3353,
                   "nodeType": "IfStatement",
                   "src": "6784:245:4",
                   "trueBody": {
-                    "id": 3342,
+                    "id": 3349,
                     "nodeType": "Block",
                     "src": "6871:125:4",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3337,
+                          "id": 3344,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
                             "argumentTypes": null,
-                            "id": 3335,
+                            "id": 3342,
                             "name": "newCorpBank_",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3227,
+                            "referencedDeclaration": 3234,
                             "src": "6931:12:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -5003,11 +5003,11 @@
                           "operator": "=",
                           "rightHandSide": {
                             "argumentTypes": null,
-                            "id": 3336,
+                            "id": 3343,
                             "name": "_newCorpBank",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3313,
+                            "referencedDeclaration": 3320,
                             "src": "6946:12:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -5020,7 +5020,7 @@
                             "typeString": "address"
                           }
                         },
-                        "id": 3338,
+                        "id": 3345,
                         "nodeType": "ExpressionStatement",
                         "src": "6931:27:4"
                       },
@@ -5031,7 +5031,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "74727565",
-                              "id": 3339,
+                              "id": 3346,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -5047,7 +5047,7 @@
                               "value": "true"
                             }
                           ],
-                          "id": 3340,
+                          "id": 3347,
                           "isConstant": false,
                           "isInlineArray": false,
                           "isLValue": false,
@@ -5060,8 +5060,8 @@
                             "typeString": "bool"
                           }
                         },
-                        "functionReturnParameters": 3317,
-                        "id": 3341,
+                        "functionReturnParameters": 3324,
+                        "id": 3348,
                         "nodeType": "Return",
                         "src": "6972:13:4"
                       }
@@ -5071,7 +5071,7 @@
               ]
             },
             "documentation": null,
-            "id": 3348,
+            "id": 3355,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -5079,15 +5079,15 @@
             "name": "startMigration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3314,
+              "id": 3321,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3313,
+                  "id": 3320,
                   "name": "_newCorpBank",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3348,
+                  "scope": 3355,
                   "src": "6404:20:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5096,7 +5096,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3312,
+                    "id": 3319,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "6404:7:4",
@@ -5113,15 +5113,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3317,
+              "id": 3324,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3316,
+                  "id": 3323,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3348,
+                  "scope": 3355,
                   "src": "6459:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5130,7 +5130,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3315,
+                    "id": 3322,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "6459:4:4",
@@ -5145,7 +5145,7 @@
               ],
               "src": "6458:6:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "6380:656:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -5153,7 +5153,7 @@
           },
           {
             "body": {
-              "id": 3372,
+              "id": 3379,
               "nodeType": "Block",
               "src": "7116:403:4",
               "statements": [
@@ -5167,7 +5167,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 3359,
+                        "id": 3366,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -5176,18 +5176,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 3354,
+                            "id": 3361,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6136,
+                            "referencedDeclaration": 5609,
                             "src": "7272:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 3355,
+                          "id": 3362,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -5208,14 +5208,14 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 3357,
+                              "id": 3364,
                               "name": "currentCorpBank_",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3225,
+                              "referencedDeclaration": 3232,
                               "src": "7294:16:4",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                                 "typeString": "contract JIincInterfaceForForwarder"
                               }
                             }
@@ -5223,11 +5223,11 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                                "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                                 "typeString": "contract JIincInterfaceForForwarder"
                               }
                             ],
-                            "id": 3356,
+                            "id": 3363,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -5240,7 +5240,7 @@
                             },
                             "typeName": "address"
                           },
-                          "id": 3358,
+                          "id": 3365,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -5263,7 +5263,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "466f727761726465722063616e63656c4d6967726174696f6e206661696c6564202d206d73672e73656e646572206d7573742062652063757272656e7420636f72702062616e6b",
-                        "id": 3360,
+                        "id": 3367,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -5290,21 +5290,21 @@
                           "typeString": "literal_string \"Forwarder cancelMigration failed - msg.sender must be current corp bank\""
                         }
                       ],
-                      "id": 3353,
+                      "id": 3360,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        6139,
-                        6140
+                        5612,
+                        5613
                       ],
-                      "referencedDeclaration": 6140,
+                      "referencedDeclaration": 5613,
                       "src": "7264:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3361,
+                    "id": 3368,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5318,25 +5318,25 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3362,
+                  "id": 3369,
                   "nodeType": "ExpressionStatement",
                   "src": "7264:123:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3367,
+                    "id": 3374,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3363,
+                      "id": 3370,
                       "name": "newCorpBank_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3227,
+                      "referencedDeclaration": 3234,
                       "src": "7453:12:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -5351,7 +5351,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "307830",
-                          "id": 3365,
+                          "id": 3372,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -5374,7 +5374,7 @@
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 3364,
+                        "id": 3371,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -5387,7 +5387,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 3366,
+                      "id": 3373,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -5407,7 +5407,7 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 3368,
+                  "id": 3375,
                   "nodeType": "ExpressionStatement",
                   "src": "7453:27:4"
                 },
@@ -5418,7 +5418,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "74727565",
-                        "id": 3369,
+                        "id": 3376,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -5434,7 +5434,7 @@
                         "value": "true"
                       }
                     ],
-                    "id": 3370,
+                    "id": 3377,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -5447,15 +5447,15 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 3352,
-                  "id": 3371,
+                  "functionReturnParameters": 3359,
+                  "id": 3378,
                   "nodeType": "Return",
                   "src": "7499:13:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 3373,
+            "id": 3380,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -5463,22 +5463,22 @@
             "name": "cancelMigration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3349,
+              "id": 3356,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "7070:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3352,
+              "id": 3359,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3351,
+                  "id": 3358,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3373,
+                  "scope": 3380,
                   "src": "7106:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5487,7 +5487,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3350,
+                    "id": 3357,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "7106:4:4",
@@ -5502,7 +5502,7 @@
               ],
               "src": "7105:6:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "7046:473:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -5510,7 +5510,7 @@
           },
           {
             "body": {
-              "id": 3402,
+              "id": 3409,
               "nodeType": "Block",
               "src": "7599:407:4",
               "statements": [
@@ -5524,7 +5524,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 3382,
+                        "id": 3389,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -5533,18 +5533,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 3379,
+                            "id": 3386,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6136,
+                            "referencedDeclaration": 5609,
                             "src": "7668:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 3380,
+                          "id": 3387,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -5562,11 +5562,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 3381,
+                          "id": 3388,
                           "name": "newCorpBank_",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3227,
+                          "referencedDeclaration": 3234,
                           "src": "7682:12:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -5582,7 +5582,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "466f727761726465722066696e6973684d6967726174696f6e206661696c6564202d206d73672e73656e646572206d757374206265206e657720636f72702062616e6b",
-                        "id": 3383,
+                        "id": 3390,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -5609,21 +5609,21 @@
                           "typeString": "literal_string \"Forwarder finishMigration failed - msg.sender must be new corp bank\""
                         }
                       ],
-                      "id": 3378,
+                      "id": 3385,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        6139,
-                        6140
+                        5612,
+                        5613
                       ],
-                      "referencedDeclaration": 6140,
+                      "referencedDeclaration": 5613,
                       "src": "7660:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3384,
+                    "id": 3391,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5637,28 +5637,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3385,
+                  "id": 3392,
                   "nodeType": "ExpressionStatement",
                   "src": "7660:106:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3391,
+                    "id": 3398,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3386,
+                      "id": 3393,
                       "name": "currentCorpBank_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3225,
+                      "referencedDeclaration": 3232,
                       "src": "7821:16:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                         "typeString": "contract JIincInterfaceForForwarder"
                       }
                     },
@@ -5672,11 +5672,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 3388,
+                              "id": 3395,
                               "name": "newCorpBank_",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3227,
+                              "referencedDeclaration": 3234,
                               "src": "7868:12:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -5691,18 +5691,18 @@
                                 "typeString": "address"
                               }
                             ],
-                            "id": 3387,
+                            "id": 3394,
                             "name": "JIincInterfaceForForwarder",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3220,
+                            "referencedDeclaration": 3227,
                             "src": "7841:26:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_JIincInterfaceForForwarder_$3220_$",
+                              "typeIdentifier": "t_type$_t_contract$_JIincInterfaceForForwarder_$3227_$",
                               "typeString": "type(contract JIincInterfaceForForwarder)"
                             }
                           },
-                          "id": 3389,
+                          "id": 3396,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -5712,12 +5712,12 @@
                           "nodeType": "FunctionCall",
                           "src": "7841:40:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                            "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                             "typeString": "contract JIincInterfaceForForwarder"
                           }
                         }
                       ],
-                      "id": 3390,
+                      "id": 3397,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
@@ -5726,35 +5726,35 @@
                       "nodeType": "TupleExpression",
                       "src": "7840:42:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                         "typeString": "contract JIincInterfaceForForwarder"
                       }
                     },
                     "src": "7821:61:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                      "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                       "typeString": "contract JIincInterfaceForForwarder"
                     }
                   },
-                  "id": 3392,
+                  "id": 3399,
                   "nodeType": "ExpressionStatement",
                   "src": "7821:61:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3397,
+                    "id": 3404,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3393,
+                      "id": 3400,
                       "name": "newCorpBank_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3227,
+                      "referencedDeclaration": 3234,
                       "src": "7940:12:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -5769,7 +5769,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "307830",
-                          "id": 3395,
+                          "id": 3402,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -5792,7 +5792,7 @@
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 3394,
+                        "id": 3401,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -5805,7 +5805,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 3396,
+                      "id": 3403,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -5825,7 +5825,7 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 3398,
+                  "id": 3405,
                   "nodeType": "ExpressionStatement",
                   "src": "7940:27:4"
                 },
@@ -5836,7 +5836,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "74727565",
-                        "id": 3399,
+                        "id": 3406,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -5852,7 +5852,7 @@
                         "value": "true"
                       }
                     ],
-                    "id": 3400,
+                    "id": 3407,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -5865,15 +5865,15 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 3377,
-                  "id": 3401,
+                  "functionReturnParameters": 3384,
+                  "id": 3408,
                   "nodeType": "Return",
                   "src": "7986:13:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 3403,
+            "id": 3410,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -5881,22 +5881,22 @@
             "name": "finishMigration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3374,
+              "id": 3381,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "7553:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3377,
+              "id": 3384,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3376,
+                  "id": 3383,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3403,
+                  "scope": 3410,
                   "src": "7589:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5905,7 +5905,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3375,
+                    "id": 3382,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "7589:4:4",
@@ -5920,7 +5920,7 @@
               ],
               "src": "7588:6:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "7529:477:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -5928,7 +5928,7 @@
           },
           {
             "body": {
-              "id": 3425,
+              "id": 3432,
               "nodeType": "Block",
               "src": "8339:200:4",
               "statements": [
@@ -5942,18 +5942,18 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 3411,
+                        "id": 3418,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 3409,
+                          "id": 3416,
                           "name": "needsBank_",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3230,
+                          "referencedDeclaration": 3237,
                           "src": "8357:10:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -5965,7 +5965,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 3410,
+                          "id": 3417,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -5989,7 +5989,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "466f72776172646572207365747570206661696c6564202d20636f72702062616e6b20616c72656164792072656769737465726564",
-                        "id": 3412,
+                        "id": 3419,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -6016,21 +6016,21 @@
                           "typeString": "literal_string \"Forwarder setup failed - corp bank already registered\""
                         }
                       ],
-                      "id": 3408,
+                      "id": 3415,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        6139,
-                        6140
+                        5612,
+                        5613
                       ],
-                      "referencedDeclaration": 6140,
+                      "referencedDeclaration": 5613,
                       "src": "8349:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3413,
+                    "id": 3420,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -6044,28 +6044,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3414,
+                  "id": 3421,
                   "nodeType": "ExpressionStatement",
                   "src": "8349:84:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3419,
+                    "id": 3426,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3415,
+                      "id": 3422,
                       "name": "currentCorpBank_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3225,
+                      "referencedDeclaration": 3232,
                       "src": "8443:16:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                         "typeString": "contract JIincInterfaceForForwarder"
                       }
                     },
@@ -6076,11 +6076,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 3417,
+                          "id": 3424,
                           "name": "_firstCorpBank",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3405,
+                          "referencedDeclaration": 3412,
                           "src": "8489:14:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -6095,18 +6095,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 3416,
+                        "id": 3423,
                         "name": "JIincInterfaceForForwarder",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3220,
+                        "referencedDeclaration": 3227,
                         "src": "8462:26:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_JIincInterfaceForForwarder_$3220_$",
+                          "typeIdentifier": "t_type$_t_contract$_JIincInterfaceForForwarder_$3227_$",
                           "typeString": "type(contract JIincInterfaceForForwarder)"
                         }
                       },
-                      "id": 3418,
+                      "id": 3425,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -6116,35 +6116,35 @@
                       "nodeType": "FunctionCall",
                       "src": "8462:42:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                        "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                         "typeString": "contract JIincInterfaceForForwarder"
                       }
                     },
                     "src": "8443:61:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3220",
+                      "typeIdentifier": "t_contract$_JIincInterfaceForForwarder_$3227",
                       "typeString": "contract JIincInterfaceForForwarder"
                     }
                   },
-                  "id": 3420,
+                  "id": 3427,
                   "nodeType": "ExpressionStatement",
                   "src": "8443:61:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3423,
+                    "id": 3430,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3421,
+                      "id": 3428,
                       "name": "needsBank_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3230,
+                      "referencedDeclaration": 3237,
                       "src": "8514:10:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -6156,7 +6156,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 3422,
+                      "id": 3429,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -6177,14 +6177,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3424,
+                  "id": 3431,
                   "nodeType": "ExpressionStatement",
                   "src": "8514:18:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 3426,
+            "id": 3433,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -6192,15 +6192,15 @@
             "name": "setup",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3406,
+              "id": 3413,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3405,
+                  "id": 3412,
                   "name": "_firstCorpBank",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3426,
+                  "scope": 3433,
                   "src": "8294:22:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -6209,7 +6209,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3404,
+                    "id": 3411,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "8294:7:4",
@@ -6226,19 +6226,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3407,
+              "id": 3414,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "8339:0:4"
             },
-            "scope": 3427,
+            "scope": 3434,
             "src": "8279:260:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 3428,
+        "scope": 3435,
         "src": "5002:3539:4"
       }
     ],
@@ -6249,49 +6249,19 @@
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
   "networks": {
-    "1532669214260": {
+    "1533058966973": {
       "events": {},
       "links": {},
-      "address": "0xb6e6adb92f130ade251363e3505127ec9cfdca59",
-      "transactionHash": "0x4cf83b2e39e4bc0306fb4a6e09d0389e87fb3990fa9bc083042e99de3e41b3dc"
+      "address": "0x67b5656d60a809915323bf2c40a8bef15a152e3e",
+      "transactionHash": "0xd57a3a75398a088e5c834de09a9c1fe4d115b201729c30b6c83ba9e5d4992343"
     },
-    "1532808719847": {
+    "1533064337868": {
       "events": {},
       "links": {},
-      "address": "0x37a582e95fc22a204557ae97c6b466eaa4749959",
-      "transactionHash": "0x9464a75fecb5d17d93e8d15a10fcba10dd06e4e78c68586a90f5966c83e4370a"
-    },
-    "1532814503344": {
-      "events": {},
-      "links": {},
-      "address": "0x1fbebadc83fba29af96a9ee9b9f40230d8a0562b",
-      "transactionHash": "0x89e2260875cf7d622c15db4d7282a0b42aa79f15f99cd015ddddb4229cf1a25f"
-    },
-    "1532899400898": {
-      "events": {},
-      "links": {},
-      "address": "0x6c60eaac917737393cf746556df1c4aff79a56c5",
-      "transactionHash": "0x73a4393ebdd6fbd0f6b4eefb34db44aa3aabae18e1f49cff6c5bfca51b6282db"
-    },
-    "1533011703112": {
-      "events": {},
-      "links": {},
-      "address": "0x151ecc4968398962d3b939256151ce3184b94c03",
-      "transactionHash": "0x027790ee86602ba81477154a1cfd8a2e8852ad4a896e48dd5cd77cbfadf32b61"
-    },
-    "1533012777052": {
-      "events": {},
-      "links": {},
-      "address": "0xc89ce4735882c9f0f0fe26686c53074e09b0d550",
-      "transactionHash": "0x13505cdacdc1710cb383efb7a3e26285aa9a8d327900360cba0002b960a7d3e2"
-    },
-    "1533012957438": {
-      "events": {},
-      "links": {},
-      "address": "0x5b9b42d6e4b2e4bf8d42eba32d46918e10899b66",
-      "transactionHash": "0xc763ac748e184df175448c554919194f6fc846d0192b6fce42a5a82b55183382"
+      "address": "0x0e696947a06550def604e82c26fd9e493e576337",
+      "transactionHash": "0x6b357e2b22b4e14d0ec747751d655dd4acdc2eb6eaadb6d277d9b6d1634a0738"
     }
   },
-  "schemaVersion": "2.0.0",
-  "updatedAt": "2018-07-31T05:21:45.705Z"
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-07-31T20:26:38.674Z"
 }

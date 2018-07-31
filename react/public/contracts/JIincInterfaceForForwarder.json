@@ -45,14 +45,14 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/interface/JIincInterfaceForForwarder.sol",
     "exportedSymbols": {
       "JIincInterfaceForForwarder": [
-        4299
+        4209
       ]
     },
-    "id": 4300,
+    "id": 4210,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4286,
+        "id": 4196,
         "literals": [
           "solidity",
           "^",
@@ -60,7 +60,7 @@
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:12"
+        "src": "0:24:10"
       },
       {
         "baseContracts": [],
@@ -68,9 +68,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 4299,
+        "id": 4209,
         "linearizedBaseContracts": [
-          4299
+          4209
         ],
         "name": "JIincInterfaceForForwarder",
         "nodeType": "ContractDefinition",
@@ -78,7 +78,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 4293,
+            "id": 4203,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -86,16 +86,16 @@
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4289,
+              "id": 4199,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4288,
+                  "id": 4198,
                   "name": "_addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4293,
-                  "src": "86:13:12",
+                  "scope": 4203,
+                  "src": "86:13:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -103,10 +103,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4287,
+                    "id": 4197,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "86:7:12",
+                    "src": "86:7:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -116,20 +116,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "85:15:12"
+              "src": "85:15:10"
             },
             "payable": true,
             "returnParameters": {
-              "id": 4292,
+              "id": 4202,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4291,
+                  "id": 4201,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4293,
-                  "src": "127:4:12",
+                  "scope": 4203,
+                  "src": "127:4:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -137,10 +137,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 4290,
+                    "id": 4200,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "127:4:12",
+                    "src": "127:4:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -150,10 +150,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "126:6:12"
+              "src": "126:6:10"
             },
-            "scope": 4299,
-            "src": "69:64:12",
+            "scope": 4209,
+            "src": "69:64:10",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
@@ -161,7 +161,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 4298,
+            "id": 4208,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -169,23 +169,23 @@
             "name": "migrationReceiver_setup",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4294,
+              "id": 4204,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "170:2:12"
+              "src": "170:2:10"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4297,
+              "id": 4207,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4296,
+                  "id": 4206,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4298,
-                  "src": "191:4:12",
+                  "scope": 4208,
+                  "src": "191:4:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -193,10 +193,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 4295,
+                    "id": 4205,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "191:4:12",
+                    "src": "191:4:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -206,33 +206,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "190:6:12"
+              "src": "190:6:10"
             },
-            "scope": 4299,
-            "src": "138:59:12",
+            "scope": 4209,
+            "src": "138:59:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 4300,
-        "src": "26:173:12"
+        "scope": 4210,
+        "src": "26:173:10"
       }
     ],
-    "src": "0:200:12"
+    "src": "0:200:10"
   },
   "legacyAST": {
     "absolutePath": "/root/projects/fomo3d_clone/contracts/interface/JIincInterfaceForForwarder.sol",
     "exportedSymbols": {
       "JIincInterfaceForForwarder": [
-        4299
+        4209
       ]
     },
-    "id": 4300,
+    "id": 4210,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4286,
+        "id": 4196,
         "literals": [
           "solidity",
           "^",
@@ -240,7 +240,7 @@
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:12"
+        "src": "0:24:10"
       },
       {
         "baseContracts": [],
@@ -248,9 +248,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 4299,
+        "id": 4209,
         "linearizedBaseContracts": [
-          4299
+          4209
         ],
         "name": "JIincInterfaceForForwarder",
         "nodeType": "ContractDefinition",
@@ -258,7 +258,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 4293,
+            "id": 4203,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -266,16 +266,16 @@
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4289,
+              "id": 4199,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4288,
+                  "id": 4198,
                   "name": "_addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4293,
-                  "src": "86:13:12",
+                  "scope": 4203,
+                  "src": "86:13:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -283,10 +283,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4287,
+                    "id": 4197,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "86:7:12",
+                    "src": "86:7:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -296,20 +296,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "85:15:12"
+              "src": "85:15:10"
             },
             "payable": true,
             "returnParameters": {
-              "id": 4292,
+              "id": 4202,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4291,
+                  "id": 4201,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4293,
-                  "src": "127:4:12",
+                  "scope": 4203,
+                  "src": "127:4:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -317,10 +317,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 4290,
+                    "id": 4200,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "127:4:12",
+                    "src": "127:4:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -330,10 +330,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "126:6:12"
+              "src": "126:6:10"
             },
-            "scope": 4299,
-            "src": "69:64:12",
+            "scope": 4209,
+            "src": "69:64:10",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
@@ -341,7 +341,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 4298,
+            "id": 4208,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -349,23 +349,23 @@
             "name": "migrationReceiver_setup",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4294,
+              "id": 4204,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "170:2:12"
+              "src": "170:2:10"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4297,
+              "id": 4207,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4296,
+                  "id": 4206,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4298,
-                  "src": "191:4:12",
+                  "scope": 4208,
+                  "src": "191:4:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -373,10 +373,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 4295,
+                    "id": 4205,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "191:4:12",
+                    "src": "191:4:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -386,26 +386,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "190:6:12"
+              "src": "190:6:10"
             },
-            "scope": 4299,
-            "src": "138:59:12",
+            "scope": 4209,
+            "src": "138:59:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 4300,
-        "src": "26:173:12"
+        "scope": 4210,
+        "src": "26:173:10"
       }
     ],
-    "src": "0:200:12"
+    "src": "0:200:10"
   },
   "compiler": {
     "name": "solc",
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "2.0.1",
-  "updatedAt": "2018-07-27T05:30:07.961Z"
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-07-27T02:39:02.557Z"
 }
