@@ -11,14 +11,14 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/library/F3Ddatasets.sol",
     "exportedSymbols": {
       "F3Ddatasets": [
-        3167
+        3148
       ]
     },
-    "id": 3168,
+    "id": 3149,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3090,
+        "id": 3071,
         "literals": [
           "solidity",
           "^",
@@ -34,23 +34,23 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 3167,
+        "id": 3148,
         "linearizedBaseContracts": [
-          3167
+          3148
         ],
         "name": "F3Ddatasets",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "F3Ddatasets.EventReturns",
-            "id": 3109,
+            "id": 3090,
             "members": [
               {
                 "constant": false,
-                "id": 3092,
+                "id": 3073,
                 "name": "compressedData",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "957:22:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -59,7 +59,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3091,
+                  "id": 3072,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "957:7:5",
@@ -73,10 +73,10 @@
               },
               {
                 "constant": false,
-                "id": 3094,
+                "id": 3075,
                 "name": "compressedIDs",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "989:21:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -85,7 +85,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3093,
+                  "id": 3074,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "989:7:5",
@@ -99,10 +99,10 @@
               },
               {
                 "constant": false,
-                "id": 3096,
+                "id": 3077,
                 "name": "winnerAddr",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1020:18:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -111,7 +111,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 3095,
+                  "id": 3076,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "1020:7:5",
@@ -125,10 +125,10 @@
               },
               {
                 "constant": false,
-                "id": 3098,
+                "id": 3079,
                 "name": "winnerName",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1074:18:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -137,7 +137,7 @@
                   "typeString": "bytes32"
                 },
                 "typeName": {
-                  "id": 3097,
+                  "id": 3078,
                   "name": "bytes32",
                   "nodeType": "ElementaryTypeName",
                   "src": "1074:7:5",
@@ -151,10 +151,10 @@
               },
               {
                 "constant": false,
-                "id": 3100,
+                "id": 3081,
                 "name": "amountWon",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1125:17:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -163,7 +163,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3099,
+                  "id": 3080,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1125:7:5",
@@ -177,10 +177,10 @@
               },
               {
                 "constant": false,
-                "id": 3102,
+                "id": 3083,
                 "name": "newPot",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1175:14:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -189,7 +189,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3101,
+                  "id": 3082,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1175:7:5",
@@ -203,10 +203,10 @@
               },
               {
                 "constant": false,
-                "id": 3104,
+                "id": 3085,
                 "name": "P3DAmount",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1232:17:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -215,7 +215,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3103,
+                  "id": 3084,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1232:7:5",
@@ -229,10 +229,10 @@
               },
               {
                 "constant": false,
-                "id": 3106,
+                "id": 3087,
                 "name": "genAmount",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1297:17:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -241,7 +241,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3105,
+                  "id": 3086,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1297:7:5",
@@ -255,10 +255,10 @@
               },
               {
                 "constant": false,
-                "id": 3108,
+                "id": 3089,
                 "name": "potAmount",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1362:17:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -267,7 +267,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3107,
+                  "id": 3088,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1362:7:5",
@@ -282,20 +282,20 @@
             ],
             "name": "EventReturns",
             "nodeType": "StructDefinition",
-            "scope": 3167,
+            "scope": 3148,
             "src": "927:491:5",
             "visibility": "public"
           },
           {
             "canonicalName": "F3Ddatasets.Player",
-            "id": 3122,
+            "id": 3103,
             "members": [
               {
                 "constant": false,
-                "id": 3111,
+                "id": 3092,
                 "name": "addr",
                 "nodeType": "VariableDeclaration",
-                "scope": 3122,
+                "scope": 3103,
                 "src": "1447:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -304,7 +304,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 3110,
+                  "id": 3091,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "1447:7:5",
@@ -318,10 +318,10 @@
               },
               {
                 "constant": false,
-                "id": 3113,
+                "id": 3094,
                 "name": "win",
                 "nodeType": "VariableDeclaration",
-                "scope": 3122,
+                "scope": 3103,
                 "src": "1489:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -330,7 +330,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3112,
+                  "id": 3093,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1489:7:5",
@@ -344,10 +344,10 @@
               },
               {
                 "constant": false,
-                "id": 3115,
+                "id": 3096,
                 "name": "gen",
                 "nodeType": "VariableDeclaration",
-                "scope": 3122,
+                "scope": 3103,
                 "src": "1531:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -356,7 +356,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3114,
+                  "id": 3095,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1531:7:5",
@@ -370,10 +370,10 @@
               },
               {
                 "constant": false,
-                "id": 3117,
+                "id": 3098,
                 "name": "aff",
                 "nodeType": "VariableDeclaration",
-                "scope": 3122,
+                "scope": 3103,
                 "src": "1572:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -382,7 +382,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3116,
+                  "id": 3097,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1572:7:5",
@@ -396,10 +396,10 @@
               },
               {
                 "constant": false,
-                "id": 3119,
+                "id": 3100,
                 "name": "lrnd",
                 "nodeType": "VariableDeclaration",
-                "scope": 3122,
+                "scope": 3103,
                 "src": "1615:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -408,7 +408,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3118,
+                  "id": 3099,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1615:7:5",
@@ -422,10 +422,10 @@
               },
               {
                 "constant": false,
-                "id": 3121,
+                "id": 3102,
                 "name": "laff",
                 "nodeType": "VariableDeclaration",
-                "scope": 3122,
+                "scope": 3103,
                 "src": "1660:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -434,7 +434,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 3120,
+                  "id": 3101,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "1660:7:5",
@@ -449,20 +449,20 @@
             ],
             "name": "Player",
             "nodeType": "StructDefinition",
-            "scope": 3167,
+            "scope": 3148,
             "src": "1423:284:5",
             "visibility": "public"
           },
           {
             "canonicalName": "F3Ddatasets.PlayerRounds",
-            "id": 3131,
+            "id": 3112,
             "members": [
               {
                 "constant": false,
-                "id": 3124,
+                "id": 3105,
                 "name": "eth",
                 "nodeType": "VariableDeclaration",
-                "scope": 3131,
+                "scope": 3112,
                 "src": "1742:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -471,7 +471,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3123,
+                  "id": 3104,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1742:7:5",
@@ -485,10 +485,10 @@
               },
               {
                 "constant": false,
-                "id": 3126,
+                "id": 3107,
                 "name": "keys",
                 "nodeType": "VariableDeclaration",
-                "scope": 3131,
+                "scope": 3112,
                 "src": "1822:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -497,7 +497,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3125,
+                  "id": 3106,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1822:7:5",
@@ -511,10 +511,10 @@
               },
               {
                 "constant": false,
-                "id": 3128,
+                "id": 3109,
                 "name": "mask",
                 "nodeType": "VariableDeclaration",
-                "scope": 3131,
+                "scope": 3112,
                 "src": "1854:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -523,7 +523,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3127,
+                  "id": 3108,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1854:7:5",
@@ -537,10 +537,10 @@
               },
               {
                 "constant": false,
-                "id": 3130,
+                "id": 3111,
                 "name": "ico",
                 "nodeType": "VariableDeclaration",
-                "scope": 3131,
+                "scope": 3112,
                 "src": "1894:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -549,7 +549,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3129,
+                  "id": 3110,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1894:7:5",
@@ -564,20 +564,20 @@
             ],
             "name": "PlayerRounds",
             "nodeType": "StructDefinition",
-            "scope": 3167,
+            "scope": 3148,
             "src": "1712:227:5",
             "visibility": "public"
           },
           {
             "canonicalName": "F3Ddatasets.Round",
-            "id": 3156,
+            "id": 3137,
             "members": [
               {
                 "constant": false,
-                "id": 3133,
+                "id": 3114,
                 "name": "plyr",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "1967:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -586,7 +586,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 3132,
+                  "id": 3113,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "1967:7:5",
@@ -600,10 +600,10 @@
               },
               {
                 "constant": false,
-                "id": 3135,
+                "id": 3116,
                 "name": "team",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2016:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -612,7 +612,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3134,
+                  "id": 3115,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2016:7:5",
@@ -626,10 +626,10 @@
               },
               {
                 "constant": false,
-                "id": 3137,
+                "id": 3118,
                 "name": "end",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2063:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -638,7 +638,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3136,
+                  "id": 3117,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2063:7:5",
@@ -652,10 +652,10 @@
               },
               {
                 "constant": false,
-                "id": 3139,
+                "id": 3120,
                 "name": "ended",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2106:10:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -664,7 +664,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 3138,
+                  "id": 3119,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "2106:4:5",
@@ -678,10 +678,10 @@
               },
               {
                 "constant": false,
-                "id": 3141,
+                "id": 3122,
                 "name": "strt",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2165:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -690,7 +690,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3140,
+                  "id": 3121,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2165:7:5",
@@ -704,10 +704,10 @@
               },
               {
                 "constant": false,
-                "id": 3143,
+                "id": 3124,
                 "name": "keys",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2211:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -716,7 +716,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3142,
+                  "id": 3123,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2211:7:5",
@@ -730,10 +730,10 @@
               },
               {
                 "constant": false,
-                "id": 3145,
+                "id": 3126,
                 "name": "eth",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2243:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -742,7 +742,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3144,
+                  "id": 3125,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2243:7:5",
@@ -756,10 +756,10 @@
               },
               {
                 "constant": false,
-                "id": 3147,
+                "id": 3128,
                 "name": "pot",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2283:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -768,7 +768,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3146,
+                  "id": 3127,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2283:7:5",
@@ -782,10 +782,10 @@
               },
               {
                 "constant": false,
-                "id": 3149,
+                "id": 3130,
                 "name": "mask",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2385:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -794,7 +794,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3148,
+                  "id": 3129,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2385:7:5",
@@ -808,10 +808,10 @@
               },
               {
                 "constant": false,
-                "id": 3151,
+                "id": 3132,
                 "name": "ico",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2428:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -820,7 +820,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3150,
+                  "id": 3131,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2428:7:5",
@@ -834,10 +834,10 @@
               },
               {
                 "constant": false,
-                "id": 3153,
+                "id": 3134,
                 "name": "icoGen",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2490:14:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -846,7 +846,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3152,
+                  "id": 3133,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2490:7:5",
@@ -860,10 +860,10 @@
               },
               {
                 "constant": false,
-                "id": 3155,
+                "id": 3136,
                 "name": "icoAvg",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2552:14:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -872,7 +872,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3154,
+                  "id": 3135,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2552:7:5",
@@ -887,20 +887,20 @@
             ],
             "name": "Round",
             "nodeType": "StructDefinition",
-            "scope": 3167,
+            "scope": 3148,
             "src": "1944:664:5",
             "visibility": "public"
           },
           {
             "canonicalName": "F3Ddatasets.TeamFee",
-            "id": 3161,
+            "id": 3142,
             "members": [
               {
                 "constant": false,
-                "id": 3158,
+                "id": 3139,
                 "name": "gen",
                 "nodeType": "VariableDeclaration",
-                "scope": 3161,
+                "scope": 3142,
                 "src": "2638:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -909,7 +909,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3157,
+                  "id": 3138,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2638:7:5",
@@ -923,10 +923,10 @@
               },
               {
                 "constant": false,
-                "id": 3160,
+                "id": 3141,
                 "name": "p3d",
                 "nodeType": "VariableDeclaration",
-                "scope": 3161,
+                "scope": 3142,
                 "src": "2720:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -935,7 +935,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3159,
+                  "id": 3140,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2720:7:5",
@@ -950,20 +950,20 @@
             ],
             "name": "TeamFee",
             "nodeType": "StructDefinition",
-            "scope": 3167,
+            "scope": 3148,
             "src": "2613:169:5",
             "visibility": "public"
           },
           {
             "canonicalName": "F3Ddatasets.PotSplit",
-            "id": 3166,
+            "id": 3147,
             "members": [
               {
                 "constant": false,
-                "id": 3163,
+                "id": 3144,
                 "name": "gen",
                 "nodeType": "VariableDeclaration",
-                "scope": 3166,
+                "scope": 3147,
                 "src": "2813:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -972,7 +972,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3162,
+                  "id": 3143,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2813:7:5",
@@ -986,10 +986,10 @@
               },
               {
                 "constant": false,
-                "id": 3165,
+                "id": 3146,
                 "name": "p3d",
                 "nodeType": "VariableDeclaration",
-                "scope": 3166,
+                "scope": 3147,
                 "src": "2892:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -998,7 +998,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3164,
+                  "id": 3145,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2892:7:5",
@@ -1013,12 +1013,12 @@
             ],
             "name": "PotSplit",
             "nodeType": "StructDefinition",
-            "scope": 3167,
+            "scope": 3148,
             "src": "2787:164:5",
             "visibility": "public"
           }
         ],
-        "scope": 3168,
+        "scope": 3149,
         "src": "238:2715:5"
       }
     ],
@@ -1028,14 +1028,14 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/library/F3Ddatasets.sol",
     "exportedSymbols": {
       "F3Ddatasets": [
-        3167
+        3148
       ]
     },
-    "id": 3168,
+    "id": 3149,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3090,
+        "id": 3071,
         "literals": [
           "solidity",
           "^",
@@ -1051,23 +1051,23 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 3167,
+        "id": 3148,
         "linearizedBaseContracts": [
-          3167
+          3148
         ],
         "name": "F3Ddatasets",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "F3Ddatasets.EventReturns",
-            "id": 3109,
+            "id": 3090,
             "members": [
               {
                 "constant": false,
-                "id": 3092,
+                "id": 3073,
                 "name": "compressedData",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "957:22:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1076,7 +1076,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3091,
+                  "id": 3072,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "957:7:5",
@@ -1090,10 +1090,10 @@
               },
               {
                 "constant": false,
-                "id": 3094,
+                "id": 3075,
                 "name": "compressedIDs",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "989:21:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1102,7 +1102,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3093,
+                  "id": 3074,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "989:7:5",
@@ -1116,10 +1116,10 @@
               },
               {
                 "constant": false,
-                "id": 3096,
+                "id": 3077,
                 "name": "winnerAddr",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1020:18:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1128,7 +1128,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 3095,
+                  "id": 3076,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "1020:7:5",
@@ -1142,10 +1142,10 @@
               },
               {
                 "constant": false,
-                "id": 3098,
+                "id": 3079,
                 "name": "winnerName",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1074:18:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1154,7 +1154,7 @@
                   "typeString": "bytes32"
                 },
                 "typeName": {
-                  "id": 3097,
+                  "id": 3078,
                   "name": "bytes32",
                   "nodeType": "ElementaryTypeName",
                   "src": "1074:7:5",
@@ -1168,10 +1168,10 @@
               },
               {
                 "constant": false,
-                "id": 3100,
+                "id": 3081,
                 "name": "amountWon",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1125:17:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1180,7 +1180,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3099,
+                  "id": 3080,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1125:7:5",
@@ -1194,10 +1194,10 @@
               },
               {
                 "constant": false,
-                "id": 3102,
+                "id": 3083,
                 "name": "newPot",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1175:14:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1206,7 +1206,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3101,
+                  "id": 3082,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1175:7:5",
@@ -1220,10 +1220,10 @@
               },
               {
                 "constant": false,
-                "id": 3104,
+                "id": 3085,
                 "name": "P3DAmount",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1232:17:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1232,7 +1232,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3103,
+                  "id": 3084,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1232:7:5",
@@ -1246,10 +1246,10 @@
               },
               {
                 "constant": false,
-                "id": 3106,
+                "id": 3087,
                 "name": "genAmount",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1297:17:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1258,7 +1258,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3105,
+                  "id": 3086,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1297:7:5",
@@ -1272,10 +1272,10 @@
               },
               {
                 "constant": false,
-                "id": 3108,
+                "id": 3089,
                 "name": "potAmount",
                 "nodeType": "VariableDeclaration",
-                "scope": 3109,
+                "scope": 3090,
                 "src": "1362:17:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1284,7 +1284,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3107,
+                  "id": 3088,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1362:7:5",
@@ -1299,20 +1299,20 @@
             ],
             "name": "EventReturns",
             "nodeType": "StructDefinition",
-            "scope": 3167,
+            "scope": 3148,
             "src": "927:491:5",
             "visibility": "public"
           },
           {
             "canonicalName": "F3Ddatasets.Player",
-            "id": 3122,
+            "id": 3103,
             "members": [
               {
                 "constant": false,
-                "id": 3111,
+                "id": 3092,
                 "name": "addr",
                 "nodeType": "VariableDeclaration",
-                "scope": 3122,
+                "scope": 3103,
                 "src": "1447:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1321,7 +1321,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 3110,
+                  "id": 3091,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "1447:7:5",
@@ -1335,10 +1335,10 @@
               },
               {
                 "constant": false,
-                "id": 3113,
+                "id": 3094,
                 "name": "win",
                 "nodeType": "VariableDeclaration",
-                "scope": 3122,
+                "scope": 3103,
                 "src": "1489:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1347,7 +1347,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3112,
+                  "id": 3093,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1489:7:5",
@@ -1361,10 +1361,10 @@
               },
               {
                 "constant": false,
-                "id": 3115,
+                "id": 3096,
                 "name": "gen",
                 "nodeType": "VariableDeclaration",
-                "scope": 3122,
+                "scope": 3103,
                 "src": "1531:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1373,7 +1373,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3114,
+                  "id": 3095,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1531:7:5",
@@ -1387,10 +1387,10 @@
               },
               {
                 "constant": false,
-                "id": 3117,
+                "id": 3098,
                 "name": "aff",
                 "nodeType": "VariableDeclaration",
-                "scope": 3122,
+                "scope": 3103,
                 "src": "1572:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1399,7 +1399,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3116,
+                  "id": 3097,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1572:7:5",
@@ -1413,10 +1413,10 @@
               },
               {
                 "constant": false,
-                "id": 3119,
+                "id": 3100,
                 "name": "lrnd",
                 "nodeType": "VariableDeclaration",
-                "scope": 3122,
+                "scope": 3103,
                 "src": "1615:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1425,7 +1425,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3118,
+                  "id": 3099,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1615:7:5",
@@ -1439,10 +1439,10 @@
               },
               {
                 "constant": false,
-                "id": 3121,
+                "id": 3102,
                 "name": "laff",
                 "nodeType": "VariableDeclaration",
-                "scope": 3122,
+                "scope": 3103,
                 "src": "1660:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1451,7 +1451,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 3120,
+                  "id": 3101,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "1660:7:5",
@@ -1466,20 +1466,20 @@
             ],
             "name": "Player",
             "nodeType": "StructDefinition",
-            "scope": 3167,
+            "scope": 3148,
             "src": "1423:284:5",
             "visibility": "public"
           },
           {
             "canonicalName": "F3Ddatasets.PlayerRounds",
-            "id": 3131,
+            "id": 3112,
             "members": [
               {
                 "constant": false,
-                "id": 3124,
+                "id": 3105,
                 "name": "eth",
                 "nodeType": "VariableDeclaration",
-                "scope": 3131,
+                "scope": 3112,
                 "src": "1742:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1488,7 +1488,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3123,
+                  "id": 3104,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1742:7:5",
@@ -1502,10 +1502,10 @@
               },
               {
                 "constant": false,
-                "id": 3126,
+                "id": 3107,
                 "name": "keys",
                 "nodeType": "VariableDeclaration",
-                "scope": 3131,
+                "scope": 3112,
                 "src": "1822:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1514,7 +1514,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3125,
+                  "id": 3106,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1822:7:5",
@@ -1528,10 +1528,10 @@
               },
               {
                 "constant": false,
-                "id": 3128,
+                "id": 3109,
                 "name": "mask",
                 "nodeType": "VariableDeclaration",
-                "scope": 3131,
+                "scope": 3112,
                 "src": "1854:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1540,7 +1540,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3127,
+                  "id": 3108,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1854:7:5",
@@ -1554,10 +1554,10 @@
               },
               {
                 "constant": false,
-                "id": 3130,
+                "id": 3111,
                 "name": "ico",
                 "nodeType": "VariableDeclaration",
-                "scope": 3131,
+                "scope": 3112,
                 "src": "1894:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1566,7 +1566,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3129,
+                  "id": 3110,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1894:7:5",
@@ -1581,20 +1581,20 @@
             ],
             "name": "PlayerRounds",
             "nodeType": "StructDefinition",
-            "scope": 3167,
+            "scope": 3148,
             "src": "1712:227:5",
             "visibility": "public"
           },
           {
             "canonicalName": "F3Ddatasets.Round",
-            "id": 3156,
+            "id": 3137,
             "members": [
               {
                 "constant": false,
-                "id": 3133,
+                "id": 3114,
                 "name": "plyr",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "1967:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1603,7 +1603,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 3132,
+                  "id": 3113,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "1967:7:5",
@@ -1617,10 +1617,10 @@
               },
               {
                 "constant": false,
-                "id": 3135,
+                "id": 3116,
                 "name": "team",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2016:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1629,7 +1629,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3134,
+                  "id": 3115,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2016:7:5",
@@ -1643,10 +1643,10 @@
               },
               {
                 "constant": false,
-                "id": 3137,
+                "id": 3118,
                 "name": "end",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2063:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1655,7 +1655,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3136,
+                  "id": 3117,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2063:7:5",
@@ -1669,10 +1669,10 @@
               },
               {
                 "constant": false,
-                "id": 3139,
+                "id": 3120,
                 "name": "ended",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2106:10:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1681,7 +1681,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 3138,
+                  "id": 3119,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "2106:4:5",
@@ -1695,10 +1695,10 @@
               },
               {
                 "constant": false,
-                "id": 3141,
+                "id": 3122,
                 "name": "strt",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2165:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1707,7 +1707,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3140,
+                  "id": 3121,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2165:7:5",
@@ -1721,10 +1721,10 @@
               },
               {
                 "constant": false,
-                "id": 3143,
+                "id": 3124,
                 "name": "keys",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2211:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1733,7 +1733,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3142,
+                  "id": 3123,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2211:7:5",
@@ -1747,10 +1747,10 @@
               },
               {
                 "constant": false,
-                "id": 3145,
+                "id": 3126,
                 "name": "eth",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2243:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1759,7 +1759,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3144,
+                  "id": 3125,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2243:7:5",
@@ -1773,10 +1773,10 @@
               },
               {
                 "constant": false,
-                "id": 3147,
+                "id": 3128,
                 "name": "pot",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2283:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1785,7 +1785,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3146,
+                  "id": 3127,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2283:7:5",
@@ -1799,10 +1799,10 @@
               },
               {
                 "constant": false,
-                "id": 3149,
+                "id": 3130,
                 "name": "mask",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2385:12:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1811,7 +1811,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3148,
+                  "id": 3129,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2385:7:5",
@@ -1825,10 +1825,10 @@
               },
               {
                 "constant": false,
-                "id": 3151,
+                "id": 3132,
                 "name": "ico",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2428:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1837,7 +1837,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3150,
+                  "id": 3131,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2428:7:5",
@@ -1851,10 +1851,10 @@
               },
               {
                 "constant": false,
-                "id": 3153,
+                "id": 3134,
                 "name": "icoGen",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2490:14:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1863,7 +1863,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3152,
+                  "id": 3133,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2490:7:5",
@@ -1877,10 +1877,10 @@
               },
               {
                 "constant": false,
-                "id": 3155,
+                "id": 3136,
                 "name": "icoAvg",
                 "nodeType": "VariableDeclaration",
-                "scope": 3156,
+                "scope": 3137,
                 "src": "2552:14:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1889,7 +1889,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3154,
+                  "id": 3135,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2552:7:5",
@@ -1904,20 +1904,20 @@
             ],
             "name": "Round",
             "nodeType": "StructDefinition",
-            "scope": 3167,
+            "scope": 3148,
             "src": "1944:664:5",
             "visibility": "public"
           },
           {
             "canonicalName": "F3Ddatasets.TeamFee",
-            "id": 3161,
+            "id": 3142,
             "members": [
               {
                 "constant": false,
-                "id": 3158,
+                "id": 3139,
                 "name": "gen",
                 "nodeType": "VariableDeclaration",
-                "scope": 3161,
+                "scope": 3142,
                 "src": "2638:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1926,7 +1926,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3157,
+                  "id": 3138,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2638:7:5",
@@ -1940,10 +1940,10 @@
               },
               {
                 "constant": false,
-                "id": 3160,
+                "id": 3141,
                 "name": "p3d",
                 "nodeType": "VariableDeclaration",
-                "scope": 3161,
+                "scope": 3142,
                 "src": "2720:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1952,7 +1952,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3159,
+                  "id": 3140,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2720:7:5",
@@ -1967,20 +1967,20 @@
             ],
             "name": "TeamFee",
             "nodeType": "StructDefinition",
-            "scope": 3167,
+            "scope": 3148,
             "src": "2613:169:5",
             "visibility": "public"
           },
           {
             "canonicalName": "F3Ddatasets.PotSplit",
-            "id": 3166,
+            "id": 3147,
             "members": [
               {
                 "constant": false,
-                "id": 3163,
+                "id": 3144,
                 "name": "gen",
                 "nodeType": "VariableDeclaration",
-                "scope": 3166,
+                "scope": 3147,
                 "src": "2813:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1989,7 +1989,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3162,
+                  "id": 3143,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2813:7:5",
@@ -2003,10 +2003,10 @@
               },
               {
                 "constant": false,
-                "id": 3165,
+                "id": 3146,
                 "name": "p3d",
                 "nodeType": "VariableDeclaration",
-                "scope": 3166,
+                "scope": 3147,
                 "src": "2892:11:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2015,7 +2015,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3164,
+                  "id": 3145,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "2892:7:5",
@@ -2030,12 +2030,12 @@
             ],
             "name": "PotSplit",
             "nodeType": "StructDefinition",
-            "scope": 3167,
+            "scope": 3148,
             "src": "2787:164:5",
             "visibility": "public"
           }
         ],
-        "scope": 3168,
+        "scope": 3149,
         "src": "238:2715:5"
       }
     ],
@@ -2047,5 +2047,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-07-29T23:06:53.657Z"
+  "updatedAt": "2018-07-31T05:20:40.787Z"
 }

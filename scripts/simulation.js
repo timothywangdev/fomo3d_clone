@@ -88,10 +88,8 @@ function playerInfo(playerData) {
   return {
     pID: playerData[0],
     keys: playerData[1].div(base).toString(),
-    win: playerData[2].div(base).toString(),
-    gen: playerData[3].mul(exchangeRate).div(base).toString(),
-    aff: playerData[4].mul(exchangeRate).div(base).toString(),
-    eth: playerData[5].mul(exchangeRate).div(base).toString()
+    earnings: playerData[2].mul(exchangeRate).div(base).toString(),
+    eth: playerData[3].mul(exchangeRate).div(base).toString()
   }
 }
 module.exports = async function (callback) {
@@ -118,7 +116,7 @@ module.exports = async function (callback) {
   let tokenAddr = await fomo.token.call()
   console.log(tokenAddr, token.address)
   let allowance = await token.allowance.call(accounts[0], fomo.address)
-  await fomo.buyXaddr(0, 0, new BigNumber(1e18))
+  // await fomo.buyXaddr(0, 0, new BigNumber(1e18))
 
   let playerData = await fomo.getPlayerInfoByAddress.call(accounts[0])
   console.log(playerInfo(playerData))
@@ -136,14 +134,17 @@ module.exports = async function (callback) {
   playerData = await fomo.getPlayerInfoByAddress.call(accounts[0])
   console.log(playerInfo(playerData))
 
+  let vaults = await fomo.getPlayerVaults(accounts[0])
+  console.log(vaults)
+  /*
   let bal_1 = await token.balanceOf.call(accounts[0])
   await fomo.withdraw()
   let bal_2 = await token.balanceOf.call(accounts[0])
-
   console.log('withdraw')
   let rewards = bal_2.sub(bal_1)
   console.log(rewards.div(base).toString())
 
   playerData = await fomo.getPlayerInfoByAddress.call(accounts[0])
   console.log(playerInfo(playerData))
+  */
 }

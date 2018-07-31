@@ -2,19 +2,19 @@ import Utils from './utils.js'
 import {BigNumber} from 'bignumber.js'
 import { toast } from 'react-toastify'
 
-function toBasicUnit(val) {
+function toBasicUnit (val) {
   let base = new BigNumber(10).pow(new BigNumber(18))
   let rv = new BigNumber(val).times(base)
   return rv
 }
 
-function notify(msg) {
-  toast.success("Transaction Mined: "+msg, {
+function notify (msg) {
+  toast.success('Transaction Mined: ' + msg, {
     position: toast.POSITION.TOP_CENTER
   })
 }
 
-function notifyPendingTx() {
+function notifyPendingTx () {
   let msg = 'Tips: Check your pending transaction in your transaction history, which can be found either in your wallet App or Metamask.'
   toast(msg, {
     position: toast.POSITION.TOP_CENTER,
@@ -29,6 +29,8 @@ class FomoService {
 
   async init () {
     this.instance = await Utils.getFomo()
+    let addr = await this.instance.token.call()
+    this.token = await Utils.getToken(addr)
   }
 
   getInstanceAddress () {
@@ -54,7 +56,10 @@ class FomoService {
   async getPlayerVaults (addr) {
     return this.instance.getPlayerVaults(addr)
   }
+
+  async getTokenAllowance (addr) {
+    return this.token.allowance(addr, this.instance.address)
+  }
 }
 
 export default new FomoService()
-

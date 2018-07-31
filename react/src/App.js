@@ -56,16 +56,17 @@ class App extends Component {
 
     const { activeItem } = this.state
 
-    const { roundInfo } = this.props
+    const { roundInfo, playerInfo, vaultsInfo, tokenInfo } = this.props
 
     return (
       <div className='fomo' style={{marginTop: '10%'}}>
-        {/*
-            Heads up! The styles below are necessary for the correct render of this example.
-            You can do same with CSS, the main idea is that all the elements up to the `Grid`
-            below must have a height of 100%.
-          */}
-        <style>{`
+      <ToastContainer />
+      {/*
+          Heads up! The styles below are necessary for the correct render of this example.
+          You can do same with CSS, the main idea is that all the elements up to the `Grid`
+          below must have a height of 100%.
+        */}
+      <style>{`
       body > div,
       body > div > div,
       body > div > div > div.fomo {
@@ -85,9 +86,9 @@ class App extends Component {
     50%  { box-shadow: 0 0 30px white; }
     100% { box-shadow: 0 0 0 white; }
 }
-          `}
+      `}
         </style>
-        <Grid textAlign='center' style={{ height: '100%' }}>
+      <Grid textAlign='center' style={{ height: '100%' }}>
           <Grid.Column style={{ maxWidth: 450 }}>
             <Grid.Row>
               <Segment circular style={square}>
@@ -141,71 +142,81 @@ class App extends Component {
                     name='vault'
                     active={activeItem === 'vault'}
                     onClick={this.handleItemClick}
-                  />
-                  
-                </Menu>
-                { activeItem === 'purchase' &&
-                  <Segment inverted style={{backgroundColor: '#343a40', topMargin: '0px', paddingTop: '0px'}}>
-                    <Input
-                      fluid
-                      labelPosition='right'
-                      placeholder='1' >
-                      <Label basic> <Icon name='key' /> </Label>
-                      <input />
-                      <Label>@ 0.02191514 XYZ</Label>
-                    </Input>
-                    <Button.Group fluid style={{paddingTop: '2%'}}>
-                      <Button positive> <Icon name='ethereum' />Send XYZ </Button>
-                      <Button.Or />
-                      <Button > <Icon name='dollar sign' /> Use Vault </Button>
-                    </Button.Group>
-                  </Segment>
-                }
-                { activeItem === 'round' &&
-                  <Segment inverted style={{backgroundColor: '#343a40', topMargin: '0px', paddingTop: '0px'}}>
-                    <div>
-                      <Segment clearing style={{backgroundColor: '#2d3238'}} >
-                        <Header inverted as='h5' floated='left'>
-                          Your Keys
-                        </Header>
-                        <Header inverted as='h5' floated='right' style={{
-                          textShadow: '0 0 5px #2b002b, 0 0 20px #cc9600, 0 0 10px #ff9900',
-                          color: 'white'}}>
-                          1200.0000 <Icon name='key' />
-                        </Header>
-                      </Segment>
-                      <Segment clearing style={{backgroundColor: '#2d3238'}} >
-                        <Header inverted as='h5' floated='left'>
-                          Your Earnings 
-                        </Header>
-                        <Header inverted as='h5' floated='right' style={{
-                          textShadow: '0 0 5px #2b002b, 0 0 20px #cc9600, 0 0 10px #ff9900',
-                          color: 'white'}}>
-                          1200.0000 XYZ
-                        </Header>
-                      </Segment>
-                      <Divider horizontal inverted>
-                        Round Stats
-                      </Divider>
-                      <Segment clearing style={{backgroundColor: '#2d3238'}} >
-                        <Header inverted as='h5' floated='left'>
-                          Total Keys
-                        </Header>
-                        <Header inverted as='h5' floated='right'>
-                          { roundInfo.keys}
-                        </Header>
-                      </Segment>
-                      <Segment clearing style={{backgroundColor: '#2d3238'}} >
-                        <Header inverted as='h5' floated='left'>
-                          Total XYZ purchased
-                        </Header>
-                        <Header inverted as='h5' floated='right'>
-                          { roundInfo.eth }
-                        </Header>
-                      </Segment>
-                    </div>
-                  </Segment>
-                }
+      />
+      
+      </Menu>
+      { activeItem === 'purchase' &&
+        <Segment inverted style={{backgroundColor: '#343a40', topMargin: '0px', paddingTop: '0px'}}>
+          <Segment clearing style={{backgroundColor: '#2d3238'}} >
+            <Header inverted as='h5' floated='left'>
+              Tokens Approved for Transfer
+            </Header>
+            <Header inverted as='h5' floated='right' style={{
+              textShadow: '0 0 5px #2b002b, 0 0 20px #cc9600, 0 0 10px #ff9900',
+              color: 'white'}}>
+              { tokenInfo.allowance  } XYZ
+            </Header>
+          </Segment>
+          <Input
+            fluid
+            labelPosition='right'
+            placeholder='1' >
+            <Label basic> <Icon name='key' /> </Label>
+            <input />
+            <Label>@ 0.02191514 XYZ</Label>
+          </Input>
+          <Button.Group fluid style={{paddingTop: '2%'}}>
+            <Button positive> <Icon name='ethereum' />Send XYZ </Button>
+            <Button.Or />
+            <Button > <Icon name='dollar sign' /> Use Vault </Button>
+          </Button.Group>
+        </Segment>
+      }
+      { activeItem === 'round' &&
+        <Segment inverted style={{backgroundColor: '#343a40', topMargin: '0px', paddingTop: '0px'}}>
+          <div>
+            <Segment clearing style={{backgroundColor: '#2d3238'}} >
+              <Header inverted as='h5' floated='left'>
+                Your Keys
+              </Header>
+              <Header inverted as='h5' floated='right' style={{
+                textShadow: '0 0 5px #2b002b, 0 0 20px #cc9600, 0 0 10px #ff9900',
+                color: 'white'}}>
+                { playerInfo.keys } <Icon name='key' />
+              </Header>
+            </Segment>
+            <Segment clearing style={{backgroundColor: '#2d3238'}} >
+              <Header inverted as='h5' floated='left'>
+                Your Earnings 
+              </Header>
+              <Header inverted as='h5' floated='right' style={{
+                textShadow: '0 0 5px #2b002b, 0 0 20px #cc9600, 0 0 10px #ff9900',
+                color: 'white'}}>
+                { playerInfo.earnings } XYZ
+              </Header>
+            </Segment>
+            <Divider horizontal inverted>
+              Round Stats
+            </Divider>
+            <Segment clearing style={{backgroundColor: '#2d3238'}} >
+              <Header inverted as='h5' floated='left'>
+                Total Keys
+              </Header>
+              <Header inverted as='h5' floated='right'>
+                { roundInfo.keys}
+              </Header>
+            </Segment>
+            <Segment clearing style={{backgroundColor: '#2d3238'}} >
+              <Header inverted as='h5' floated='left'>
+                Total XYZ purchased
+              </Header>
+              <Header inverted as='h5' floated='right'>
+                { roundInfo.eth }
+              </Header>
+            </Segment>
+          </div>
+        </Segment>
+      }
                 { activeItem === 'vault' &&
                   <Segment inverted style={{backgroundColor: '#343a40', topMargin: '0px', paddingTop: '0px'}}>
                     <div>
@@ -214,7 +225,7 @@ class App extends Component {
                           Won
                         </Header>
                         <Header inverted as='h5' floated='right'>
-                          1200.0000 XYZ
+                          { vaultsInfo.win } XYZ
                         </Header>
                       </Segment>
                       <Segment clearing style={{backgroundColor: '#2d3238'}} >
@@ -222,7 +233,7 @@ class App extends Component {
                           Dividends
                         </Header>
                         <Header inverted as='h5' floated='right'>
-                          1200.0000 XYZ
+                          { vaultsInfo.gen } XYZ
                         </Header>
                       </Segment>
                       <Segment clearing style={{backgroundColor: '#2d3238'}} >
@@ -230,7 +241,7 @@ class App extends Component {
                           Affiliation 
                         </Header>
                         <Header inverted as='h5' floated='right'>
-                          1200.0000 XYZ
+                          { vaultsInfo.aff } XYZ
                         </Header>
                       </Segment>
                       <Divider horizontal inverted>
@@ -244,7 +255,7 @@ class App extends Component {
                           style={{
                             textShadow: '0 0 5px #2b002b, 0 0 20px #cc9600, 0 0 10px #ff9900',
                             color: 'white'}} >
-                          1200.0000 XYZ
+                          { vaultsInfo.total } XYZ
                         </Header>
                       </Segment>
                       <Button fluid inverted color='green'>
@@ -264,6 +275,9 @@ class App extends Component {
 const mapStateToProps = state => {
   return {
     roundInfo: state.fomoReducer.roundInfo,
+    playerInfo: state.fomoReducer.playerInfo,
+    vaultsInfo: state.fomoReducer.vaultsInfo,
+    tokenInfo: state.fomoReducer.tokenInfo
   }
 }
 

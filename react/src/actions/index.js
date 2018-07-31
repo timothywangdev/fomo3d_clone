@@ -2,8 +2,7 @@ import Hodl3dService from '../utils/hodl3d.js'
 import {BigNumber} from 'bignumber.js'
 import Utils from '../utils/utils.js'
 
-
-function humanUnit(big, fixed = 4) {
+function humanUnit (big, fixed = 4) {
   if (!big) return '0.0000'
   let base = new BigNumber(10).pow(new BigNumber(18))
   big = big.div(base)
@@ -58,14 +57,13 @@ async function _calculateEthereumReceived (tokens) {
   return humanUnit(rv, 8)
 }
 
-async function _reinvest()  {
+async function _reinvest () {
   await Hodl3dService.reinvest()
 }
 
-async function _withdraw()  {
+async function _withdraw () {
   await Hodl3dService.withdraw()
 }
-
 
 const getData = () => {
   return {

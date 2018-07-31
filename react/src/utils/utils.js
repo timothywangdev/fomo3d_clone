@@ -10,30 +10,29 @@ var createErrorHandler = function (name) {
 }
 
 export default class Utils {
-
-  static async init() {
+  static async init () {
     this.eth = new Eth(this.getProvider())
     const accounts = await this.eth.accounts()
     this.account = accounts[0]
     let web3 = this.getWeb3()
   }
 
-  static defaultAccount() {
+  static defaultAccount () {
     return this.account
   }
 
-  static getWeb3() {
+  static getWeb3 () {
     if (this.web3) return this.web3
     this.web3 = new Web3(this.getProvider())
     this.web3.eth.defaultAccount = this.account
     return this.web3
   }
 
-  static async getBalance() {
+  static async getBalance () {
     return await this.eth.getBalance(this.account)
   }
 
-  static getProvider() {
+  static getProvider () {
     if (typeof window.web3 !== 'undefined' && typeof window.web3.currentProvider !== 'undefined') {
       return window.web3.currentProvider
     } else {
@@ -57,11 +56,13 @@ export default class Utils {
     const data = await window.fetch(`${url}/${contract}.json`)
     const json = await data.json()
 
+    /*
     try {
       window.sessionStorage.setItem(storageKey, JSON.stringify(json))
     } catch (error) {
       console.error(error)
     }
+    */
 
     return json
   }
@@ -80,5 +81,13 @@ export default class Utils {
     _c.setProvider(this.getProvider())
     _c.defaults({from: this.defaultAccount()})
     return _c.deployed().catch(createErrorHandler('FoMo3Dlong'))
+  }
+
+  static async getToken (addr) {
+    let _artifact = await this.getAbi('Token')
+    let _c = contract(_artifact)
+    _c.setProvider(this.getProvider())
+    _c.defaults({from: this.defaultAccount()})
+    return _c.at(addr)
   }
 }

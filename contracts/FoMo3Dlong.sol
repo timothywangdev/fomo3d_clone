@@ -462,15 +462,13 @@ contract FoMo3Dlong is modularLong {
      * @param _addr address of the player you want to lookup 
      * @return player ID 
      * @return keys owned (current round)
-     * @return winnings vault
-     * @return general vault 
-     * @return affiliate vault 
+     * @return unmasked earnings
      * @return player round eth
      */
     function getPlayerInfoByAddress(address _addr)
         public 
         view 
-        returns(address, uint256, uint256, uint256, uint256, uint256)
+        returns(address, uint256, uint256, uint256)
     {
         // setup local rID
         uint256 _rID = rID_;
@@ -480,10 +478,8 @@ contract FoMo3Dlong is modularLong {
             (
              _pID,                               //0
              plyrRnds_[_pID][_rID].keys,         //1
-             plyr_[_pID].win,                    //2
-             (plyr_[_pID].gen).add(calcUnMaskedEarnings(_pID, plyr_[_pID].lrnd)),       //3
-             plyr_[_pID].aff,                    //4
-             plyrRnds_[_pID][_rID].eth           //5
+             calcUnMaskedEarnings(_pID, plyr_[_pID].lrnd),       //2
+             plyrRnds_[_pID][_rID].eth           //3
              );
     }
 
@@ -659,7 +655,7 @@ contract FoMo3Dlong is modularLong {
      * @return earnings in wei format
      */
     function calcUnMaskedEarnings(address _pID, uint256 _rIDlast)
-        private
+        public
         view
         returns(uint256)
     {

@@ -363,14 +363,14 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/modularLong.sol",
     "exportedSymbols": {
       "modularLong": [
-        3384
+        3365
       ]
     },
-    "id": 3385,
+    "id": 3366,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3380,
+        "id": 3361,
         "literals": [
           "solidity",
           "^",
@@ -383,9 +383,9 @@
       {
         "absolutePath": "/root/projects/fomo3d_clone/contracts/F3Devents.sol",
         "file": "./F3Devents.sol",
-        "id": 3381,
+        "id": 3362,
         "nodeType": "ImportDirective",
-        "scope": 3385,
+        "scope": 3366,
         "sourceUnit": 137,
         "src": "26:25:7",
         "symbolAliases": [],
@@ -397,7 +397,7 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 3382,
+              "id": 3363,
               "name": "F3Devents",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 136,
@@ -407,7 +407,7 @@
                 "typeString": "contract F3Devents"
               }
             },
-            "id": 3383,
+            "id": 3364,
             "nodeType": "InheritanceSpecifier",
             "src": "77:9:7"
           }
@@ -418,15 +418,15 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 3384,
+        "id": 3365,
         "linearizedBaseContracts": [
-          3384,
+          3365,
           136
         ],
         "name": "modularLong",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 3385,
+        "scope": 3366,
         "src": "53:36:7"
       }
     ],
@@ -436,14 +436,14 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/modularLong.sol",
     "exportedSymbols": {
       "modularLong": [
-        3384
+        3365
       ]
     },
-    "id": 3385,
+    "id": 3366,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3380,
+        "id": 3361,
         "literals": [
           "solidity",
           "^",
@@ -456,9 +456,9 @@
       {
         "absolutePath": "/root/projects/fomo3d_clone/contracts/F3Devents.sol",
         "file": "./F3Devents.sol",
-        "id": 3381,
+        "id": 3362,
         "nodeType": "ImportDirective",
-        "scope": 3385,
+        "scope": 3366,
         "sourceUnit": 137,
         "src": "26:25:7",
         "symbolAliases": [],
@@ -470,7 +470,7 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 3382,
+              "id": 3363,
               "name": "F3Devents",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 136,
@@ -480,7 +480,7 @@
                 "typeString": "contract F3Devents"
               }
             },
-            "id": 3383,
+            "id": 3364,
             "nodeType": "InheritanceSpecifier",
             "src": "77:9:7"
           }
@@ -491,15 +491,15 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 3384,
+        "id": 3365,
         "linearizedBaseContracts": [
-          3384,
+          3365,
           136
         ],
         "name": "modularLong",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 3385,
+        "scope": 3366,
         "src": "53:36:7"
       }
     ],
@@ -511,5 +511,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-07-29T23:06:53.660Z"
+  "updatedAt": "2018-07-31T05:20:40.789Z"
 }

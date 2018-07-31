@@ -109,14 +109,14 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/interface/JIincForwarderInterface.sol",
     "exportedSymbols": {
       "JIincForwarderInterface": [
-        2964
+        2945
       ]
     },
-    "id": 2965,
+    "id": 2946,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2927,
+        "id": 2908,
         "literals": [
           "solidity",
           "^",
@@ -132,9 +132,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2964,
+        "id": 2945,
         "linearizedBaseContracts": [
-          2964
+          2945
         ],
         "name": "JIincForwarderInterface",
         "nodeType": "ContractDefinition",
@@ -142,7 +142,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2932,
+            "id": 2913,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -150,22 +150,22 @@
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2928,
+              "id": 2909,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "82:2:3"
             },
             "payable": true,
             "returnParameters": {
-              "id": 2931,
+              "id": 2912,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2930,
+                  "id": 2911,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2932,
+                  "scope": 2913,
                   "src": "110:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -174,7 +174,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2929,
+                    "id": 2910,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "110:4:3",
@@ -189,7 +189,7 @@
               ],
               "src": "109:6:3"
             },
-            "scope": 2964,
+            "scope": 2945,
             "src": "66:50:3",
             "stateMutability": "payable",
             "superFunction": null,
@@ -198,7 +198,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2941,
+            "id": 2922,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -206,22 +206,22 @@
             "name": "status",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2933,
+              "id": 2914,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "136:2:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 2940,
+              "id": 2921,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2935,
+                  "id": 2916,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2941,
+                  "scope": 2922,
                   "src": "161:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -230,7 +230,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2934,
+                    "id": 2915,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "161:7:3",
@@ -244,10 +244,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2937,
+                  "id": 2918,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2941,
+                  "scope": 2922,
                   "src": "170:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -256,7 +256,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2936,
+                    "id": 2917,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "170:7:3",
@@ -270,10 +270,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2939,
+                  "id": 2920,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2941,
+                  "scope": 2922,
                   "src": "179:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -282,7 +282,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2938,
+                    "id": 2919,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "179:4:3",
@@ -297,7 +297,7 @@
               ],
               "src": "160:24:3"
             },
-            "scope": 2964,
+            "scope": 2945,
             "src": "121:64:3",
             "stateMutability": "view",
             "superFunction": null,
@@ -306,7 +306,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2948,
+            "id": 2929,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -314,15 +314,15 @@
             "name": "startMigration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2944,
+              "id": 2925,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2943,
+                  "id": 2924,
                   "name": "_newCorpBank",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2948,
+                  "scope": 2929,
                   "src": "214:20:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -331,7 +331,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2942,
+                    "id": 2923,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "214:7:3",
@@ -348,15 +348,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 2947,
+              "id": 2928,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2946,
+                  "id": 2927,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2948,
+                  "scope": 2929,
                   "src": "253:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -365,7 +365,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2945,
+                    "id": 2926,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "253:4:3",
@@ -380,7 +380,7 @@
               ],
               "src": "252:6:3"
             },
-            "scope": 2964,
+            "scope": 2945,
             "src": "190:69:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -389,7 +389,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2953,
+            "id": 2934,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -397,22 +397,22 @@
             "name": "cancelMigration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2949,
+              "id": 2930,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "288:2:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 2952,
+              "id": 2933,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2951,
+                  "id": 2932,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2953,
+                  "scope": 2934,
                   "src": "308:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -421,7 +421,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2950,
+                    "id": 2931,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "308:4:3",
@@ -436,7 +436,7 @@
               ],
               "src": "307:6:3"
             },
-            "scope": 2964,
+            "scope": 2945,
             "src": "264:50:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -445,7 +445,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2958,
+            "id": 2939,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -453,22 +453,22 @@
             "name": "finishMigration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2954,
+              "id": 2935,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "343:2:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 2957,
+              "id": 2938,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2956,
+                  "id": 2937,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2958,
+                  "scope": 2939,
                   "src": "363:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -477,7 +477,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2955,
+                    "id": 2936,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "363:4:3",
@@ -492,7 +492,7 @@
               ],
               "src": "362:6:3"
             },
-            "scope": 2964,
+            "scope": 2945,
             "src": "319:50:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -501,7 +501,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2963,
+            "id": 2944,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -509,15 +509,15 @@
             "name": "setup",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2961,
+              "id": 2942,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2960,
+                  "id": 2941,
                   "name": "_firstCorpBank",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2963,
+                  "scope": 2944,
                   "src": "389:22:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -526,7 +526,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2959,
+                    "id": 2940,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "389:7:3",
@@ -543,19 +543,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 2962,
+              "id": 2943,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "421:0:3"
             },
-            "scope": 2964,
+            "scope": 2945,
             "src": "374:48:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2965,
+        "scope": 2946,
         "src": "26:398:3"
       }
     ],
@@ -565,14 +565,14 @@
     "absolutePath": "/root/projects/fomo3d_clone/contracts/interface/JIincForwarderInterface.sol",
     "exportedSymbols": {
       "JIincForwarderInterface": [
-        2964
+        2945
       ]
     },
-    "id": 2965,
+    "id": 2946,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2927,
+        "id": 2908,
         "literals": [
           "solidity",
           "^",
@@ -588,9 +588,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2964,
+        "id": 2945,
         "linearizedBaseContracts": [
-          2964
+          2945
         ],
         "name": "JIincForwarderInterface",
         "nodeType": "ContractDefinition",
@@ -598,7 +598,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2932,
+            "id": 2913,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -606,22 +606,22 @@
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2928,
+              "id": 2909,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "82:2:3"
             },
             "payable": true,
             "returnParameters": {
-              "id": 2931,
+              "id": 2912,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2930,
+                  "id": 2911,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2932,
+                  "scope": 2913,
                   "src": "110:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -630,7 +630,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2929,
+                    "id": 2910,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "110:4:3",
@@ -645,7 +645,7 @@
               ],
               "src": "109:6:3"
             },
-            "scope": 2964,
+            "scope": 2945,
             "src": "66:50:3",
             "stateMutability": "payable",
             "superFunction": null,
@@ -654,7 +654,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2941,
+            "id": 2922,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -662,22 +662,22 @@
             "name": "status",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2933,
+              "id": 2914,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "136:2:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 2940,
+              "id": 2921,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2935,
+                  "id": 2916,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2941,
+                  "scope": 2922,
                   "src": "161:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -686,7 +686,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2934,
+                    "id": 2915,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "161:7:3",
@@ -700,10 +700,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2937,
+                  "id": 2918,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2941,
+                  "scope": 2922,
                   "src": "170:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -712,7 +712,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2936,
+                    "id": 2917,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "170:7:3",
@@ -726,10 +726,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2939,
+                  "id": 2920,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2941,
+                  "scope": 2922,
                   "src": "179:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -738,7 +738,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2938,
+                    "id": 2919,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "179:4:3",
@@ -753,7 +753,7 @@
               ],
               "src": "160:24:3"
             },
-            "scope": 2964,
+            "scope": 2945,
             "src": "121:64:3",
             "stateMutability": "view",
             "superFunction": null,
@@ -762,7 +762,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2948,
+            "id": 2929,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -770,15 +770,15 @@
             "name": "startMigration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2944,
+              "id": 2925,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2943,
+                  "id": 2924,
                   "name": "_newCorpBank",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2948,
+                  "scope": 2929,
                   "src": "214:20:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -787,7 +787,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2942,
+                    "id": 2923,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "214:7:3",
@@ -804,15 +804,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 2947,
+              "id": 2928,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2946,
+                  "id": 2927,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2948,
+                  "scope": 2929,
                   "src": "253:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -821,7 +821,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2945,
+                    "id": 2926,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "253:4:3",
@@ -836,7 +836,7 @@
               ],
               "src": "252:6:3"
             },
-            "scope": 2964,
+            "scope": 2945,
             "src": "190:69:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -845,7 +845,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2953,
+            "id": 2934,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -853,22 +853,22 @@
             "name": "cancelMigration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2949,
+              "id": 2930,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "288:2:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 2952,
+              "id": 2933,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2951,
+                  "id": 2932,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2953,
+                  "scope": 2934,
                   "src": "308:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -877,7 +877,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2950,
+                    "id": 2931,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "308:4:3",
@@ -892,7 +892,7 @@
               ],
               "src": "307:6:3"
             },
-            "scope": 2964,
+            "scope": 2945,
             "src": "264:50:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -901,7 +901,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2958,
+            "id": 2939,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -909,22 +909,22 @@
             "name": "finishMigration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2954,
+              "id": 2935,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "343:2:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 2957,
+              "id": 2938,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2956,
+                  "id": 2937,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2958,
+                  "scope": 2939,
                   "src": "363:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -933,7 +933,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2955,
+                    "id": 2936,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "363:4:3",
@@ -948,7 +948,7 @@
               ],
               "src": "362:6:3"
             },
-            "scope": 2964,
+            "scope": 2945,
             "src": "319:50:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -957,7 +957,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2963,
+            "id": 2944,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -965,15 +965,15 @@
             "name": "setup",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2961,
+              "id": 2942,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2960,
+                  "id": 2941,
                   "name": "_firstCorpBank",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2963,
+                  "scope": 2944,
                   "src": "389:22:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -982,7 +982,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2959,
+                    "id": 2940,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "389:7:3",
@@ -999,19 +999,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 2962,
+              "id": 2943,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "421:0:3"
             },
-            "scope": 2964,
+            "scope": 2945,
             "src": "374:48:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2965,
+        "scope": 2946,
         "src": "26:398:3"
       }
     ],
@@ -1023,5 +1023,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-07-29T23:06:53.656Z"
+  "updatedAt": "2018-07-31T05:20:40.785Z"
 }
