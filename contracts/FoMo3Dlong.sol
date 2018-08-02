@@ -144,24 +144,16 @@ contract FoMo3Dlong is modularLong {
         address _pID = msg.sender;
 
         // manage affiliate residuals
-        address _affID;
+        address _affID = plyr_[_pID].laff;
+
         // if no affiliate code was given or player tried to use their own, lolz
-        if (_affCode == address(0) || _affCode == msg.sender)
-            {
-                // use last stored affiliate code
-                _affID = plyr_[_pID].laff;
-        
-                // if affiliate code was given    
-            } else {
-            // get affiliate ID from aff Code 
-            _affID = _affCode;
-            
-            // if affID is not the same as previously stored 
-            if (_affID != plyr_[_pID].laff)
-                {
-                    // update last affiliate
-                    plyr_[_pID].laff = _affID;
-                }
+        if (_affID  == address(0)) {
+            // no laff
+            if (_affCode != address(0) && _affCode != _pID) {
+                // valid _affCode, update laff
+                plyr_[_pID].laff = _affCode;
+                _affID = _affCode;
+            }
         }
         
         // verify a valid team was selected
@@ -197,24 +189,16 @@ contract FoMo3Dlong is modularLong {
         address _pID = msg.sender;
         
         // manage affiliate residuals
-        address _affID;
+        address _affID = plyr_[_pID].laff;
+
         // if no affiliate code was given or player tried to use their own, lolz
-        if (_affCode == address(0) || _affCode == msg.sender)
-            {
-                // use last stored affiliate code
-                _affID = plyr_[_pID].laff;
-        
-                // if affiliate code was given    
-            } else {
-            // get affiliate ID from aff Code 
-            _affID = _affCode;
-            
-            // if affID is not the same as previously stored 
-            if (_affID != plyr_[_pID].laff)
-                {
-                    // update last affiliate
-                    plyr_[_pID].laff = _affID;
-                }
+        if (_affID  == address(0)) {
+            // no laff
+            if (_affCode != address(0) && _affCode != _pID) {
+                // valid _affCode, update laff
+                plyr_[_pID].laff = _affCode;
+                _affID = _affCode;
+            }
         }
         
         // verify a valid team was selected
@@ -326,34 +310,7 @@ contract FoMo3Dlong is modularLong {
         else // rounds over.  need price for new round
             return ( 75000000000000 ); // init
     }
-    
-    /**
-     * @dev returns time left.  dont spam this, you'll ddos yourself from your node 
-     * provider
-     * -functionhash- 0xc7e284b8
-     * @return time left in seconds
-     * @return true if the current round has started, otherwise false
-     */
-    function getTimeLeft()
-        public
-        view
-        returns(uint256, bool)
-    {
-        // setup local rID
-        uint256 _rID = rID_;
-        
-        // grab time
-        uint256 _now = block.timestamp;
-        
-        if (_now < round_[_rID].end)
-            if (_now > round_[_rID].strt + rndGap_)
-                return( (round_[_rID].end).sub(_now), true );
-            else
-                return( (round_[_rID].strt + rndGap_).sub(_now), false );
-        else
-            return(0, true);
-    }
-    
+
     /**
      * @dev returns player earnings per vaults 
      * -functionhash- 0x63066434
@@ -639,7 +596,7 @@ contract FoMo3Dlong is modularLong {
                 rndTmEth_[_rID][_team] = _eth.add(rndTmEth_[_rID][_team]);
     
                 // distribute eth
-                _eventData_ = distributeExternal(_rID, _pID, _eth, _affID, _eventData_);
+                (_eth, _eventData_) = distributeExternal(_rID, _pID, _eth, _affID, _eventData_);
                 _eventData_ = distributeInternal(_rID, _pID, _eth, _team, _keys, _eventData_);
             
                 // call end tx function to fire end tx event.
@@ -803,8 +760,8 @@ contract FoMo3Dlong is modularLong {
         
         // send share for p3d to divies
         /*
-        if (_p3d > 0)
-            Divies.deposit.value(_p3d)();
+          if (_p3d > 0)
+          Divies.deposit.value(_p3d)();
         */
 
         // prepare event data
@@ -870,11 +827,15 @@ contract FoMo3Dlong is modularLong {
      */
     function distributeExternal(uint256 _rID, address _pID, uint256 _eth, address _affID, F3Ddatasets.EventReturns memory _eventData_)
         private
-        returns(F3Ddatasets.EventReturns)
+        returns(uint256, F3Ddatasets.EventReturns)
     {
         // CHANGE THIS
         // pay 2% out to community rewards
-        uint256 _com = _eth / 50;
+        uint256 _com = _eth.div(50);
+
+        // distribute share to affiliate (20%)
+        uint _aff = _eth.div(5);
+
         if (!address(Jekyll_Island_Inc).call.value(_com)(bytes4(keccak256("deposit()"))))
             {
                 // This ensures Team Just cannot influence the outcome of FoMo3D with
@@ -883,20 +844,46 @@ contract FoMo3Dlong is modularLong {
                 // We spent 2000$ in eth re-deploying just to patch this, we hold the 
                 // highest belief that everything we create should be trustless.
                 // Team JUST, The name you shouldn't have to trust.
+                _aff = _aff.add(_com);
                 _com = 0;
-            }
-
-        // distribute share to affiliate
-        uint256 _aff = _eth / 10;
-        
-        // decide what to do with affiliate share of fees
-        // affiliate must not be self, and must have a name registered
-        if (_affID != _pID) {
-            plyr_[_affID].aff = _aff.add(plyr_[_affID].aff);
-            emit F3Devents.onAffiliatePayout(_affID, _rID, _pID, _aff, now);
+            } else {
+            _eth = _eth.sub(_com);
         }
 
-        return(_eventData_);
+        // one level above gets 50% of _aff
+        // two levels above gets 50% of _aff
+        uint256 _oneLevelAff = 0;
+        uint256 _twoLevelAff = 0;
+
+        address oneLevelAddr = address(0);
+        address twoLevelAddr = address(0);
+
+        // decide what to do with affiliate share of fees
+        // affiliate must not be self, and must have a name registered
+        if (_affID != _pID && _affID != address(0)) {
+
+            // distribut to one level above
+            _oneLevelAff = _aff.mul(5).div(10);
+            oneLevelAddr = _affID;
+            _eth = _eth.sub(_oneLevelAff);
+
+            plyr_[oneLevelAddr].aff = _oneLevelAff.add(plyr_[oneLevelAddr].aff);
+            _aff = _aff.sub(_oneLevelAff);
+
+            twoLevelAddr = plyr_[oneLevelAddr].laff;
+            
+            if (twoLevelAddr != address(0)) {
+                // two level above exists, distribute to two level above
+                _twoLevelAff = _aff;
+                _eth = _eth.sub(_twoLevelAff);
+
+                plyr_[twoLevelAddr].aff = _twoLevelAff.add(plyr_[twoLevelAddr].aff);
+                _aff = _aff.sub(_twoLevelAff);
+            }
+        }
+
+        emit onAffiliatePayout(twoLevelAddr, oneLevelAddr, _twoLevelAff, _oneLevelAff);
+        return(_eth, _eventData_);
     }
 
     /**

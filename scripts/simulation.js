@@ -33,7 +33,7 @@ function advanceBlock () {
 }
 
 function increaseTime (duration) {
-  const id = Date.now();
+  const id = Date.now()
 
   return new Promise((resolve, reject) => {
     web3.currentProvider.sendAsync({
@@ -67,7 +67,7 @@ function diff(old, _new){
   return ((old-_new)/60).toString() + ' min'
 }
 
-async function roundInfo(roundData) {
+asysudo docker exec -it 60efea8280c3 bashnc function roundInfo(roundData) {
   return {
     ico: roundData[0].div(base).toString(),
     rID: roundData[1].toString(),
