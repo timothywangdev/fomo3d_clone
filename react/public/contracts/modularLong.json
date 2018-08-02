@@ -355,22 +355,22 @@
   ],
   "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058205d92d932140e1c2c2663bbb9e95b66a39adb8e0d757ded2693a2ea9c11e11fc50029",
   "deployedBytecode": "0x6080604052600080fd00a165627a7a723058205d92d932140e1c2c2663bbb9e95b66a39adb8e0d757ded2693a2ea9c11e11fc50029",
-  "sourceMap": "53:36:16:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;53:36:16;;;;;;;",
-  "deployedSourceMap": "53:36:16:-;;;;;",
+  "sourceMap": "53:36:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;53:36:7;;;;;;;",
+  "deployedSourceMap": "53:36:7:-;;;;;",
   "source": "pragma solidity ^0.4.24;\n\nimport \"./F3Devents.sol\";\n\ncontract modularLong is F3Devents {}",
   "sourcePath": "/root/projects/fomo3d_clone/contracts/modularLong.sol",
   "ast": {
     "absolutePath": "/root/projects/fomo3d_clone/contracts/modularLong.sol",
     "exportedSymbols": {
       "modularLong": [
-        5181
+        3369
       ]
     },
-    "id": 5182,
+    "id": 3370,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5177,
+        "id": 3365,
         "literals": [
           "solidity",
           "^",
@@ -378,16 +378,16 @@
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:16"
+        "src": "0:24:7"
       },
       {
         "absolutePath": "/root/projects/fomo3d_clone/contracts/F3Devents.sol",
         "file": "./F3Devents.sol",
-        "id": 5178,
+        "id": 3366,
         "nodeType": "ImportDirective",
-        "scope": 5182,
-        "sourceUnit": 452,
-        "src": "26:25:16",
+        "scope": 3370,
+        "sourceUnit": 137,
+        "src": "26:25:7",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -397,53 +397,53 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 5179,
+              "id": 3367,
               "name": "F3Devents",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 451,
-              "src": "77:9:16",
+              "referencedDeclaration": 136,
+              "src": "77:9:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_F3Devents_$451",
+                "typeIdentifier": "t_contract$_F3Devents_$136",
                 "typeString": "contract F3Devents"
               }
             },
-            "id": 5180,
+            "id": 3368,
             "nodeType": "InheritanceSpecifier",
-            "src": "77:9:16"
+            "src": "77:9:7"
           }
         ],
         "contractDependencies": [
-          451
+          136
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 5181,
+        "id": 3369,
         "linearizedBaseContracts": [
-          5181,
-          451
+          3369,
+          136
         ],
         "name": "modularLong",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 5182,
-        "src": "53:36:16"
+        "scope": 3370,
+        "src": "53:36:7"
       }
     ],
-    "src": "0:89:16"
+    "src": "0:89:7"
   },
   "legacyAST": {
     "absolutePath": "/root/projects/fomo3d_clone/contracts/modularLong.sol",
     "exportedSymbols": {
       "modularLong": [
-        5181
+        3369
       ]
     },
-    "id": 5182,
+    "id": 3370,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5177,
+        "id": 3365,
         "literals": [
           "solidity",
           "^",
@@ -451,16 +451,16 @@
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:16"
+        "src": "0:24:7"
       },
       {
         "absolutePath": "/root/projects/fomo3d_clone/contracts/F3Devents.sol",
         "file": "./F3Devents.sol",
-        "id": 5178,
+        "id": 3366,
         "nodeType": "ImportDirective",
-        "scope": 5182,
-        "sourceUnit": 452,
-        "src": "26:25:16",
+        "scope": 3370,
+        "sourceUnit": 137,
+        "src": "26:25:7",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -470,40 +470,40 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 5179,
+              "id": 3367,
               "name": "F3Devents",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 451,
-              "src": "77:9:16",
+              "referencedDeclaration": 136,
+              "src": "77:9:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_F3Devents_$451",
+                "typeIdentifier": "t_contract$_F3Devents_$136",
                 "typeString": "contract F3Devents"
               }
             },
-            "id": 5180,
+            "id": 3368,
             "nodeType": "InheritanceSpecifier",
-            "src": "77:9:16"
+            "src": "77:9:7"
           }
         ],
         "contractDependencies": [
-          451
+          136
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 5181,
+        "id": 3369,
         "linearizedBaseContracts": [
-          5181,
-          451
+          3369,
+          136
         ],
         "name": "modularLong",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 5182,
-        "src": "53:36:16"
+        "scope": 3370,
+        "src": "53:36:7"
       }
     ],
-    "src": "0:89:16"
+    "src": "0:89:7"
   },
   "compiler": {
     "name": "solc",
@@ -511,5 +511,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-07-31T18:01:56.759Z"
+  "updatedAt": "2018-08-01T18:59:24.818Z"
 }

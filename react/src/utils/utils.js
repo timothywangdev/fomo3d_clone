@@ -2,7 +2,7 @@ import contract from 'truffle-contract'
 import Eth from 'ethjs'
 import {BigNumber} from 'bignumber.js'
 var Web3 = require('web3')
-
+const {promisify} = require('util')
 
 var createErrorHandler = function (name) {
   return function (err) {
@@ -17,6 +17,12 @@ export default class Utils {
     const accounts = await this.eth.accounts()
     this.account = accounts[0]
     let web3 = this.getWeb3()
+  }
+
+  static async getBlockNumber() {
+    return new Promise(function(resolve,reject){
+      this.web3.eth.blockNumber = resolve
+    });
   }
 
   static defaultAccount () {

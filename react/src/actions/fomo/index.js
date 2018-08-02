@@ -51,7 +51,7 @@ function vaultsInfo (vaultsData, exchangeRate, decimals) {
 async function _getData () {
   let web3 = Utils.getWeb3()
   let accounts = web3.eth.accounts
-  let exchangeRate = await fomo.exchangeRate()
+  let exchangeRate = fomo.exchangeRate
   let timeLeftData = await fomo.getTimeLeft()
 
   let roundData = await fomo.getCurrentRoundInfo()
@@ -82,7 +82,7 @@ async function _getData () {
 
 async function _getBuyPrice (keys) {
   let decimals = fomo.tokenDecimals
-  let exchangeRate = await fomo.exchangeRate()
+  let exchangeRate = fomo.exchangeRate
 
   let base = Utils.getBase(18)
   let _keys = base.times(new BigNumber(keys))
@@ -95,7 +95,7 @@ async function _getBuyPrice (keys) {
 
 async function _buy (affCode, keys) {
   let decimals = fomo.tokenDecimals
-  let exchangeRate = await fomo.exchangeRate()
+  let exchangeRate = fomo.exchangeRate
 
   let base = Utils.getBase(18)
   let _keys = base.times(new BigNumber(keys))
@@ -108,12 +108,31 @@ async function _buy (affCode, keys) {
   await fomo.buy(affCode, 0, buyPrice)
 }
 
+async function _reload (affCode, keys) {
+  let decimals = fomo.tokenDecimals
+  let exchangeRate = fomo.exchangeRate
+
+  let base = Utils.getBase(18)
+  let _keys = base.times(new BigNumber(keys))
+  let buyPrice = await fomo.iWantXKeys(_keys)
+  buyPrice = buyPrice.mul(exchangeRate)
+
+  if (!affCode) {
+    affCode = '0x0000000000000000000000000000000000000000'
+  }
+  await fomo.reload(affCode, 0, buyPrice)
+}
+
 async function _approve (val) {
   let decimals = fomo.tokenDecimals
   let base = Utils.getBase(decimals)
   let tokens = base.times(new BigNumber(val))
 
   await fomo.approveToken(tokens)
+}
+
+async function _withdraw () {
+  await fomo.withdraw()
 }
 
 const getData = () => {
@@ -137,6 +156,13 @@ const buy = (affcode, keys) => {
   }
 }
 
+const reload = (affcode, keys) => {
+  return {
+    type: 'FOMO_RELOAD',
+    payload: _reload(affcode, keys)
+  }
+}
+
 const approve = (val) => {
   return {
     type: 'FOMO_APPROVE',
@@ -144,4 +170,11 @@ const approve = (val) => {
   }
 }
 
-export { getData, getBuyPrice, buy, approve}
+const withdraw = () => {
+  return {
+    type: 'FOMO_WITHDRAW',
+    payload: _withdraw()
+  }
+}
+
+export { getData, getBuyPrice, buy, approve, reload, withdraw }

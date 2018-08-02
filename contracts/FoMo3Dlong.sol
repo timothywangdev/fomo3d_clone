@@ -114,10 +114,8 @@ contract FoMo3Dlong is modularLong {
      * @dev sets boundaries for incoming tx 
      */
     modifier isWithinLimits(uint256 _eth) {
-        uint base = 10**decimals;
-
-        require(_eth >= 1*base, "pocket lint: not a valid currency");
-        require(_eth <= 10000000*base, "no vitalik, no");
+        require(_eth >= 1000000000, "pocket lint: not a valid currency");
+        require(_eth <= 100000000000000000000000, "no vitalik, no");
         _;
     }
     
@@ -134,7 +132,7 @@ contract FoMo3Dlong is modularLong {
     function buyXaddr(address _affCode, uint256 _team, uint val)
         isActivated()
         isHuman()
-        isWithinLimits(val)
+        isWithinLimits(val.div(exchangeRate))
         public
     {
         F3Ddatasets.EventReturns memory _eventData_;
@@ -181,18 +179,20 @@ contract FoMo3Dlong is modularLong {
      * -functionhash- 0x079ce327 (using name for affiliate)
      * @param _affCode the ID/address/name of the player who gets the affiliate fee
      * @param _team what team is the player playing for?
-     * @param _eth amount of earnings to use (remainder returned to gen vault)
+     * @param val amount of earnings to use (remainder returned to gen vault)
      */
     
-    function reLoadXaddr(address _affCode, uint256 _team, uint256 _eth)
+    function reLoadXaddr(address _affCode, uint256 _team, uint256 val)
         isActivated()
         isHuman()
-        isWithinLimits(_eth)
+        isWithinLimits(val.div(exchangeRate))
         public
     {
         // set up our tx event data
         F3Ddatasets.EventReturns memory _eventData_;
-        
+
+        uint _eth = val.div(exchangeRate);
+
         // fetch player ID
         address _pID = msg.sender;
         
@@ -343,7 +343,7 @@ contract FoMo3Dlong is modularLong {
         uint256 _rID = rID_;
         
         // grab time
-        uint256 _now = now;
+        uint256 _now = block.timestamp;
         
         if (_now < round_[_rID].end)
             if (_now > round_[_rID].strt + rndGap_)
