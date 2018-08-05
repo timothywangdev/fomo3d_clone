@@ -67,7 +67,7 @@ function diff(old, _new){
   return ((old-_new)/60).toString() + ' min'
 }
 
-asysudo docker exec -it 60efea8280c3 bashnc function roundInfo(roundData) {
+async function roundInfo(roundData) {
   return {
     ico: roundData[0].div(base).toString(),
     rID: roundData[1].toString(),
@@ -101,13 +101,11 @@ module.exports = async function (callback) {
   // activate the game
   await fomo.activate()
 
-  
+
+  /*
   exchangeRate = await fomo.exchangeRate.call()
   let price = await fomo.getBuyPrice.call()
   console.log('starting price: ', price.mul(exchangeRate).div(base).toString())
-
-  let timeLeft = await fomo.getTimeLeft.call()
-  console.log('time left: ', timeLeft[0].toNumber()/60, ' min')
 
   let roundData = await fomo.getCurrentRoundInfo.call()
   console.log(await roundInfo(roundData))
@@ -120,10 +118,13 @@ module.exports = async function (callback) {
 
   let playerData = await fomo.getPlayerInfoByAddress.call(accounts[0])
   console.log(playerInfo(playerData))
+  */
 
+  /*
   increaseTime( duration.minutes(31))
   advanceBlock()
-
+  */
+  /*
   console.log('buy event:')
 
   await fomo.buyXaddr(0, 0, new BigNumber(1e18))
@@ -136,6 +137,7 @@ module.exports = async function (callback) {
 
   let vaults = await fomo.getPlayerVaults(accounts[0])
   console.log(vaults)
+  */
   /*
   let bal_1 = await token.balanceOf.call(accounts[0])
   await fomo.withdraw()

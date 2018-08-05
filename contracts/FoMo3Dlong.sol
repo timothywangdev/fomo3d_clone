@@ -2,8 +2,6 @@ pragma solidity ^0.4.24;
 
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 
-import "./interface/JIincForwarderInterface.sol";
-//import "./interface/F3DexternalSettingsInterface.sol";
 import "./library/SafeMath.sol";
 import "./library/F3DKeysCalcLong.sol";
 import "./library/F3Ddatasets.sol";
@@ -15,8 +13,6 @@ contract FoMo3Dlong is modularLong {
     using SafeMath for *;
     using F3DKeysCalcLong for uint256;
 
-    JIincForwarderInterface private Jekyll_Island_Inc;
-    //F3DexternalSettingsInterface private extSettings;
     ERC20 public token;
     uint public decimals = 18;
     uint public exchangeRate;
@@ -26,13 +22,14 @@ contract FoMo3Dlong is modularLong {
     //=================_|===========================================================
     string constant public name = "FoMo3D Long Official";
     string constant public symbol = "F3D";
-    uint256 public rndExtra_ = 2 minutes;
-    uint256 public rndGap_ = 2 minutes;
+    uint256 public rndExtra_ = 20 seconds;
+    uint256 public rndGap_ = 20 seconds;
     // uint256 private rndExtra_ = extSettings.getLongExtra();     // length of the very first ICO 
     // uint256 private rndGap_ = extSettings.getLongGap();         // length of ICO phase, set to 1 year for EOS.
-    uint256 constant private rndInit_ = 1 hours;                // round timer starts at this
-    uint256 constant private rndInc_ = 30 seconds;              // every full key purchased adds this much to the timer
-    uint256 constant private rndMax_ = 24 hours;                // max length a round timer can be
+    uint256 constant private rndInit_ = 10 minutes;                // round timer starts at this
+    uint256 constant private rndInc_ = 2 seconds;              // every full key purchased adds this much to the timer
+    uint256 constant private rndMax_ = 10 minutes;                // max length a round timer can be
+    address comAddr;
     //==============================================================================
     //     _| _ _|_ _    _ _ _|_    _   .
     //    (_|(_| | (_|  _\(/_ | |_||_)  .  (data used to store game info that changes)
@@ -43,47 +40,26 @@ contract FoMo3Dlong is modularLong {
     //****************
     mapping (address => F3Ddatasets.Player) public plyr_;   // (pID => data) player data
     mapping (address => mapping (uint256 => F3Ddatasets.PlayerRounds)) public plyrRnds_;    // (pID => rID => data) player round data by player id & round id
+    mapping (address => address) public affID;
     //****************
     // ROUND DATA 
     //****************
     mapping (uint256 => F3Ddatasets.Round) public round_;   // (rID => data) round data
-    mapping (uint256 => mapping(uint256 => uint256)) public rndTmEth_;      // (rID => tID => data) eth in per team, by round id and team id
     //****************
     // TEAM FEE DATA 
     //****************
-    mapping (uint256 => F3Ddatasets.TeamFee) public fees_;          // (team => fees) fee distribution by team
-    mapping (uint256 => F3Ddatasets.PotSplit) public potSplit_;     // (team => fees) pot split distribution by team
+    uint256 public fees_gen = 25;          // fee distribution
+    uint256 public potSplit_gen = 25;      // pot split distribution
     //==============================================================================
     //     _ _  _  __|_ _    __|_ _  _  .
     //    (_(_)| |_\ | | |_|(_ | (_)|   .  (initial data setup upon contract deploy)
     //==============================================================================
-    constructor(address Jekyll_Island_Inc_Addr, address tokenAddr, uint _exchangeRate)
+    constructor(address _comAddr, address tokenAddr, uint _exchangeRate)
         public
         {
             exchangeRate = _exchangeRate;
-            Jekyll_Island_Inc = JIincForwarderInterface(Jekyll_Island_Inc_Addr);
             token = ERC20(tokenAddr);
-
-            // Team allocation structures
-            // 0 = whales
-            // 1 = bears
-            // 2 = sneks
-            // 3 = bulls
-
-            // Team allocation percentages
-            // (F3D, P3D) + (Pot , Referrals, Community)
-            // Referrals / Community rewards are mathematically designed to come from the winner's share of the pot.
-            fees_[0] = F3Ddatasets.TeamFee(30,0);   //50% to pot, 10% to aff, 2% to com
-            fees_[1] = F3Ddatasets.TeamFee(30,0);   //43% to pot, 10% to aff, 2% to com
-            fees_[2] = F3Ddatasets.TeamFee(30,0);  //20% to pot, 10% to aff, 2% to com
-            fees_[3] = F3Ddatasets.TeamFee(30,0);   //35% to pot, 10% to aff, 2% to com
-        
-            // how to split up the final pot based on which team was picked
-            // (F3D, P3D)
-            potSplit_[0] = F3Ddatasets.PotSplit(0,0);  //48% to winner, 25% to next round, 2% to com
-            potSplit_[1] = F3Ddatasets.PotSplit(0,0);   //48% to winner, 25% to next round, 2% to com
-            potSplit_[2] = F3Ddatasets.PotSplit(0,0);  //48% to winner, 10% to next round, 2% to com
-            potSplit_[3] = F3Ddatasets.PotSplit(0,0);  //48% to winner, 10% to next round, 2% to com
+            comAddr = _comAddr;
         }
     //==============================================================================
     //     _ _  _  _|. |`. _  _ _  .
@@ -123,13 +99,27 @@ contract FoMo3Dlong is modularLong {
     //     _    |_ |. _   |`    _  __|_. _  _  _  .
     //    |_)|_||_)||(_  ~|~|_|| |(_ | |(_)| |_\  .  (use these to interact with contract)
     //====|=========================================================================
+
+    function setupAff(address _pID, address _affCode) private {
+        // manage affiliate residuals
+        address _affID = affID[_pID];
+
+        // if no affiliate code was given or player tried to use their own, lolz
+        if (_affID  == address(0)) {
+            // no laff
+            if (_affCode != address(0) && _affCode != _pID) {
+                // valid _affCode, update laff
+                affID[_pID] = _affCode;
+            }
+        }
+    }
+
     /**
      * @dev converts all incoming ethereum to keys.
      * -functionhash- 0x98a0871d (using address for affiliate)
      * @param _affCode the address of the player who gets the affiliate fee
-     * @param _team what team is the player playing for?
      */
-    function buyXaddr(address _affCode, uint256 _team, uint val)
+    function buyXaddr(address _affCode,  uint val)
         isActivated()
         isHuman()
         isWithinLimits(val.div(exchangeRate))
@@ -143,24 +133,10 @@ contract FoMo3Dlong is modularLong {
         // fetch player id
         address _pID = msg.sender;
 
-        // manage affiliate residuals
-        address _affID = plyr_[_pID].laff;
-
-        // if no affiliate code was given or player tried to use their own, lolz
-        if (_affID  == address(0)) {
-            // no laff
-            if (_affCode != address(0) && _affCode != _pID) {
-                // valid _affCode, update laff
-                plyr_[_pID].laff = _affCode;
-                _affID = _affCode;
-            }
-        }
-        
-        // verify a valid team was selected
-        _team = verifyTeam(_team);
+        setupAff(_pID, _affCode);
         
         // buy core 
-        buyCore(_pID, _affID, _team, eth, _eventData_);
+        buyCore(_pID, affID[_pID], eth, _eventData_);
     }
     
     /**
@@ -170,11 +146,10 @@ contract FoMo3Dlong is modularLong {
      * -functionhash- 0x82bfc739 (using address for affiliate)
      * -functionhash- 0x079ce327 (using name for affiliate)
      * @param _affCode the ID/address/name of the player who gets the affiliate fee
-     * @param _team what team is the player playing for?
      * @param val amount of earnings to use (remainder returned to gen vault)
      */
     
-    function reLoadXaddr(address _affCode, uint256 _team, uint256 val)
+    function reLoadXaddr(address _affCode, uint256 val)
         isActivated()
         isHuman()
         isWithinLimits(val.div(exchangeRate))
@@ -187,25 +162,11 @@ contract FoMo3Dlong is modularLong {
 
         // fetch player ID
         address _pID = msg.sender;
-        
-        // manage affiliate residuals
-        address _affID = plyr_[_pID].laff;
 
-        // if no affiliate code was given or player tried to use their own, lolz
-        if (_affID  == address(0)) {
-            // no laff
-            if (_affCode != address(0) && _affCode != _pID) {
-                // valid _affCode, update laff
-                plyr_[_pID].laff = _affCode;
-                _affID = _affCode;
-            }
-        }
-        
-        // verify a valid team was selected
-        _team = verifyTeam(_team);
-        
+        setupAff(_pID, _affCode);
+
         // reload core
-        reLoadCore(_pID, _affID, _team, _eth, _eventData_);
+        reLoadCore(_pID, affID[_pID], _eth, _eventData_);
     }
 
     /**
@@ -334,7 +295,7 @@ contract FoMo3Dlong is modularLong {
                     {
                         return
                             (
-                             (plyr_[_pID].win).add( ((round_[_rID].pot).mul(48)) / 100 ),
+                             (plyr_[_pID].win).add( ((round_[_rID].pot).mul(50)).div(100) ),
                              (plyr_[_pID].gen).add(  getPlayerVaultsHelper(_pID, _rID).sub(plyrRnds_[_pID][_rID].mask)   ),
                              plyr_[_pID].aff
                              );
@@ -368,7 +329,7 @@ contract FoMo3Dlong is modularLong {
         returns(uint256)
     {
         //                                   ---------------------------- # eth / key * 1000000000000000000 --------------------------------------------------- | plyr's # keys
-        return(  ((((round_[_rID].mask).add(((((round_[_rID].pot).mul(potSplit_[round_[_rID].team].gen)) / 100).mul(1000000000000000000)) / (round_[_rID].keys))).mul(plyrRnds_[_pID][_rID].keys)) / 1000000000000000000)  );
+        return(  ((((round_[_rID].mask).add(((((round_[_rID].pot).mul(potSplit_gen)) / 100).mul(1000000000000000000)) / (round_[_rID].keys))).mul(plyrRnds_[_pID][_rID].keys)) / 1000000000000000000)  );
     }
     
     /**
@@ -382,15 +343,11 @@ contract FoMo3Dlong is modularLong {
      * @return current pot 
      * @return current team ID
      * @return current player in leads address 
-     * @return whales eth in for round
-     * @return bears eth in for round
-     * @return sneks eth in for round
-     * @return bulls eth in for round
      */
     function getCurrentRoundInfo()
         public
         view
-        returns(uint256, uint256, uint256, uint256, uint256, uint256, uint256, address, uint256, uint256, uint256, uint256)
+        returns(uint256, uint256, uint256, uint256, uint256, uint256, uint256, address)
     {
         // setup local rID
         uint256 _rID = rID_;
@@ -404,11 +361,7 @@ contract FoMo3Dlong is modularLong {
              round_[_rID].strt,              //4
              round_[_rID].pot,               //5
              round_[_rID].team,              //6
-             round_[_rID].plyr,              //7
-             rndTmEth_[_rID][0],             //8
-             rndTmEth_[_rID][1],             //9
-             rndTmEth_[_rID][2],             //10
-             rndTmEth_[_rID][3]              //11
+             round_[_rID].plyr              //7
              );
     }
 
@@ -448,7 +401,7 @@ contract FoMo3Dlong is modularLong {
      * @dev logic runs whenever a buy order is executed.  determines how to handle 
      * incoming eth depending on if we are in an active round or not
      */
-    function buyCore(address _pID, address _affID, uint256 _team, uint val, F3Ddatasets.EventReturns memory _eventData_)
+    function buyCore(address _pID, address _affID, uint val, F3Ddatasets.EventReturns memory _eventData_)
         private
     {
         // setup local rID
@@ -461,7 +414,7 @@ contract FoMo3Dlong is modularLong {
         if (_now > round_[_rID].strt + rndGap_ && (_now <= round_[_rID].end || (_now > round_[_rID].end && round_[_rID].plyr == 0))) 
             {
                 // call core 
-                core(_rID, _pID, val, _affID, _team, _eventData_);
+                core(_rID, _pID, val, _affID, _eventData_);
         
                 // if round is not active     
             } else {
@@ -501,7 +454,7 @@ contract FoMo3Dlong is modularLong {
      * @dev logic runs whenever a reload order is executed.  determines how to handle 
      * incoming eth depending on if we are in an active round or not 
      */
-    function reLoadCore(address _pID, address _affID, uint256 _team, uint256 _eth, F3Ddatasets.EventReturns memory _eventData_)
+    function reLoadCore(address _pID, address _affID, uint256 _eth, F3Ddatasets.EventReturns memory _eventData_)
         private
     {
         // setup local rID
@@ -519,7 +472,7 @@ contract FoMo3Dlong is modularLong {
                 plyr_[_pID].gen = withdrawEarnings(_pID).sub(_eth);
             
                 // call core 
-                core(_rID, _pID, _eth, _affID, _team, _eventData_);
+                core(_rID, _pID, _eth, _affID, _eventData_);
         
                 // if round is not active and end round needs to be ran   
             } else if (_now > round_[_rID].end && round_[_rID].ended == false) {
@@ -551,7 +504,7 @@ contract FoMo3Dlong is modularLong {
      * @dev this is the core logic for any buy/reload that happens while a round 
      * is live.
      */
-    function core(uint256 _rID, address _pID, uint256 _eth, address _affID, uint256 _team, F3Ddatasets.EventReturns memory _eventData_)
+    function core(uint256 _rID, address _pID, uint256 _eth, address _affID, F3Ddatasets.EventReturns memory _eventData_)
         private
     {
         // if player is new to round
@@ -580,8 +533,6 @@ contract FoMo3Dlong is modularLong {
                         // set new leaders
                         if (round_[_rID].plyr != _pID)
                             round_[_rID].plyr = _pID;  
-                        if (round_[_rID].team != _team)
-                            round_[_rID].team = _team; 
                         // set the new leader bool to true
                         _eventData_.compressedData = _eventData_.compressedData + 100;
                     }
@@ -593,14 +544,13 @@ contract FoMo3Dlong is modularLong {
                 // update round
                 round_[_rID].keys = _keys.add(round_[_rID].keys);
                 round_[_rID].eth = _eth.add(round_[_rID].eth);
-                rndTmEth_[_rID][_team] = _eth.add(rndTmEth_[_rID][_team]);
     
                 // distribute eth
-                (_eth, _eventData_) = distributeExternal(_rID, _pID, _eth, _affID, _eventData_);
-                _eventData_ = distributeInternal(_rID, _pID, _eth, _team, _keys, _eventData_);
+                _eventData_ = distributeExternal(_rID, _pID, _eth, _affID, _eventData_);
+                _eventData_ = distributeInternal(_rID, _pID, _eth, _keys, _eventData_);
             
                 // call end tx function to fire end tx event.
-                endTx(_pID, _team, _eth, _keys, _eventData_);
+                endTx(_pID, _eth, _keys, _eventData_);
             }
     }
     //==============================================================================
@@ -668,20 +618,6 @@ contract FoMo3Dlong is modularLong {
     //    _|_ _  _ | _  .
     //     | (_)(_)|_\  .
     //==============================================================================
-    /**
-     * @dev checks to make sure user picked a valid team.  if not sets team 
-     * to default (sneks)
-     */
-    function verifyTeam(uint256 _team)
-        private
-        pure
-        returns (uint256)
-    {
-        if (_team < 0 || _team > 3)
-            return(2);
-        else
-            return(_team);
-    }
     
     /**
      * @dev decides if round end needs to be run & new round started.  and if 
@@ -717,18 +653,15 @@ contract FoMo3Dlong is modularLong {
         
         // grab our winning player and team id's
         address _winPID = round_[_rID].plyr;
-        uint256 _winTID = round_[_rID].team;
         
         // grab our pot amount
         uint256 _pot = round_[_rID].pot;
         
         // calculate our winner share, community rewards, gen share, 
         // p3d share, and amount reserved for next pot 
-        uint256 _win = (_pot.mul(48)) / 100;
-        uint256 _com = (_pot / 50);
-        uint256 _gen = (_pot.mul(potSplit_[_winTID].gen)) / 100;
-        uint256 _p3d = (_pot.mul(potSplit_[_winTID].p3d)) / 100;
-        uint256 _res = (((_pot.sub(_win)).sub(_com)).sub(_gen)).sub(_p3d);
+        uint256 _win = (_pot.mul(50)) / 100;
+        uint256 _gen = (_pot.mul(potSplit_gen)) / 100;
+        uint256 _res = (_pot.sub(_win)).sub(_gen);
         
         // calculate ppt for round mask
         uint256 _ppt = (_gen.mul(1000000000000000000)) / (round_[_rID].keys);
@@ -742,35 +675,15 @@ contract FoMo3Dlong is modularLong {
         // pay our winner
         plyr_[_winPID].win = _win.add(plyr_[_winPID].win);
         
-        // community rewards
-        if (!address(Jekyll_Island_Inc).call.value(_com)(bytes4(keccak256("deposit()"))))
-            {
-                // This ensures Team Just cannot influence the outcome of FoMo3D with
-                // bank migrations by breaking outgoing transactions.
-                // Something we would never do. But that's not the point.
-                // We spent 2000$ in eth re-deploying just to patch this, we hold the 
-                // highest belief that everything we create should be trustless.
-                // Team JUST, The name you shouldn't have to trust.
-                _p3d = _p3d.add(_com);
-                _com = 0;
-            }
-        
         // distribute gen portion to key holders
         round_[_rID].mask = _ppt.add(round_[_rID].mask);
-        
-        // send share for p3d to divies
-        /*
-          if (_p3d > 0)
-          Divies.deposit.value(_p3d)();
-        */
 
         // prepare event data
         _eventData_.compressedData = _eventData_.compressedData + (round_[_rID].end * 1000000);
-        _eventData_.compressedIDs = _eventData_.compressedIDs + (uint256(_winPID) * 100000000000000000000000000) + (_winTID * 100000000000000000);
+        _eventData_.compressedIDs = _eventData_.compressedIDs + (uint256(_winPID) * 100000000000000000000000000);
         _eventData_.winnerAddr = plyr_[_winPID].addr;
         _eventData_.amountWon = _win;
         _eventData_.genAmount = _gen;
-        _eventData_.P3DAmount = _p3d;
         _eventData_.newPot = _res;
         
         // start next round
@@ -827,28 +740,14 @@ contract FoMo3Dlong is modularLong {
      */
     function distributeExternal(uint256 _rID, address _pID, uint256 _eth, address _affID, F3Ddatasets.EventReturns memory _eventData_)
         private
-        returns(uint256, F3Ddatasets.EventReturns)
+        returns(F3Ddatasets.EventReturns)
     {
-        // CHANGE THIS
-        // pay 2% out to community rewards
-        uint256 _com = _eth.div(50);
+        // distribute com share (2%)
+        uint com = _eth.div(50);
+        plyr_[comAddr].aff = com.add(plyr_[comAddr].aff);
 
         // distribute share to affiliate (20%)
         uint _aff = _eth.div(5);
-
-        if (!address(Jekyll_Island_Inc).call.value(_com)(bytes4(keccak256("deposit()"))))
-            {
-                // This ensures Team Just cannot influence the outcome of FoMo3D with
-                // bank migrations by breaking outgoing transactions.
-                // Something we would never do. But that's not the point.
-                // We spent 2000$ in eth re-deploying just to patch this, we hold the 
-                // highest belief that everything we create should be trustless.
-                // Team JUST, The name you shouldn't have to trust.
-                _aff = _aff.add(_com);
-                _com = 0;
-            } else {
-            _eth = _eth.sub(_com);
-        }
 
         // one level above gets 50% of _aff
         // two levels above gets 50% of _aff
@@ -865,7 +764,6 @@ contract FoMo3Dlong is modularLong {
             // distribut to one level above
             _oneLevelAff = _aff.mul(5).div(10);
             oneLevelAddr = _affID;
-            _eth = _eth.sub(_oneLevelAff);
 
             plyr_[oneLevelAddr].aff = _oneLevelAff.add(plyr_[oneLevelAddr].aff);
             _aff = _aff.sub(_oneLevelAff);
@@ -875,30 +773,34 @@ contract FoMo3Dlong is modularLong {
             if (twoLevelAddr != address(0)) {
                 // two level above exists, distribute to two level above
                 _twoLevelAff = _aff;
-                _eth = _eth.sub(_twoLevelAff);
 
                 plyr_[twoLevelAddr].aff = _twoLevelAff.add(plyr_[twoLevelAddr].aff);
                 _aff = _aff.sub(_twoLevelAff);
             }
         }
 
+        // if _aff > 0, transfer the remaining aff to comAddr
+        plyr_[comAddr].aff = _aff.add(plyr_[comAddr].aff);
+
         emit onAffiliatePayout(twoLevelAddr, oneLevelAddr, _twoLevelAff, _oneLevelAff);
-        return(_eth, _eventData_);
+        return(_eventData_);
     }
 
     /**
      * @dev distributes eth based on fees to gen and pot
      */
-    function distributeInternal(uint256 _rID, address _pID, uint256 _eth, uint256 _team, uint256 _keys, F3Ddatasets.EventReturns memory _eventData_)
+    function distributeInternal(uint256 _rID, address _pID, uint256 _eth, uint256 _keys, F3Ddatasets.EventReturns memory _eventData_)
         private
         returns(F3Ddatasets.EventReturns)
     {
+        // 78% is distributed internally, from which,
+        // 53% to the pot
+        // 25% to dividends
+
         // calculate gen share
-        uint256 _gen = (_eth.mul(fees_[_team].gen)) / 100;
+        uint256 _gen = (_eth.mul(fees_gen)) / 100;
         
-        // update eth balance (eth = eth - (com share + aff share + p3d share))
-        // WARNING: P3D MUST BE ZERO
-        _eth = _eth.sub(((_eth.mul(12)) / 100).add((_eth.mul(fees_[_team].p3d)) / 100));
+        _eth = _eth.sub(((_eth.mul(22)) / 100));
         
         // calculate pot 
         uint256 _pot = _eth.sub(_gen);
@@ -977,10 +879,10 @@ contract FoMo3Dlong is modularLong {
     /**
      * @dev prepares compression data and fires event for buy or reload tx's
      */
-    function endTx(address _pID, uint256 _team, uint256 _eth, uint256 _keys, F3Ddatasets.EventReturns memory _eventData_)
+    function endTx(address _pID, uint256 _eth, uint256 _keys, F3Ddatasets.EventReturns memory _eventData_)
         private
     {
-        _eventData_.compressedData = _eventData_.compressedData + (now * 1000000000000000000) + (_team * 100000000000000000000000000000);
+        _eventData_.compressedData = _eventData_.compressedData + (now * 1000000000000000000);
         _eventData_.compressedIDs = _eventData_.compressedIDs + uint256(_pID) + (rID_ * 10000000000000000000000000000000000000000000000000000);
         
         emit F3Devents.onEndTx

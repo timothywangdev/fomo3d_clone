@@ -1,8 +1,9 @@
 import fomo from '../../utils/fomo.js'
 import Utils from '../../utils/utils.js'
 import {BigNumber} from 'bignumber.js'
+var moment = require('moment')
 
-function roundInfo (roundData, timeLeftData, exchangeRate, decimals) {
+function roundInfo (roundData, exchangeRate, decimals, rndGap) {
   roundData[0] = roundData[0].mul(exchangeRate)
   roundData[5] = roundData[5].mul(exchangeRate)
 
@@ -11,12 +12,20 @@ function roundInfo (roundData, timeLeftData, exchangeRate, decimals) {
     rID: roundData[1].toString(),
     keys: Utils.humanUnit(roundData[2]),
     end: roundData[3].toNumber(),
-    start: roundData[4].toNumber(),
+    start: roundData[4].toNumber() + rndGap.toNumber(),
     pot: Utils.humanUnit(roundData[5], 4, decimals),
     team: roundData[6].toNumber(),
     plyr: roundData[7],
-    timeLeft: timeLeftData[0].toNumber(),
-    started: timeLeftData[1]
+    deadline: 0,
+    started: false
+  }
+
+  let _now = moment().unix()
+  if (_now <= rv.start) {
+    rv.deadline = rv.start
+  } else {
+    rv.deadline = rv.end
+    rv.started = true
   }
 
   return rv
@@ -52,7 +61,6 @@ async function _getData () {
   let web3 = Utils.getWeb3()
   let accounts = web3.eth.accounts
   let exchangeRate = fomo.exchangeRate
-  let timeLeftData = await fomo.getTimeLeft()
 
   let roundData = await fomo.getCurrentRoundInfo()
 
@@ -67,9 +75,10 @@ async function _getData () {
   let tokenBalance = await fomo.getTokenBalance(accounts[0])
 
   let decimals = fomo.tokenDecimals
+  let rndGap = await fomo.getRndGap()
 
   return {
-    roundInfo: roundInfo(roundData, timeLeftData, exchangeRate, decimals),
+    roundInfo: roundInfo(roundData, exchangeRate, decimals, rndGap),
     playerInfo: playerInfo(playerData, exchangeRate, decimals),
     vaultsInfo: vaultsInfo(vaultsData, exchangeRate, decimals),
     tokenInfo: {

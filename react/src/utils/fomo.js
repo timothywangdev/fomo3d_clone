@@ -52,7 +52,6 @@ class FomoService {
     let events = this.instance.allEvents({fromBlock: 'latest', toBlock: 'latest'})
     var fomoWatchFunction = (function(error, event) {
       if (!error) {
-        console.log(event)
         switch (event.event) {
 
         case 'onEndTx':
@@ -80,7 +79,6 @@ class FomoService {
 
     var tokenApprovalWatchFunction = (function(error, event) {
       if (!error) {
-        console.log(event)
         let value = Utils.humanUnit(event.args.value, 4, this.tokenDecimals)
         notifyEventOwner('Total tokens approved changed to ' + value + ' !')
       }
@@ -126,6 +124,10 @@ class FomoService {
     console.log(afterIncreased, balance, allowance, tokens)
     if (afterIncreased.lte(balance)) {
       // enough tokens approve more
+      toast.info('Approval request submitted! Check your transaction status in MetaMask.', {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 12000
+      })
       return this.token.approve(this.instance.address, afterIncreased.toString())
     } else {
       // not enough tokens
@@ -138,13 +140,17 @@ class FomoService {
   async buy (affCode, team, tokens) {
     let allowance = await this.getTokenAllowance(Utils.account)
     if (tokens.gt(allowance)) {
-      // enough allowance
+      // not enough allowance
       toast.error('Not enough tokens approved for transfer', {
         position: toast.POSITION.TOP_CENTER
       })
       return
     }
-    await this.instance.buyXaddr(affCode, team, tokens.toString())
+    toast.info('Purchase request submitted! Check your transaction status in MetaMask.', {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 12000
+    })
+    await this.instance.buyXaddr(affCode, tokens.toString())
   }
 
   async iWantXKeys (keys) {
@@ -152,11 +158,23 @@ class FomoService {
   }
 
   async reload (affCode, team, tokens) {
-    await this.instance.reLoadXaddr(affCode, team, tokens.toString())
+    toast.info('Reinvest request submitted! Check your transaction status in MetaMask.', {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 12000
+    })
+    await this.instance.reLoadXaddr(affCode, tokens.toString())
   }
 
   async withdraw() {
+    toast.info('Withdraw request submitted! Check your transaction status in MetaMask.', {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 12000
+    })
     await this.instance.withdraw()
+  }
+
+  async getRndGap () {
+    return this.instance.rndGap_.call()
   }
 }
 

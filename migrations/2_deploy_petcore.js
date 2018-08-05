@@ -11,6 +11,6 @@ module.exports = function(deployer, network, accounts) {
   }).then(function() {
     return deployer.deploy(JIincForwarder)
   }).then(function() {
-    return deployer.deploy(FoMo3Dlong, JIincForwarder.address, Token.address, 1000)
+    return deployer.deploy(FoMo3Dlong, '0xB1196823E928F8BEa57d8EFD0b299ffbE7CABB46', Token.address, 1000)
   })
 };
