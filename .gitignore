@@ -1,4 +1,4 @@
 build/*
 node_modules/*
 test/*
-react/public/contract/
+react/public/contracts

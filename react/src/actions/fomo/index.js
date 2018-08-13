@@ -13,9 +13,8 @@ function roundInfo (roundData, exchangeRate, decimals, rndGap) {
     keys: Utils.humanUnit(roundData[2]),
     end: roundData[3].toNumber(),
     start: roundData[4].toNumber() + rndGap.toNumber(),
-    pot: Utils.humanUnit(roundData[5], 4, decimals),
-    team: roundData[6].toNumber(),
-    plyr: roundData[7],
+    pot: Utils.humanUnit(roundData[5]),
+    plyr: roundData[6],
     deadline: 0,
     started: false
   }
@@ -64,6 +63,7 @@ async function _getData () {
 
   let roundData = await fomo.getCurrentRoundInfo()
 
+  
   let playerData = await fomo.getPlayerInfoByAddress(accounts[0])
   let vaultsData = await fomo.getPlayerVaults(accounts[0])
 
@@ -144,6 +144,10 @@ async function _withdraw () {
   await fomo.withdraw()
 }
 
+async function _switchToken (addr) {
+  await fomo.switchToken(addr)
+}
+
 const getData = () => {
   return {
     type: 'FOMO_GET_DATA',
@@ -186,4 +190,11 @@ const withdraw = () => {
   }
 }
 
-export { getData, getBuyPrice, buy, approve, reload, withdraw }
+const switchToken = (addr) => {
+  return {
+    type: 'FOMO_SWITCH_TOKEN',
+    payload: _switchToken(addr)
+  }
+}
+
+export { getData, getBuyPrice, buy, approve, reload, withdraw, switchToken }

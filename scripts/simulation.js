@@ -69,18 +69,13 @@ function diff(old, _new){
 
 async function roundInfo(roundData) {
   return {
-    ico: roundData[0].div(base).toString(),
+    eth: roundData[0].div(base).toString(),
     rID: roundData[1].toString(),
     keys: roundData[2].div(base).toString(),
     end: diff(roundData[3].toNumber(), await latestTime()),
     start: diff(roundData[4].toNumber(), await latestTime()),
     pot: roundData[5].div(base).toString(),
-    team: roundData[6].toString(),
-    plyr: roundData[7],
-    rndTmEth_0: roundData[8].div(base).toString(),
-    rndTmEth_1: roundData[9].div(base).toString(),
-    rndTmEth_2: roundData[10].div(base).toString(),
-    rndTmEth_3: roundData[11].div(base).toString(),
+    plyr: roundData[6],
   }
 }
 
@@ -97,34 +92,34 @@ module.exports = async function (callback) {
   var accounts = await web3.eth.getAccountsPromise()
   var fomo = await FoMo3Dlong.deployed()
   var token = await Token.deployed()
+  var token2 = await Token.new()
 
   // activate the game
-  await fomo.activate()
-
+  await fomo.activate(token.address, 1000)
+  await fomo.activate(token2.address, 1000)
+  console.log(token2.address)
 
   /*
-  exchangeRate = await fomo.exchangeRate.call()
-  let price = await fomo.getBuyPrice.call()
+  exchangeRate = await fomo.exchangeRate.call(token.address)
+  let price = await fomo.getBuyPrice.call(token.address)
   console.log('starting price: ', price.mul(exchangeRate).div(base).toString())
 
-  let roundData = await fomo.getCurrentRoundInfo.call()
+  let roundData = await fomo.getCurrentRoundInfo.call(token.address)
   console.log(await roundInfo(roundData))
 
+  
   await token.approve(fomo.address, new BigNumber(1e19))
-  let tokenAddr = await fomo.token.call()
-  console.log(tokenAddr, token.address)
   let allowance = await token.allowance.call(accounts[0], fomo.address)
-  // await fomo.buyXaddr(0, 0, new BigNumber(1e18))
+  await fomo.buyXaddr(token.address, 0, new BigNumber(1e18))
 
-  let playerData = await fomo.getPlayerInfoByAddress.call(accounts[0])
+  
+  let playerData = await fomo.getPlayerInfoByAddress.call(token.address, accounts[0])
   console.log(playerInfo(playerData))
-  */
 
-  /*
-  increaseTime( duration.minutes(31))
+
+  increaseTime( duration.minutes(1))
   advanceBlock()
-  */
-  /*
+  
   console.log('buy event:')
 
   await fomo.buyXaddr(0, 0, new BigNumber(1e18))
@@ -137,8 +132,7 @@ module.exports = async function (callback) {
 
   let vaults = await fomo.getPlayerVaults(accounts[0])
   console.log(vaults)
-  */
-  /*
+
   let bal_1 = await token.balanceOf.call(accounts[0])
   await fomo.withdraw()
   let bal_2 = await token.balanceOf.call(accounts[0])

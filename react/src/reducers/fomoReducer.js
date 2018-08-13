@@ -31,6 +31,16 @@ const fomoReducer = (state = [], action) => {
       ...state,
       error: 'GET_GET_BUY_PRICE_REJECTED'
     }
+  case 'FOMO_SWITCH_TOKEN_PENDING':
+    return {
+      ...state,
+      loading: true
+    }
+  case 'FOMO_SWITCH_TOKEN_FULFILLED':
+    return {
+      ...state,
+      tokenAddr: action.payload
+    }
   default:
     return state
   }

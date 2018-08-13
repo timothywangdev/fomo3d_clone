@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import { Modal, Grid, Input, Message, Container, Header, Divider, Button, Segment, Step, Icon, Statistic, Form, Image, Menu, Label, List, Dimmer, Loader } from 'semantic-ui-react'
+import { Modal, Grid, Input, Message, Container, Header, Divider, Button, Segment, Step, Icon, Statistic, Form, Image, Menu, Label, List, Dimmer, Loader, Dropdown } from 'semantic-ui-react'
 import { connect } from 'react-redux'
-import { getData, getBuyPrice, buy, approve, reload, withdraw } from './actions/fomo'
+import { getData, getBuyPrice, buy, approve, reload, withdraw, switchToken } from './actions/fomo'
 import Utils from './utils/utils.js'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -120,6 +120,11 @@ class App extends Component {
     return addr.slice(0, 8) + '...' + addr.slice(-6)
   }
 
+  handleTokenChange = (value) => {
+    let token = Utils.tokenList[Utils.name2Token[value]]
+    this.props.switchToken(token.address)
+  }
+
   render () {
     if (!this.props || !this.props.roundInfo) {
       return (
@@ -140,7 +145,7 @@ class App extends Component {
 
     return (
       <div className='fomo'>
-        <Menu inverted style={{backgroundColor: 'rgba(52, 58, 64, 0.4)', marginBottom: '5%'}} >
+        <Menu inverted style={{backgroundColor: 'rgba(52, 58, 64, 0.6)', marginBottom: '5%'}} >
           <Menu.Item>
             <img src='./rocket.png' />
           </Menu.Item>
@@ -153,6 +158,12 @@ class App extends Component {
           >
             ReadMe
           </Menu.Item>
+          <Dropdown item text='Token'>
+            <Dropdown.Menu>
+              <Dropdown.Item onClick={() => this.handleTokenChange('XYZ')}>XYZ</Dropdown.Item>
+              <Dropdown.Item onClick={() => this.handleTokenChange('BAT')}>BAT</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Menu>
         <ToastContainer />
         <style> {`
@@ -498,6 +509,7 @@ function mapDispatchToProps (dispatch) {
     approve: (val) => { dispatch(approve(val)) },
     reload: (affCode, keys) => { dispatch(reload(affCode, keys)) },
     withdraw: () => { dispatch(withdraw()) },
+    switchToken: (addr) => { dispatch(switchToken(addr)) },
   })
 }
 

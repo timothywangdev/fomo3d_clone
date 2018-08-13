@@ -31,7 +31,6 @@ library F3Ddatasets {
         bytes32 winnerName;         // winner name
         uint256 amountWon;          // amount won
         uint256 newPot;             // amount in new pot
-        uint256 P3DAmount;          // amount distributed to p3d
         uint256 genAmount;          // amount distributed to gen
         uint256 potAmount;          // amount added to pot
     }
@@ -41,13 +40,11 @@ library F3Ddatasets {
         uint256 gen;    // general vault
         uint256 aff;    // affiliate vault
         uint256 lrnd;   // last round played
-        address laff;   // last affiliate id used
     }
     struct PlayerRounds {
         uint256 eth;    // eth player has added to round (used for eth limiter)
         uint256 keys;   // keys
         uint256 mask;   // player mask 
-        uint256 ico;    // ICO phase investment
     }
     struct Round {
         address plyr;   // pID of player in lead
@@ -59,16 +56,5 @@ library F3Ddatasets {
         uint256 eth;    // total eth in
         uint256 pot;    // eth to pot (during round) / final amount paid to winner (after round ends)
         uint256 mask;   // global mask ???
-        uint256 ico;    // total eth sent in during ICO phase
-        uint256 icoGen; // total eth for gen during ICO phase
-        uint256 icoAvg; // average key price for ICO phase
-    }
-    struct TeamFee {
-        uint256 gen;    // % of buy in thats paid to key holders of current round
-        uint256 p3d;    // % of buy in thats paid to p3d holders
-    }
-    struct PotSplit {
-        uint256 gen;    // % of pot thats paid to key holders of current round
-        uint256 p3d;    // % of pot thats paid to p3d holders
     }
 }

@@ -12,6 +12,30 @@ var createErrorHandler = function (name) {
 }
 
 export default class Utils {
+
+  static addr2Token = {
+    '0x9561c133dd8580860b6b7e504bc5aa500f0f06a7': 1,
+    '0x1234556': 1,
+  }
+
+  static name2Token = {
+    'XYZ' : 0,
+    'BAT' : 1
+  }
+  
+  static tokenList = [
+    {
+      name: 'XYZ',
+      address: '0x9561c133dd8580860b6b7e504bc5aa500f0f06a7',
+      decimals: 18
+    },
+    {
+      name: 'BAT',
+      address: '0x9561c133dd8580860b6b7e504bc5aa500f0f06a7',
+      decimals: 18
+    }
+  ]
+
   static async init () {
     this.eth = new Eth(this.getProvider())
     const accounts = await this.eth.accounts()
@@ -96,7 +120,21 @@ export default class Utils {
     let _c = contract(_artifact)
     _c.setProvider(this.getProvider())
     _c.defaults({from: this.defaultAccount()})
-    return _c.at(addr)
+    if (addr) {
+      return _c.at(addr)
+    } else {
+      let tokenInstance = await _c.deployed().catch(createErrorHandler('Token'))
+      // test only
+      this.tokenList[0].address = tokenInstance.address
+
+      this.addr2Token[tokenInstance.address] = 0
+
+      return tokenInstance
+    }
+  }
+
+  static getTokenDecimals (addr) {
+    return this.tokenList[this.addr2Token[addr]].decimals
   }
 
   static humanUnit (big, fixed = 4, decimals = 18) {

@@ -27,7 +27,6 @@ contract F3Devents {
          bytes32 winnerName,
          uint256 amountWon,
          uint256 newPot,
-         uint256 P3DAmount,
          uint256 genAmount,
          uint256 potAmount
          );
@@ -50,7 +49,6 @@ contract F3Devents {
          address winnerAddr,
          uint256 amountWon,
          uint256 newPot,
-         uint256 P3DAmount,
          uint256 genAmount
          );
     
@@ -66,7 +64,6 @@ contract F3Devents {
          bytes32 winnerName,
          uint256 amountWon,
          uint256 newPot,
-         uint256 P3DAmount,
          uint256 genAmount
          );
     
@@ -81,7 +78,6 @@ contract F3Devents {
          bytes32 winnerName,
          uint256 amountWon,
          uint256 newPot,
-         uint256 P3DAmount,
          uint256 genAmount
          );
     

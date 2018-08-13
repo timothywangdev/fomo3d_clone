@@ -43,13 +43,22 @@ class FomoService {
     this.instance = null
   }
 
-  async init () {
-    this.instance = await Utils.getFomo()
-    let addr = await this.instance.token.call()
-    this.token = await Utils.getToken(addr)
-    this.exchangeRate = await this.instance.exchangeRate.call()
-    this.tokenDecimals = 18
-    let events = this.instance.allEvents({fromBlock: 'latest', toBlock: 'latest'})
+  async stopEvents () {
+    // stop all event watchings
+
+    if (this.fomoEvents) {
+      this.fomoEvents.stopWatching()
+    }
+
+    if (this.tokenApprovalEvent) {
+      this.tokenApprovalEvent.stopWatching()
+    }
+  }
+
+  async setupEvents (addr) {
+    // setup new events
+
+    this.fomoEvents = this.instance.allEvents({fromBlock: 'latest', toBlock: 'latest'})
     var fomoWatchFunction = (function(error, event) {
       if (!error) {
         switch (event.event) {
@@ -75,7 +84,7 @@ class FomoService {
         }
       }
     }).bind(this)
-    events.watch(fomoWatchFunction)
+    this.fomoEvents.watch(fomoWatchFunction)
 
     var tokenApprovalWatchFunction = (function(error, event) {
       if (!error) {
@@ -85,8 +94,28 @@ class FomoService {
     }).bind(this)
 
 
-    let tokenApprovalEvent = this.token.Approval({owner: Utils.account, spender: this.getInstanceAddress()})
-    tokenApprovalEvent.watch(tokenApprovalWatchFunction)
+    this.tokenApprovalEvent = this.token.Approval({owner: Utils.account, spender: this.getInstanceAddress()})
+    this.tokenApprovalEvent.watch(tokenApprovalWatchFunction)
+  }
+
+  async init () {
+    this.instance = await Utils.getFomo()
+    this.token = await Utils.getToken()
+    let addr = this.token.address
+    this.exchangeRate = await this.instance.exchangeRate.call(addr)
+    this.tokenDecimals = Utils.getTokenDecimals(addr)
+
+    this.setupEvents(addr)
+  }
+
+  async switchToken ( addr ) {
+    this.stopEvents()
+
+    this.token = await Utils.getToken(addr)
+    this.exchangeRate = await this.instance.exchangeRate.call(addr)
+    this.tokenDecimals = Utils.getTokenDecimals(addr)
+
+    this.setupEvents(addr)
   }
 
   getInstanceAddress () {
@@ -94,19 +123,15 @@ class FomoService {
   }
 
   async getCurrentRoundInfo () {
-    return this.instance.getCurrentRoundInfo()
-  }
-
-  async getTimeLeft () {
-    return this.instance.getTimeLeft.call()
+    return this.instance.getCurrentRoundInfo(this.token.address)
   }
 
   async getPlayerInfoByAddress (addr) {
-    return this.instance.getPlayerInfoByAddress.call(addr)
+    return this.instance.getPlayerInfoByAddress.call(this.token.address, addr)
   }
 
   async getPlayerVaults (addr) {
-    return this.instance.getPlayerVaults.call(addr)
+    return this.instance.getPlayerVaults.call(this.token.address, addr)
   }
 
   async getTokenAllowance (addr) {
@@ -150,11 +175,11 @@ class FomoService {
       position: toast.POSITION.TOP_CENTER,
       autoClose: 12000
     })
-    await this.instance.buyXaddr(affCode, tokens.toString())
+    await this.instance.buyXaddr(this.token.address, affCode, tokens.toString())
   }
 
   async iWantXKeys (keys) {
-    return this.instance.iWantXKeys.call(keys.toString())
+    return this.instance.iWantXKeys.call(this.token.address, keys.toString())
   }
 
   async reload (affCode, team, tokens) {
@@ -162,7 +187,7 @@ class FomoService {
       position: toast.POSITION.TOP_CENTER,
       autoClose: 12000
     })
-    await this.instance.reLoadXaddr(affCode, tokens.toString())
+    await this.instance.reLoadXaddr(this.token.address, affCode, tokens.toString())
   }
 
   async withdraw() {
@@ -170,7 +195,7 @@ class FomoService {
       position: toast.POSITION.TOP_CENTER,
       autoClose: 12000
     })
-    await this.instance.withdraw()
+    await this.instance.withdraw(this.token.address)
   }
 
   async getRndGap () {
